@@ -1,6 +1,6 @@
-# 📈 1-Year 2x Stock Screener & Predictive Research Engine
+# 📈 Tranche 2x Stock Screener
 
-A machine learning & statistical research tool designed to identify US Small/Mid-Cap stocks ($1B–$10B market cap) with high probability to double ($2\times$) in price over a 12-month horizon.
+An AI tool that scans stock market-cap tranches to find companies with high potential to double in price over 1 year.
 
 ---
 
