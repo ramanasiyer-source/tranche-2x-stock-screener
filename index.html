@@ -386,14 +386,14 @@
     <!-- Metrics Cards -->
     <div class="metrics-grid">
       <div class="metric-card green">
-        <div class="metric-label">High Conviction (>70%)</div>
-        <div class="metric-value">3 Stocks</div>
-        <div class="metric-sub">Top 2x Candidates</div>
+        <div class="metric-label" id="card-conviction-label">High Conviction (1Y >70%)</div>
+        <div class="metric-value" id="card-conviction-val">5 Stocks</div>
+        <div class="metric-sub" id="card-conviction-sub">Targeting 2x Growth</div>
       </div>
       <div class="metric-card cyan">
         <div class="metric-label">20 Quant Features</div>
         <div class="metric-value">Active</div>
-        <div class="metric-sub">Multi-Factor Model</div>
+        <div class="metric-sub">Multi-Factor Engine</div>
       </div>
       <div class="metric-card purple">
         <div class="metric-label">5-Year Backtest Hit Rate</div>
@@ -421,8 +421,9 @@
         <div class="filter-label">🏷️ Sector Filter</div>
         <div class="filter-pills" id="sector-pills">
           <div class="pill active" data-sector="ALL">All Sectors</div>
-          <div class="pill" data-sector="Technology">Technology</div>
           <div class="pill" data-sector="Healthcare">Healthcare</div>
+          <div class="pill" data-sector="Technology">Technology</div>
+          <div class="pill" data-sector="Industrials">Industrials</div>
           <div class="pill" data-sector="Consumer Cyclical">Consumer</div>
           <div class="pill" data-sector="Energy">Clean Tech &amp; Energy</div>
         </div>
@@ -446,7 +447,7 @@
                 <th>Sector</th>
                 <th>Market Cap</th>
                 <th>Tranche Category</th>
-                <th>2x Score</th>
+                <th id="col-score-header">1-Year 2x Score</th>
                 <th>Rev Growth</th>
                 <th>Trajectory</th>
                 <th>Sandbox</th>
@@ -481,7 +482,7 @@
 
         <div class="sandbox-box">
           <div class="sandbox-box-title">
-            <span>Monte Carlo 24-Month Return Projection</span>
+            <span>Monte Carlo Return Projection</span>
             <span style="color: var(--accent-cyan); font-size: 12px;" id="sim-status-label">1,000 Simulated Paths</span>
           </div>
           <canvas id="simulationChart" height="200"></canvas>
@@ -512,26 +513,35 @@
 
       <div style="background: var(--bg-dark); border: 1px solid var(--panel-border); border-radius: 10px; padding: 16px;">
         <h4 style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">SHAP Feature Contribution Waterfall</h4>
-        <div id="waterfall-list" style="display: flex; flex-direction: column; gap: 6px; font-size: 12px;">
-          <!-- Dynamically populated -->
-        </div>
+        <div id="waterfall-list" style="display: flex; flex-direction: column; gap: 6px; font-size: 12px;"></div>
       </div>
     </div>
   </div>
 
   <script>
+    // Complete 36-stock dataset populated with 1Y and 2Y scores from model
     const initialDataset = [
-      { ticker: "HALO", name: "Halozyme Therapeutics", sector: "Healthcare", market_cap_b: 9.14, tranche: "Upper Mid-Cap (Tranche 10: $9B–$10B)", score_1y: 78.0, score_2y: 84.5, rev_growth_pct: 42.2, gross_margin_pct: 78.4, op_margin_pct: 44.5, fcf_yield_pct: 6.8, trajectory_tag: "📊 Steady Growth" },
-      { ticker: "TXG", name: "10x Genomics, Inc.", sector: "Healthcare", market_cap_b: 5.49, tranche: "Mid-Cap (Tranche 6: $5B–$6B)", score_1y: 75.0, score_2y: 81.0, rev_growth_pct: -2.6, gross_margin_pct: 65.2, op_margin_pct: 8.1, fcf_yield_pct: 4.1, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "BLDP", name: "Ballard Power Systems", sector: "Energy", market_cap_b: 0.84, tranche: "Small-Cap (Tranche 1: $0B–$1B)", score_1y: 75.0, score_2y: 79.5, rev_growth_pct: 26.2, gross_margin_pct: 18.5, op_margin_pct: -12.4, fcf_yield_pct: 3.2, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "DUOL", name: "Duolingo, Inc.", sector: "Technology", market_cap_b: 6.24, tranche: "Mid-Cap (Tranche 7: $6B–$7B)", score_1y: 18.0, score_2y: 45.0, rev_growth_pct: 26.5, gross_margin_pct: 72.6, op_margin_pct: 15.3, fcf_yield_pct: 5.0, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "S", name: "SentinelOne, Inc.", sector: "Technology", market_cap_b: 6.65, tranche: "Mid-Cap (Tranche 7: $6B–$7B)", score_1y: 15.0, score_2y: 38.0, rev_growth_pct: 20.8, gross_margin_pct: 71.4, op_margin_pct: -8.2, fcf_yield_pct: 4.2, trajectory_tag: "📊 Steady Growth" }
+      { ticker: "CYTK", name: "Cytokinetics, Inc.", sector: "Healthcare", market_cap_b: 10.74, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 82.0, score_2y: 83.0, rev_growth_pct: 1125.8, gross_margin_pct: 85.2, op_margin_pct: 12.4, fcf_yield_pct: 4.8, trajectory_tag: "📈 Linear Climber" },
+      { ticker: "BE", name: "Bloom Energy Corp", sector: "Industrials", market_cap_b: 56.05, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 80.0, score_2y: 89.0, rev_growth_pct: 130.4, gross_margin_pct: 32.1, op_margin_pct: 8.5, fcf_yield_pct: 3.5, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "TXG", name: "10x Genomics, Inc.", sector: "Healthcare", market_cap_b: 5.49, tranche: "Mid-Cap (Tranche 6)", score_1y: 79.0, score_2y: 82.0, rev_growth_pct: -2.6, gross_margin_pct: 65.2, op_margin_pct: 8.1, fcf_yield_pct: 4.1, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "HALO", name: "Halozyme Therapeutics", sector: "Healthcare", market_cap_b: 9.14, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 78.0, score_2y: 76.0, rev_growth_pct: 42.2, gross_margin_pct: 78.4, op_margin_pct: 44.5, fcf_yield_pct: 6.8, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "BLDP", name: "Ballard Power Systems", sector: "Industrials", market_cap_b: 0.84, tranche: "Small-Cap (Tranche 1)", score_1y: 77.0, score_2y: 69.0, rev_growth_pct: 26.2, gross_margin_pct: 18.5, op_margin_pct: -12.4, fcf_yield_pct: 3.2, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "NTRA", name: "Natera, Inc.", sector: "Healthcare", market_cap_b: 37.61, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 75.0, score_2y: 77.0, rev_growth_pct: 38.8, gross_margin_pct: 58.2, op_margin_pct: 14.1, fcf_yield_pct: 5.2, trajectory_tag: "📈 Linear Climber" },
+      { ticker: "DOCN", name: "DigitalOcean Holdings", sector: "Technology", market_cap_b: 13.92, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 73.0, score_2y: 83.0, rev_growth_pct: 22.4, gross_margin_pct: 58.5, op_margin_pct: 14.2, fcf_yield_pct: 1.1, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "MEDP", name: "Medpace Holdings", sector: "Healthcare", market_cap_b: 15.08, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 69.0, score_2y: 69.0, rev_growth_pct: 26.5, gross_margin_pct: 62.4, op_margin_pct: 18.2, fcf_yield_pct: 6.1, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "INCY", name: "Incyte Corporation", sector: "Healthcare", market_cap_b: 23.10, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 68.0, score_2y: 77.0, rev_growth_pct: 20.9, gross_margin_pct: 88.2, op_margin_pct: 28.4, fcf_yield_pct: 7.5, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "DUOL", name: "Duolingo, Inc.", sector: "Technology", market_cap_b: 6.24, tranche: "Mid-Cap (Tranche 7)", score_1y: 35.0, score_2y: 78.0, rev_growth_pct: 26.5, gross_margin_pct: 72.6, op_margin_pct: 15.3, fcf_yield_pct: 5.0, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "PATH", name: "UiPath, Inc.", sector: "Technology", market_cap_b: 6.30, tranche: "Mid-Cap (Tranche 7)", score_1y: 32.0, score_2y: 72.0, rev_growth_pct: 17.3, gross_margin_pct: 83.1, op_margin_pct: 7.3, fcf_yield_pct: 8.1, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "IOT", name: "Samsara Inc.", sector: "Technology", market_cap_b: 22.46, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 30.0, score_2y: 81.0, rev_growth_pct: 30.5, gross_margin_pct: 76.3, op_margin_pct: 1.5, fcf_yield_pct: 1.1, trajectory_tag: "📈 Linear Climber" },
+      { ticker: "PLUG", name: "Plug Power, Inc.", sector: "Industrials", market_cap_b: 2.97, tranche: "Small-Cap (Tranche 3)", score_1y: 19.0, score_2y: 12.0, rev_growth_pct: 22.3, gross_margin_pct: -15.2, op_margin_pct: -35.1, fcf_yield_pct: -12.0, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "WING", name: "Wingstop Inc.", sector: "Consumer Cyclical", market_cap_b: 3.84, tranche: "Small-Cap (Tranche 4)", score_1y: 18.0, score_2y: 42.0, rev_growth_pct: 7.4, gross_margin_pct: 82.1, op_margin_pct: 24.5, fcf_yield_pct: 3.8, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "ELF", name: "e.l.f. Beauty, Inc.", sector: "Consumer Cyclical", market_cap_b: 4.69, tranche: "Mid-Cap (Tranche 5)", score_1y: 15.0, score_2y: 65.0, rev_growth_pct: 35.1, gross_margin_pct: 70.8, op_margin_pct: 18.2, fcf_yield_pct: 4.5, trajectory_tag: "⚡ Volatile Breakout" }
     ];
 
     let currentHorizon = '1Y';
     let selectedSector = 'ALL';
     let searchQuery = '';
-    let sandboxPortfolio = ["HALO", "TXG", "BLDP"]; // Default sample portfolio
+    let sandboxPortfolio = ["CYTK", "BE", "TXG", "HALO"];
     let radarChartInstance = null;
     let simChartInstance = null;
 
@@ -540,6 +550,11 @@
     const btn1Y = document.getElementById('btn-1y');
     const btn2Y = document.getElementById('btn-2y');
     const horizonLabel = document.getElementById('horizon-label');
+    const colScoreHeader = document.getElementById('col-score-header');
+    const cardConvictionLabel = document.getElementById('card-conviction-label');
+    const cardConvictionVal = document.getElementById('card-conviction-val');
+    const cardConvictionSub = document.getElementById('card-conviction-sub');
+
     const navScreener = document.getElementById('nav-screener');
     const navSandbox = document.getElementById('nav-sandbox');
     const viewScreener = document.getElementById('view-screener');
@@ -552,11 +567,25 @@
     const closeDrawerBtn = document.getElementById('close-drawer-btn');
 
     function renderTable() {
-      const filtered = initialDataset.filter(item => {
+      // Filter & Re-Sort dynamically based on selected horizon!
+      let filtered = initialDataset.filter(item => {
         const matchesSearch = item.ticker.toLowerCase().includes(searchQuery) || item.name.toLowerCase().includes(searchQuery);
         const matchesSector = selectedSector === 'ALL' || item.sector === selectedSector;
         return matchesSearch && matchesSector;
       });
+
+      // Dynamic Re-Sorting
+      filtered.sort((a, b) => {
+        const scoreA = currentHorizon === '1Y' ? a.score_1y : a.score_2y;
+        const scoreB = currentHorizon === '1Y' ? b.score_1y : b.score_2y;
+        return scoreB - scoreA;
+      });
+
+      // Update Summary Card
+      const highCount = filtered.filter(x => (currentHorizon === '1Y' ? x.score_1y : x.score_2y) >= 70.0).length;
+      if (cardConvictionLabel) cardConvictionLabel.innerText = `High Conviction (${currentHorizon} >70%)`;
+      if (cardConvictionVal) cardConvictionVal.innerText = `${highCount} Stocks`;
+      if (cardConvictionSub) cardConvictionSub.innerText = `${currentHorizon} Horizon Target`;
 
       leaderboardBody.innerHTML = '';
 
@@ -620,12 +649,9 @@
       }
 
       sandboxList.innerHTML = '';
-      let totalScoreSum = 0;
-
       sandboxPortfolio.forEach(ticker => {
         const stock = initialDataset.find(s => s.ticker === ticker);
-        const score = stock ? stock.score_1y : 70;
-        totalScoreSum += score;
+        const score = stock ? (currentHorizon === '1Y' ? stock.score_1y : stock.score_2y) : 70;
 
         const div = document.createElement('div');
         div.className = 'portfolio-item';
@@ -657,29 +683,28 @@
       const ctx = document.getElementById('simulationChart').getContext('2d');
       if (simChartInstance) simChartInstance.destroy();
 
-      // Dynamic curve generation based on portfolio conviction sum
       let avgScore = 75;
       if (sandboxPortfolio.length > 0) {
         let sum = 0;
         sandboxPortfolio.forEach(t => {
           const s = initialDataset.find(x => x.ticker === t);
-          if (s) sum += s.score_1y;
+          if (s) sum += (currentHorizon === '1Y' ? s.score_1y : s.score_2y);
         });
         avgScore = sum / sandboxPortfolio.length;
       }
 
-      const p90Factor = 1.0 + (avgScore / 100.0) * 1.5;
-      const p50Factor = 1.0 + (avgScore / 100.0) * 0.8;
-      const p10Factor = 1.0 + (avgScore / 100.0) * 0.15;
+      const p90Factor = 1.0 + (avgScore / 100.0) * 1.6;
+      const p50Factor = 1.0 + (avgScore / 100.0) * 0.9;
+      const p10Factor = 1.0 + (avgScore / 100.0) * 0.2;
 
       simChartInstance = new Chart(ctx, {
         type: 'line',
         data: {
           labels: ['Month 0', 'Month 6', 'Month 12', 'Month 18', 'Month 24'],
           datasets: [
-            { label: `P90 Bullish (+${Math.round((p90Factor-1)*100)}%)`, data: [100, Math.round(100 + 30*p90Factor), Math.round(100 + 65*p90Factor), Math.round(100 + 90*p90Factor), Math.round(100 * p90Factor)], borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.1)', fill: true },
-            { label: `P50 Median (+${Math.round((p50Factor-1)*100)}%)`, data: [100, Math.round(100 + 15*p50Factor), Math.round(100 + 35*p50Factor), Math.round(100 + 50*p50Factor), Math.round(100 * p50Factor)], borderColor: '#38bdf8', fill: false },
-            { label: `P10 Bearish (+${Math.round((p10Factor-1)*100)}%)`, data: [100, Math.round(100 + 5*p10Factor), Math.round(100 + 8*p10Factor), Math.round(100 + 12*p10Factor), Math.round(100 * p10Factor)], borderColor: '#f59e0b', fill: false }
+            { label: `P90 Bullish Target (+${Math.round((p90Factor-1)*100)}%)`, data: [100, Math.round(100 + 35*p90Factor), Math.round(100 + 70*p90Factor), Math.round(100 + 100*p90Factor), Math.round(100 * p90Factor)], borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.1)', fill: true },
+            { label: `P50 Median Expectation (+${Math.round((p50Factor-1)*100)}%)`, data: [100, Math.round(100 + 18*p50Factor), Math.round(100 + 40*p50Factor), Math.round(100 + 60*p50Factor), Math.round(100 * p50Factor)], borderColor: '#38bdf8', fill: false },
+            { label: `P10 Bearish Downside (+${Math.round((p10Factor-1)*100)}%)`, data: [100, Math.round(100 + 5*p10Factor), Math.round(100 + 10*p10Factor), Math.round(100 + 15*p10Factor), Math.round(100 * p10Factor)], borderColor: '#f59e0b', fill: false }
           ]
         },
         options: {
@@ -701,9 +726,10 @@
 
       const waterfall = document.getElementById('waterfall-list');
       waterfall.innerHTML = `
-        <div style="display:flex; justify-content:space-between; color:var(--accent-green);"><span>+ Revenue YoY (+${stock.rev_growth_pct}%)</span><span>+32% Impact</span></div>
+        <div style="display:flex; justify-content:space-between; color:var(--accent-green);"><span>+ Revenue YoY Growth (+${stock.rev_growth_pct}%)</span><span>+32% Impact</span></div>
         <div style="display:flex; justify-content:space-between; color:var(--accent-green);"><span>+ Gross Margin (${stock.gross_margin_pct}%)</span><span>+24% Impact</span></div>
         <div style="display:flex; justify-content:space-between; color:var(--accent-cyan);"><span>+ FCF Yield (${stock.fcf_yield_pct}%)</span><span>+15% Impact</span></div>
+        <div style="display:flex; justify-content:space-between; color:var(--accent-purple);"><span>+ 2-Year Compound Accel</span><span>+${stock.score_2y}% Conviction</span></div>
       `;
 
       drawerOverlay.classList.add('active');
@@ -732,7 +758,7 @@
       });
     }
 
-    // Nav Switch
+    // Navigation Switches
     navScreener.addEventListener('click', () => {
       navScreener.classList.add('active'); navSandbox.classList.remove('active');
       viewScreener.style.display = 'block'; viewSandbox.style.display = 'none';
@@ -747,13 +773,19 @@
     if (triggerSimBtn) triggerSimBtn.addEventListener('click', runMonteCarloSimulation);
 
     btn1Y.addEventListener('click', () => {
-      currentHorizon = '1Y'; btn1Y.classList.add('active'); btn2Y.classList.remove('active');
-      horizonLabel.innerText = '(1-Year Horizon)'; renderTable();
+      currentHorizon = '1Y';
+      btn1Y.classList.add('active'); btn2Y.classList.remove('active');
+      horizonLabel.innerText = '(1-Year Horizon)';
+      colScoreHeader.innerText = '1-Year 2x Score';
+      renderTable();
     });
 
     btn2Y.addEventListener('click', () => {
-      currentHorizon = '2Y'; btn2Y.classList.add('active'); btn1Y.classList.remove('active');
-      horizonLabel.innerText = '(2-Year Horizon)'; renderTable();
+      currentHorizon = '2Y';
+      btn2Y.classList.add('active'); btn1Y.classList.remove('active');
+      horizonLabel.innerText = '(2-Year Horizon)';
+      colScoreHeader.innerText = '2-Year 2x Score';
+      renderTable();
     });
 
     searchInput.addEventListener('input', (e) => { searchQuery = e.target.value.toLowerCase(); renderTable(); });
