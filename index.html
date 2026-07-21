@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tranche 2x Stock Screener | AI Predictive Research Engine</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --panel-bg: #131b2e;
+      --panel-border: #1e293b;
+      --panel-hover: #1c2744;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-green: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-purple: #8b5cf6;
+      --accent-cyan: #06b6d4;
+      --accent-blue: #3b82f6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding: 24px;
+      min-height: 100vh;
+    }
+
+    .app-container { max-width: 1400px; margin: 0 auto; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--panel-border);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand-title {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-subtitle { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--accent-green);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.4; }
+      50% { opacity: 1; }
+      100% { opacity: 0.4; }
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .metric-card {
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent-cyan);
+    }
+
+    .metric-card.green::before { background: var(--accent-green); }
+    .metric-card.purple::before { background: var(--accent-purple); }
+    .metric-card.amber::before { background: var(--accent-amber); }
+
+    .metric-label { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .metric-value { font-size: 28px; font-weight: 800; margin-top: 6px; }
+    .metric-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+    .controls-panel {
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+
+    .search-row { display: flex; gap: 16px; margin-bottom: 18px; flex-wrap: wrap; }
+
+    .search-input {
+      flex: 1;
+      min-width: 280px;
+      background: var(--bg-dark);
+      border: 1px solid var(--panel-border);
+      border-radius: 8px;
+      padding: 10px 16px;
+      color: var(--text-main);
+      font-size: 14px;
+      outline: none;
+    }
+
+    .search-input:focus { border-color: var(--accent-cyan); }
+
+    .view-mode-toggle {
+      display: flex;
+      background: var(--bg-dark);
+      border: 1px solid var(--panel-border);
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    .toggle-btn {
+      padding: 6px 14px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .toggle-btn.active { background: var(--accent-blue); color: white; }
+
+    .filter-label { font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+
+    .filter-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+
+    .pill {
+      background: var(--bg-dark);
+      border: 1px solid var(--panel-border);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12.5px;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .pill:hover { border-color: #334155; color: var(--text-main); }
+    .pill.active { background: rgba(56, 189, 248, 0.15); border-color: var(--accent-cyan); color: #38bdf8; font-weight: 600; }
+
+    .leaderboard-panel {
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .panel-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--panel-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .panel-title { font-size: 17px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+
+    .table-container { overflow-x: auto; }
+
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13.5px; }
+
+    th {
+      background: rgba(15, 23, 42, 0.6);
+      color: var(--text-muted);
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--panel-border);
+    }
+
+    td { padding: 16px 20px; border-bottom: 1px solid var(--panel-border); vertical-align: middle; }
+    tr:hover td { background: var(--panel-hover); }
+
+    .rank-cell { font-weight: 700; color: var(--text-muted); }
+
+    .ticker-link {
+      font-weight: 700;
+      color: #38bdf8;
+      text-decoration: none;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .ticker-link:hover { background: rgba(56, 189, 248, 0.25); border-color: #38bdf8; }
+
+    .company-name { font-weight: 600; color: var(--text-main); }
+
+    .sector-badge {
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      background: rgba(148, 163, 184, 0.1);
+      color: #cbd5e1;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .sector-badge.tech { background: rgba(56, 189, 248, 0.1); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3); }
+    .sector-badge.healthcare { background: rgba(168, 85, 247, 0.1); color: #c084fc; border-color: rgba(168, 85, 247, 0.3); }
+    .sector-badge.consumer { background: rgba(245, 158, 11, 0.1); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); }
+    .sector-badge.clean { background: rgba(16, 185, 129, 0.1); color: #34d399; border-color: rgba(16, 185, 129, 0.3); }
+
+    .tranche-tag { font-size: 12px; font-weight: 600; color: #cbd5e1; }
+
+    .score-container { display: flex; align-items: center; gap: 10px; }
+
+    .score-bar-bg { flex: 1; max-width: 90px; height: 8px; background: #1e293b; border-radius: 4px; overflow: hidden; }
+    .score-bar-fill { height: 100%; border-radius: 4px; }
+    .score-bar-fill.high { background: linear-gradient(90deg, #059669, #10b981); }
+    .score-bar-fill.med { background: linear-gradient(90deg, #d97706, #f59e0b); }
+    .score-bar-fill.low { background: #64748b; }
+
+    .score-val { font-weight: 700; min-width: 48px; }
+    .score-val.high { color: var(--accent-green); }
+    .score-val.med { color: var(--accent-amber); }
+    .score-val.low { color: var(--text-muted); }
+
+    .trajectory-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid var(--panel-border);
+    }
+
+    .details-btn {
+      background: transparent;
+      border: 1px solid var(--panel-border);
+      color: var(--accent-cyan);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .details-btn:hover { background: rgba(6, 182, 212, 0.1); border-color: var(--accent-cyan); }
+
+    .drawer-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      justify-content: flex-end;
+    }
+
+    .drawer-overlay.active { display: flex; }
+
+    .drawer {
+      width: 100%; max-width: 580px; height: 100%;
+      background: var(--panel-bg);
+      border-left: 1px solid var(--panel-border);
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--panel-border);
+      padding-bottom: 16px;
+    }
+
+    .close-btn { background: transparent; border: none; color: var(--text-muted); font-size: 24px; cursor: pointer; }
+
+    .chart-box {
+      background: var(--bg-dark);
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 20px;
+      margin-bottom: 24px;
+    }
+
+    .metric-grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+
+    .metric-tile { background: var(--bg-dark); border: 1px solid var(--panel-border); padding: 12px; border-radius: 8px; }
+    .metric-tile-label { font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; }
+    .metric-tile-val { font-size: 16px; font-weight: 700; margin-top: 4px; }
+
+    footer {
+      margin-top: 40px; text-align: center; font-size: 12px; color: var(--text-muted); padding-top: 20px; border-top: 1px solid var(--panel-border);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <header>
+      <div>
+        <h1 class="brand-title">📈 TRANCHE 2X STOCK SCREENER</h1>
+        <p class="brand-subtitle">An AI tool that scans stock market-cap tranches to find companies with high potential to double in price over 1 year.</p>
+      </div>
+      <div class="header-actions">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Live Cache Active</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="metrics-grid">
+      <div class="metric-card green">
+        <div class="metric-label">High Conviction (>75%)</div>
+        <div class="metric-value">3</div>
+        <div class="metric-sub">Top 2x Candidates Identified</div>
+      </div>
+      <div class="metric-card cyan">
+        <div class="metric-label">Tracked Universe</div>
+        <div class="metric-value">36</div>
+        <div class="metric-sub">Across Market-Cap Tranches</div>
+      </div>
+      <div class="metric-card purple">
+        <div class="metric-label">Top Sector Concentration</div>
+        <div class="metric-value">Healthcare</div>
+        <div class="metric-sub">Highest Avg Conviction</div>
+      </div>
+      <div class="metric-card amber">
+        <div class="metric-label">Avg Rev Growth</div>
+        <div class="metric-value">+24.8%</div>
+        <div class="metric-sub">Across Top Candidates</div>
+      </div>
+    </div>
+
+    <div class="controls-panel">
+      <div class="search-row">
+        <input type="text" id="search-input" class="search-input" placeholder="🔍 Search by Ticker or Company Name...">
+        <div class="view-mode-toggle">
+          <button class="toggle-btn active" id="btn-top10">Top 10 Leaderboard</button>
+          <button class="toggle-btn" id="btn-all">Full Universe (36)</button>
+        </div>
+      </div>
+
+      <div class="filter-label">🏷️ Filter by Sector</div>
+      <div class="filter-pills" id="sector-pills">
+        <div class="pill active" data-sector="ALL">All Sectors</div>
+        <div class="pill" data-sector="Technology">Technology</div>
+        <div class="pill" data-sector="Healthcare">Healthcare</div>
+        <div class="pill" data-sector="Consumer Cyclical">Consumer</div>
+        <div class="pill" data-sector="Industrials">Industrials</div>
+        <div class="pill" data-sector="Energy">Clean Tech & Energy</div>
+      </div>
+
+      <div class="filter-label" style="margin-top: 14px;">💰 Filter by Tranche Category</div>
+      <div class="filter-pills" id="tranche-pills">
+        <div class="pill active" data-tranche="ALL">All Tranches</div>
+        <div class="pill" data-tranche="Small-Cap">Small-Cap ($0B–$4B)</div>
+        <div class="pill" data-tranche="Mid-Cap">Mid-Cap ($4B–$7B)</div>
+        <div class="pill" data-tranche="Upper Mid-Cap">Upper Mid-Cap ($7B–$10B)</div>
+      </div>
+    </div>
+
+    <div class="leaderboard-panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span>🎯 High Conviction Leaderboard</span>
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 400;" id="table-subtitle">(Displaying Top 10)</span>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Ticker</th>
+              <th>Company Name</th>
+              <th>Sector</th>
+              <th>Market Cap</th>
+              <th>Self-Descriptive Tranche</th>
+              <th>2x Conviction Score</th>
+              <th>Rev Growth</th>
+              <th>Trajectory Tag</th>
+              <th>Assessment</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <p>Tranche 2x Stock Screener &copy; 2026 | Powered by Random Forest ML &amp; yfinance Data Pipeline</p>
+    </footer>
+  </div>
+
+  <div class="drawer-overlay" id="drawer-overlay">
+    <div class="drawer">
+      <div class="drawer-header">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <h2 id="drawer-ticker" style="font-size: 24px; color: var(--accent-cyan);">HALO</h2>
+            <span class="sector-badge" id="drawer-sector">Healthcare</span>
+          </div>
+          <p id="drawer-name" style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">Halozyme Therapeutics, Inc.</p>
+        </div>
+        <button class="close-btn" id="close-drawer-btn">&times;</button>
+      </div>
+
+      <div class="metric-grid-2col">
+        <div class="metric-tile">
+          <div class="metric-tile-label">2x Conviction Score</div>
+          <div class="metric-tile-val" id="drawer-score" style="color: var(--accent-green);">78.0%</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-tile-label">Market Cap</div>
+          <div class="metric-tile-val" id="drawer-mcap">$9.14B</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-tile-label">Tranche Category</div>
+          <div class="metric-tile-val" id="drawer-tranche" style="font-size: 13px;">Upper Mid-Cap ($9B–$10B)</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-tile-label">Revenue Growth</div>
+          <div class="metric-tile-val" id="drawer-rev">+42.2%</div>
+        </div>
+      </div>
+
+      <div class="chart-box">
+        <h4 style="font-size: 13px; font-weight: 700; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase;">Fundamental Feature Assessment</h4>
+        <canvas id="radarChart" height="220"></canvas>
+      </div>
+
+      <div style="background: var(--bg-dark); border: 1px solid var(--panel-border); border-radius: 12px; padding: 18px;">
+        <h4 style="font-size: 13px; font-weight: 700; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase;">AI Assessment Summary</h4>
+        <p id="drawer-notes" style="font-size: 13px; color: var(--text-main); line-height: 1.6;">
+          Demonstrates strong fundamental revenue acceleration and solid operating margins. High probability target for 12-month upside trajectory.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const initialDataset = [
+      { ticker: "HALO", name: "Halozyme Therapeutics", sector: "Healthcare", market_cap_b: 9.14, tranche: "Upper Mid-Cap (Tranche 10: $9B–$10B)", tranche_cat: "Upper Mid-Cap", conviction_score: 78.0, rev_growth_pct: 42.2, gross_margin_pct: 78.4, op_margin_pct: 44.5, debt_to_equity: 12.5, fcf_yield_pct: 6.8, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "TXG", name: "10x Genomics, Inc.", sector: "Healthcare", market_cap_b: 5.49, tranche: "Mid-Cap (Tranche 6: $5B–$6B)", tranche_cat: "Mid-Cap", conviction_score: 75.0, rev_growth_pct: -2.6, gross_margin_pct: 65.2, op_margin_pct: 8.1, debt_to_equity: 5.2, fcf_yield_pct: 4.1, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "BLDP", name: "Ballard Power Systems", sector: "Energy", market_cap_b: 0.84, tranche: "Small-Cap (Tranche 1: $0B–$1B)", tranche_cat: "Small-Cap", conviction_score: 75.0, rev_growth_pct: 26.2, gross_margin_pct: 18.5, op_margin_pct: -12.4, debt_to_equity: 2.1, fcf_yield_pct: 3.2, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "DUOL", name: "Duolingo, Inc.", sector: "Technology", market_cap_b: 6.24, tranche: "Mid-Cap (Tranche 7: $6B–$7B)", tranche_cat: "Mid-Cap", conviction_score: 18.0, rev_growth_pct: 26.5, gross_margin_pct: 72.6, op_margin_pct: 15.3, debt_to_equity: 6.6, fcf_yield_pct: 5.0, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "S", name: "SentinelOne, Inc.", sector: "Technology", market_cap_b: 6.65, tranche: "Mid-Cap (Tranche 7: $6B–$7B)", tranche_cat: "Mid-Cap", conviction_score: 15.0, rev_growth_pct: 20.8, gross_margin_pct: 71.4, op_margin_pct: -8.2, debt_to_equity: 8.4, fcf_yield_pct: 4.2, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "PLUG", name: "Plug Power, Inc.", sector: "Energy", market_cap_b: 2.97, tranche: "Small-Cap (Tranche 3: $2B–$3B)", tranche_cat: "Small-Cap", conviction_score: 13.0, rev_growth_pct: 22.3, gross_margin_pct: -15.2, op_margin_pct: -35.1, debt_to_equity: 45.2, fcf_yield_pct: -12.0, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "WING", name: "Wingstop Inc.", sector: "Consumer Cyclical", market_cap_b: 3.84, tranche: "Small-Cap (Tranche 4: $3B–$4B)", tranche_cat: "Small-Cap", conviction_score: 12.0, rev_growth_pct: 7.4, gross_margin_pct: 82.1, op_margin_pct: 24.5, debt_to_equity: 120.4, fcf_yield_pct: 3.8, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "ELF", name: "e.l.f. Beauty, Inc.", sector: "Consumer Cyclical", market_cap_b: 4.69, tranche: "Mid-Cap (Tranche 5: $4B–$5B)", tranche_cat: "Mid-Cap", conviction_score: 12.0, rev_growth_pct: 35.1, gross_margin_pct: 70.8, op_margin_pct: 18.2, debt_to_equity: 18.5, fcf_yield_pct: 4.5, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "CELH", name: "Celsius Holdings, Inc.", sector: "Consumer Cyclical", market_cap_b: 7.52, tranche: "Upper Mid-Cap (Tranche 8: $7B–$8B)", tranche_cat: "Upper Mid-Cap", conviction_score: 12.0, rev_growth_pct: 137.7, gross_margin_pct: 48.5, op_margin_pct: 16.4, debt_to_equity: 4.2, fcf_yield_pct: 2.9, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "ARR", name: "ARMOUR Residential", sector: "Financial Services", market_cap_b: 2.03, tranche: "Small-Cap (Tranche 3: $2B–$3B)", tranche_cat: "Small-Cap", conviction_score: 12.0, rev_growth_pct: 0.0, gross_margin_pct: 90.0, op_margin_pct: 45.0, debt_to_equity: 350.0, fcf_yield_pct: 8.5, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "POWI", name: "Power Integrations", sector: "Technology", market_cap_b: 3.96, tranche: "Small-Cap (Tranche 4: $3B–$4B)", tranche_cat: "Small-Cap", conviction_score: 10.0, rev_growth_pct: 2.6, gross_margin_pct: 52.4, op_margin_pct: 12.1, debt_to_equity: 1.5, fcf_yield_pct: 3.9, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "RUN", name: "Sunrun Inc.", sector: "Energy", market_cap_b: 2.73, tranche: "Small-Cap (Tranche 3: $2B–$3B)", tranche_cat: "Small-Cap", conviction_score: 9.0, rev_growth_pct: 43.2, gross_margin_pct: 12.4, op_margin_pct: -5.2, debt_to_equity: 180.2, fcf_yield_pct: -8.4, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "BIRK", name: "Birkenstock Holding", sector: "Consumer Cyclical", market_cap_b: 7.87, tranche: "Upper Mid-Cap (Tranche 8: $7B–$8B)", tranche_cat: "Upper Mid-Cap", conviction_score: 8.0, rev_growth_pct: 7.7, gross_margin_pct: 60.1, op_margin_pct: 22.0, debt_to_equity: 42.1, fcf_yield_pct: 4.8, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "CROX", name: "Crocs, Inc.", sector: "Consumer Cyclical", market_cap_b: 6.73, tranche: "Mid-Cap (Tranche 7: $6B–$7B)", tranche_cat: "Mid-Cap", conviction_score: 5.0, rev_growth_pct: -1.7, gross_margin_pct: 55.4, op_margin_pct: 26.1, debt_to_equity: 140.2, fcf_yield_pct: 9.2, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "CAVA", name: "CAVA Group, Inc.", sector: "Consumer Cyclical", market_cap_b: 7.40, tranche: "Upper Mid-Cap (Tranche 8: $7B–$8B)", tranche_cat: "Upper Mid-Cap", conviction_score: 5.0, rev_growth_pct: 32.1, gross_margin_pct: 38.2, op_margin_pct: 8.4, debt_to_equity: 15.0, fcf_yield_pct: 2.1, trajectory_tag: "⚡ Volatile Breakout" }
+    ];
+
+    let currentMode = 'TOP10';
+    let selectedSector = 'ALL';
+    let selectedTranche = 'ALL';
+    let searchQuery = '';
+    let radarChartInstance = null;
+
+    const leaderboardBody = document.getElementById('leaderboard-body');
+    const searchInput = document.getElementById('search-input');
+    const btnTop10 = document.getElementById('btn-top10');
+    const btnAll = document.getElementById('btn-all');
+    const tableSubtitle = document.getElementById('table-subtitle');
+    const drawerOverlay = document.getElementById('drawer-overlay');
+    const closeDrawerBtn = document.getElementById('close-drawer-btn');
+
+    function getFilteredData() {
+      return initialDataset.filter(item => {
+        const matchesSearch = item.ticker.toLowerCase().includes(searchQuery) || item.name.toLowerCase().includes(searchQuery);
+        const matchesSector = selectedSector === 'ALL' || item.sector === selectedSector;
+        const matchesTranche = selectedTranche === 'ALL' || item.tranche_cat === selectedTranche;
+        return matchesSearch && matchesSector && matchesTranche;
+      });
+    }
+
+    function renderTable() {
+      const filtered = getFilteredData();
+      const dataToRender = currentMode === 'TOP10' ? filtered.slice(0, 10) : filtered;
+
+      leaderboardBody.innerHTML = '';
+
+      if (dataToRender.length === 0) {
+        leaderboardBody.innerHTML = `<tr><td colspan="10" style="text-align: center; padding: 30px; color: var(--text-muted);">No stocks match your filter criteria.</td></tr>`;
+        return;
+      }
+
+      dataToRender.forEach((stock, idx) => {
+        const tr = document.createElement('tr');
+        
+        let scoreClass = 'high';
+        if (stock.conviction_score < 40) scoreClass = 'low';
+        else if (stock.conviction_score < 75) scoreClass = 'med';
+
+        let sectorClass = 'tech';
+        if (stock.sector === 'Healthcare') sectorClass = 'healthcare';
+        else if (stock.sector.includes('Consumer')) sectorClass = 'consumer';
+        else if (stock.sector.includes('Energy')) sectorClass = 'clean';
+
+        tr.innerHTML = `
+          <td class="rank-cell">#${idx + 1}</td>
+          <td><a href="#/stock/${stock.ticker}" class="ticker-link" onclick="openAssessmentDrawer('${stock.ticker}'); return false;">${stock.ticker}</a></td>
+          <td class="company-name">${stock.name}</td>
+          <td><span class="sector-badge ${sectorClass}">${stock.sector}</span></td>
+          <td style="font-weight: 600;">$${stock.market_cap_b.toFixed(2)}B</td>
+          <td class="tranche-tag">${stock.tranche}</td>
+          <td>
+            <div class="score-container">
+              <div class="score-bar-bg">
+                <div class="score-bar-fill ${scoreClass}" style="width: ${stock.conviction_score}%;"></div>
+              </div>
+              <span class="score-val ${scoreClass}">${stock.conviction_score.toFixed(1)}%</span>
+            </div>
+          </td>
+          <td style="font-weight: 600; color: ${stock.rev_growth_pct >= 0 ? 'var(--accent-green)' : '#f87171'}">
+            ${stock.rev_growth_pct >= 0 ? '+' : ''}${stock.rev_growth_pct.toFixed(1)}%
+          </td>
+          <td><span class="trajectory-badge">${stock.trajectory_tag}</span></td>
+          <td><button class="details-btn" onclick="openAssessmentDrawer('${stock.ticker}')">Assessment &rarr;</button></td>
+        `;
+        leaderboardBody.appendChild(tr);
+      });
+    }
+
+    function openAssessmentDrawer(ticker) {
+      const stock = initialDataset.find(s => s.ticker === ticker);
+      if (!stock) return;
+
+      document.getElementById('drawer-ticker').innerText = stock.ticker;
+      document.getElementById('drawer-name').innerText = stock.name;
+      document.getElementById('drawer-sector').innerText = stock.sector;
+      document.getElementById('drawer-score').innerText = stock.conviction_score.toFixed(1) + '%';
+      document.getElementById('drawer-mcap').innerText = '$' + stock.market_cap_b.toFixed(2) + 'B';
+      document.getElementById('drawer-tranche').innerText = stock.tranche;
+      document.getElementById('drawer-rev').innerText = (stock.rev_growth_pct >= 0 ? '+' : '') + stock.rev_growth_pct.toFixed(1) + '%';
+
+      document.getElementById('drawer-notes').innerText = 
+        `${stock.name} (${stock.ticker}) ranks in ${stock.tranche} with a 2x Conviction Score of ${stock.conviction_score}%. Key catalysts include ${stock.rev_growth_pct > 20 ? 'high revenue growth (+' + stock.rev_growth_pct + '%)' : 'stable cash flow fundamentals'} and trajectory classification as ${stock.trajectory_tag}.`;
+
+      drawerOverlay.classList.add('active');
+      renderRadarChart(stock);
+    }
+
+    function renderRadarChart(stock) {
+      const ctx = document.getElementById('radarChart').getContext('2d');
+      if (radarChartInstance) radarChartInstance.destroy();
+
+      radarChartInstance = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ['Rev Growth', 'Gross Margin', 'Op Margin', 'FCF Yield', 'Price Stability'],
+          datasets: [{
+            label: stock.ticker + ' Fundamentals',
+            data: [
+              Math.min(Math.max(stock.rev_growth_pct, 0), 100),
+              Math.min(Math.max(stock.gross_margin_pct, 0), 100),
+              Math.min(Math.max(stock.op_margin_pct * 2, 0), 100),
+              Math.min(Math.max(stock.fcf_yield_pct * 10, 0), 100),
+              Math.min(Math.max(100 - (stock.volatility_pct || 40), 0), 100)
+            ],
+            backgroundColor: 'rgba(56, 189, 248, 0.2)',
+            borderColor: '#38bdf8',
+            pointBackgroundColor: '#38bdf8'
+          }]
+        },
+        options: {
+          scales: {
+            r: {
+              angleLines: { color: '#1e293b' },
+              grid: { color: '#1e293b' },
+              pointLabels: { color: '#94a3b8', font: { size: 11, weight: '600' } },
+              ticks: { display: false }
+            }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase();
+      renderTable();
+    });
+
+    btnTop10.addEventListener('click', () => {
+      currentMode = 'TOP10';
+      btnTop10.classList.add('active');
+      btnAll.classList.remove('active');
+      tableSubtitle.innerText = '(Displaying Top 10)';
+      renderTable();
+    });
+
+    btnAll.addEventListener('click', () => {
+      currentMode = 'ALL';
+      btnAll.classList.add('active');
+      btnTop10.classList.remove('active');
+      tableSubtitle.innerText = '(Displaying Full Universe)';
+      renderTable();
+    });
+
+    document.querySelectorAll('#sector-pills .pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('#sector-pills .pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        selectedSector = pill.getAttribute('data-sector');
+        renderTable();
+      });
+    });
+
+    document.querySelectorAll('#tranche-pills .pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('#tranche-pills .pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        selectedTranche = pill.getAttribute('data-tranche');
+        renderTable();
+      });
+    });
+
+    closeDrawerBtn.addEventListener('click', () => {
+      drawerOverlay.classList.remove('active');
+    });
+
+    drawerOverlay.addEventListener('click', (e) => {
+      if (e.target === drawerOverlay) drawerOverlay.classList.remove('active');
+    });
+
+    renderTable();
+  </script>
+</body>
+</html>
