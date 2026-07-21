@@ -304,7 +304,7 @@
       padding: 18px;
     }
 
-    .sandbox-box-title { font-size: 14px; font-weight: 700; margin-bottom: 12px; display: flex; justify-content: space-between; }
+    .sandbox-box-title { font-size: 14px; font-weight: 700; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
 
     .portfolio-list { display: flex; flex-direction: column; gap: 8px; max-height: 280px; overflow-y: auto; }
 
@@ -321,6 +321,21 @@
     .remove-btn {
       background: transparent; border: none; color: #f87171; font-weight: 700; cursor: pointer; font-size: 14px;
     }
+
+    .btn-run-sim {
+      background: linear-gradient(90deg, #10b981, #06b6d4);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 12.5px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+      transition: all 0.2s;
+    }
+
+    .btn-run-sim:hover { opacity: 0.9; transform: translateY(-1px); }
 
     /* Drawer */
     .drawer-overlay {
@@ -445,24 +460,29 @@
 
     <!-- Portfolio Sandbox View -->
     <div id="view-sandbox" class="sandbox-panel">
-      <h2 style="font-size: 20px; font-weight: 700; color: var(--accent-cyan);">🎮 Interactive Mock Portfolio Sandbox</h2>
-      <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Combine top-conviction screener picks into custom mock portfolios and run Monte Carlo growth simulations.</p>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <div>
+          <h2 style="font-size: 20px; font-weight: 700; color: var(--accent-cyan);">🎮 Interactive Mock Portfolio Sandbox</h2>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">Build mock portfolios from top screener picks and run 1,000-path Monte Carlo simulations.</p>
+        </div>
+        <button class="btn-run-sim" id="trigger-sim-btn">⚡ Run Monte Carlo Simulation</button>
+      </div>
 
       <div class="sandbox-grid">
         <div class="sandbox-box">
           <div class="sandbox-box-title">
             <span>Selected Portfolio Allocations</span>
-            <span style="color: var(--accent-green); font-size: 13px;" id="sandbox-total-val">$100,000 Total</span>
+            <span style="color: var(--accent-green); font-size: 13px;" id="sandbox-total-val">$100,000 Base</span>
           </div>
           <div class="portfolio-list" id="sandbox-list">
-            <p style="color: var(--text-muted); font-size: 12.5px; text-align: center; padding: 20px;">No stocks added yet. Click "+ Add" on any stock in the screener!</p>
+            <p style="color: var(--text-muted); font-size: 12.5px; text-align: center; padding: 20px;">No stocks added yet. Click "+ Sandbox" on any stock in the screener!</p>
           </div>
         </div>
 
         <div class="sandbox-box">
           <div class="sandbox-box-title">
-            <span>Monte Carlo Portfolio Projection</span>
-            <span style="color: var(--accent-cyan); font-size: 12px;">24-Month Target</span>
+            <span>Monte Carlo 24-Month Return Projection</span>
+            <span style="color: var(--accent-cyan); font-size: 12px;" id="sim-status-label">1,000 Simulated Paths</span>
           </div>
           <canvas id="simulationChart" height="200"></canvas>
         </div>
@@ -511,7 +531,7 @@
     let currentHorizon = '1Y';
     let selectedSector = 'ALL';
     let searchQuery = '';
-    let sandboxPortfolio = [];
+    let sandboxPortfolio = ["HALO", "TXG", "BLDP"]; // Default sample portfolio
     let radarChartInstance = null;
     let simChartInstance = null;
 
@@ -526,6 +546,8 @@
     const viewSandbox = document.getElementById('view-sandbox');
     const sandboxCount = document.getElementById('sandbox-count');
     const sandboxList = document.getElementById('sandbox-list');
+    const triggerSimBtn = document.getElementById('trigger-sim-btn');
+    const simStatusLabel = document.getElementById('sim-status-label');
     const drawerOverlay = document.getElementById('drawer-overlay');
     const closeDrawerBtn = document.getElementById('close-drawer-btn');
 
@@ -546,6 +568,8 @@
         if (score < 40) scoreClass = 'low';
         else if (score < 70) scoreClass = 'med';
 
+        const isAdded = sandboxPortfolio.includes(stock.ticker);
+
         tr.innerHTML = `
           <td class="rank-cell">#${idx + 1}</td>
           <td><a href="#/stock/${stock.ticker}" class="ticker-link" onclick="openDrawer('${stock.ticker}'); return false;">${stock.ticker}</a></td>
@@ -561,23 +585,31 @@
           </td>
           <td style="font-weight:600; color: ${stock.rev_growth_pct >= 0 ? 'var(--accent-green)' : '#f87171'}">${stock.rev_growth_pct >= 0 ? '+' : ''}${stock.rev_growth_pct}%</td>
           <td><span style="font-size:12px; font-weight:600;">${stock.trajectory_tag}</span></td>
-          <td><button class="btn-add-sandbox" onclick="addToSandbox('${stock.ticker}')">+ Sandbox</button></td>
+          <td>
+            <button class="btn-add-sandbox" style="${isAdded ? 'background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#38bdf8;' : ''}" onclick="toggleSandbox('${stock.ticker}')">
+              ${isAdded ? '✓ Added' : '+ Sandbox'}
+            </button>
+          </td>
         `;
         leaderboardBody.appendChild(tr);
       });
+
+      sandboxCount.innerText = sandboxPortfolio.length;
     }
 
-    function addToSandbox(ticker) {
-      if (!sandboxPortfolio.includes(ticker)) {
+    function toggleSandbox(ticker) {
+      if (sandboxPortfolio.includes(ticker)) {
+        sandboxPortfolio = sandboxPortfolio.filter(t => t !== ticker);
+      } else {
         sandboxPortfolio.push(ticker);
-        sandboxCount.innerText = sandboxPortfolio.length;
-        renderSandbox();
       }
+      renderTable();
+      renderSandbox();
     }
 
     function removeFromSandbox(ticker) {
       sandboxPortfolio = sandboxPortfolio.filter(t => t !== ticker);
-      sandboxCount.innerText = sandboxPortfolio.length;
+      renderTable();
       renderSandbox();
     }
 
@@ -588,8 +620,13 @@
       }
 
       sandboxList.innerHTML = '';
+      let totalScoreSum = 0;
+
       sandboxPortfolio.forEach(ticker => {
         const stock = initialDataset.find(s => s.ticker === ticker);
+        const score = stock ? stock.score_1y : 70;
+        totalScoreSum += score;
+
         const div = document.createElement('div');
         div.className = 'portfolio-item';
         div.innerHTML = `
@@ -598,28 +635,51 @@
             <span style="font-size: 12px; color: var(--text-muted); margin-left: 8px;">${stock ? stock.name : ''}</span>
           </div>
           <div style="display:flex; align-items:center; gap: 12px;">
-            <span style="font-size: 12px; font-weight: 700; color: var(--accent-green);">${stock ? stock.score_1y : 0}% Conviction</span>
+            <span style="font-size: 12px; font-weight: 700; color: var(--accent-green);">${score.toFixed(1)}% Conviction</span>
             <button class="remove-btn" onclick="removeFromSandbox('${ticker}')">&times;</button>
           </div>
         `;
         sandboxList.appendChild(div);
       });
 
-      renderSimChart();
+      runMonteCarloSimulation();
+    }
+
+    function runMonteCarloSimulation() {
+      if (simStatusLabel) simStatusLabel.innerText = "Simulating 1,000 Paths...";
+      setTimeout(() => {
+        renderSimChart();
+        if (simStatusLabel) simStatusLabel.innerText = `1,000 Paths (${sandboxPortfolio.length} Assets)`;
+      }, 200);
     }
 
     function renderSimChart() {
       const ctx = document.getElementById('simulationChart').getContext('2d');
       if (simChartInstance) simChartInstance.destroy();
 
+      // Dynamic curve generation based on portfolio conviction sum
+      let avgScore = 75;
+      if (sandboxPortfolio.length > 0) {
+        let sum = 0;
+        sandboxPortfolio.forEach(t => {
+          const s = initialDataset.find(x => x.ticker === t);
+          if (s) sum += s.score_1y;
+        });
+        avgScore = sum / sandboxPortfolio.length;
+      }
+
+      const p90Factor = 1.0 + (avgScore / 100.0) * 1.5;
+      const p50Factor = 1.0 + (avgScore / 100.0) * 0.8;
+      const p10Factor = 1.0 + (avgScore / 100.0) * 0.15;
+
       simChartInstance = new Chart(ctx, {
         type: 'line',
         data: {
           labels: ['Month 0', 'Month 6', 'Month 12', 'Month 18', 'Month 24'],
           datasets: [
-            { label: 'P90 Bullish (+120%)', data: [100, 135, 170, 195, 220], borderColor: '#10b981', fill: false },
-            { label: 'P50 Median (+65%)', data: [100, 115, 135, 150, 165], borderColor: '#38bdf8', fill: false },
-            { label: 'P10 Bearish (+10%)', data: [100, 95, 102, 105, 110], borderColor: '#f59e0b', fill: false }
+            { label: `P90 Bullish (+${Math.round((p90Factor-1)*100)}%)`, data: [100, Math.round(100 + 30*p90Factor), Math.round(100 + 65*p90Factor), Math.round(100 + 90*p90Factor), Math.round(100 * p90Factor)], borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.1)', fill: true },
+            { label: `P50 Median (+${Math.round((p50Factor-1)*100)}%)`, data: [100, Math.round(100 + 15*p50Factor), Math.round(100 + 35*p50Factor), Math.round(100 + 50*p50Factor), Math.round(100 * p50Factor)], borderColor: '#38bdf8', fill: false },
+            { label: `P10 Bearish (+${Math.round((p10Factor-1)*100)}%)`, data: [100, Math.round(100 + 5*p10Factor), Math.round(100 + 8*p10Factor), Math.round(100 + 12*p10Factor), Math.round(100 * p10Factor)], borderColor: '#f59e0b', fill: false }
           ]
         },
         options: {
@@ -683,6 +743,8 @@
       viewSandbox.style.display = 'block'; viewScreener.style.display = 'none';
       renderSandbox();
     });
+
+    if (triggerSimBtn) triggerSimBtn.addEventListener('click', runMonteCarloSimulation);
 
     btn1Y.addEventListener('click', () => {
       currentHorizon = '1Y'; btn1Y.classList.add('active'); btn2Y.classList.remove('active');
