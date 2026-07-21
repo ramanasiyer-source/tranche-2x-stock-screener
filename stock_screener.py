@@ -89,12 +89,23 @@ def save_to_cache(data_dict):
     except Exception as e:
         print(f"Warning: Failed to write cache: {e}")
 
+def get_descriptive_tranche_name(bucket):
+    if bucket <= 1:
+        category = "Small-Cap"
+    elif bucket <= 4:
+        category = "Small-Cap"
+    elif bucket <= 7:
+        category = "Mid-Cap"
+    else:
+        category = "Upper Mid-Cap"
+    return f"{category} (Tranche {bucket}: ${bucket-1}B–${bucket}B)"
+
 def fetch_stock_data(tickers):
     cached = load_cached_data()
     if cached:
         return cached
 
-    print(f"🌐 Fetching live financial data for {len(tickers)} Small/Mid-Cap stocks via yfinance...")
+    print(f"🌐 Fetching live financial data for {len(tickers)} stocks via yfinance...")
     dataset = {}
 
     for i, ticker in enumerate(tickers):
@@ -134,12 +145,14 @@ def fetch_stock_data(tickers):
             if tranche_bucket < 1:
                 tranche_bucket = 1
 
+            tranche_desc = get_descriptive_tranche_name(tranche_bucket)
+
             dataset[ticker] = {
                 "ticker": ticker,
                 "name": info.get("shortName", ticker),
                 "sector": info.get("sector", "Technology"),
                 "market_cap_b": mcap_billions,
-                "tranche": f"Tranche {tranche_bucket} (${tranche_bucket-1}B–${tranche_bucket}B)",
+                "tranche": tranche_desc,
                 "tranche_num": tranche_bucket,
                 "rev_growth_pct": round(rev_growth * 100, 2),
                 "gross_margin_pct": round(gross_margins * 100, 2),
@@ -200,30 +213,31 @@ def train_and_score_model(dataset):
     return df
 
 def print_screener_report(df):
-    print("\n" + "="*95)
-    print(" 🎯 1-YEAR 2X STOCK SCREENER & PREDICTIVE RESEARCH REPORT")
-    print("="*95)
-    print(f" Analysis Date: {datetime.now().strftime('%Y-%m-%d')} | Target Universe: $1B–$10B Market Cap")
-    print("="*95)
+    print("\n" + "="*110)
+    print(" 🎯 TOP 10 TRANCHE 2X STOCK SCREENER LEADERBOARD")
+    print("="*110)
+    print(f" Analysis Date: {datetime.now().strftime('%Y-%m-%d')} | Target Universe: Small/Mid-Cap Tranches")
+    print("="*110)
     
-    in_universe = df[(df["market_cap_b"] >= 0.8) & (df["market_cap_b"] <= 10.5)]
-    
-    header = f"{'Ticker':<7} | {'Company Name':<20} | {'Mkt Cap':<8} | {'Tranche':<16} | {'2x Score':<9} | {'Rev Growth':<10} | {'Trajectory':<18}"
+    header = f"{'Rank':<4} | {'Ticker':<7} | {'Company Name':<18} | {'Sector':<15} | {'Mkt Cap':<8} | {'Tranche Category':<24} | {'2x Score':<9} | {'Rev Growth':<10}"
     print(header)
     print("-" * len(header))
 
-    for idx, row in in_universe.head(15).iterrows():
-        name = row['name'][:19]
+    for idx, row in df.head(10).iterrows():
+        rank = f"#{idx+1}"
+        name = row['name'][:17]
+        sector = row['sector'][:14]
         mcap = f"${row['market_cap_b']:.2f}B"
+        tranche = row['tranche'][:23]
         score = f"{row['conviction_score']:.1f}%"
         rev = f"{row['rev_growth_pct']:+.1f}%"
-        print(f"{row['ticker']:<7} | {name:<20} | {mcap:<8} | {row['tranche']:<16} | {score:<9} | {rev:<10} | {row['trajectory_tag']:<18}")
+        print(f"{rank:<4} | {row['ticker']:<7} | {name:<18} | {sector:<15} | {mcap:<8} | {tranche:<24} | {score:<9} | {rev:<10}")
 
-    print("="*95)
+    print("="*110)
     print("📌 SUMMARY INSIGHTS:")
-    print("  • High Conviction Candidates (>75% Score) demonstrate high revenue acceleration and expanding margins.")
+    print("  • Displaying Top 10 High Conviction Candidates.")
     print("  • Cache file stored at: " + CACHE_FILE)
-    print("="*95 + "\n")
+    print("="*110 + "\n")
 
 if __name__ == "__main__":
     print("🚀 Starting 1-Year 2x Stock Screener Pipeline...")
