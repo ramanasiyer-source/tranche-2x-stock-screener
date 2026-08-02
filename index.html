@@ -599,17 +599,17 @@
   </div>
 
   <script>
-    const initialDataset = [
-      { ticker: "CYTK", name: "Cytokinetics, Inc.", sector: "Healthcare", market_cap_b: 10.74, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 82.0, score_2y: 83.0, rev_growth_pct: 1125.8, gross_margin_pct: 85.2, op_margin_pct: 12.4, fcf_yield_pct: 4.8, share_dilution_1y: 95.2, trajectory_tag: "📈 Linear Climber" },
-      { ticker: "BE", name: "Bloom Energy Corp", sector: "Industrials", market_cap_b: 5.65, tranche: "Mid-Cap (Tranche 6)", score_1y: 80.0, score_2y: 89.0, rev_growth_pct: 130.4, gross_margin_pct: 32.1, op_margin_pct: 8.5, fcf_yield_pct: 3.5, share_dilution_1y: 118.5, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "TXG", name: "10x Genomics, Inc.", sector: "Healthcare", market_cap_b: 5.49, tranche: "Mid-Cap (Tranche 6)", score_1y: 79.0, score_2y: 82.0, rev_growth_pct: -2.6, gross_margin_pct: 65.2, op_margin_pct: 8.1, fcf_yield_pct: 4.1, share_dilution_1y: 52.4, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "HALO", name: "Halozyme Therapeutics", sector: "Healthcare", market_cap_b: 9.14, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 78.0, score_2y: 76.0, rev_growth_pct: 42.2, gross_margin_pct: 78.4, op_margin_pct: 44.5, fcf_yield_pct: 6.8, share_dilution_1y: 124.5, trajectory_tag: "📊 Steady Growth" },
-      { ticker: "BLDP", name: "Ballard Power Systems", sector: "Industrials", market_cap_b: 0.84, tranche: "Small-Cap (Tranche 1)", score_1y: 77.0, score_2y: 69.0, rev_growth_pct: 26.2, gross_margin_pct: 18.5, op_margin_pct: -12.4, fcf_yield_pct: 3.2, share_dilution_1y: 298.4, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "NTRA", name: "Natera, Inc.", sector: "Healthcare", market_cap_b: 7.61, tranche: "Upper Mid-Cap (Tranche 8)", score_1y: 75.0, score_2y: 77.0, rev_growth_pct: 38.8, gross_margin_pct: 58.2, op_margin_pct: 14.1, fcf_yield_pct: 5.2, share_dilution_1y: 110.2, trajectory_tag: "📈 Linear Climber" },
-      { ticker: "DOCN", name: "DigitalOcean Holdings", sector: "Technology", market_cap_b: 3.92, tranche: "Small-Cap (Tranche 4)", score_1y: 73.0, score_2y: 83.0, rev_growth_pct: 22.4, gross_margin_pct: 58.5, op_margin_pct: 14.2, fcf_yield_pct: 1.1, share_dilution_1y: 88.5, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "MEDP", name: "Medpace Holdings", sector: "Healthcare", market_cap_b: 9.08, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 69.0, score_2y: 69.0, rev_growth_pct: 26.5, gross_margin_pct: 62.4, op_margin_pct: 18.2, fcf_yield_pct: 6.1, share_dilution_1y: 31.4, trajectory_tag: "📊 Steady Growth" },
-      { ticker: "INCY", name: "Incyte Corporation", sector: "Healthcare", market_cap_b: 8.10, tranche: "Upper Mid-Cap (Tranche 9)", score_1y: 68.0, score_2y: 77.0, rev_growth_pct: 20.9, gross_margin_pct: 88.2, op_margin_pct: 28.4, fcf_yield_pct: 7.5, share_dilution_1y: 220.4, trajectory_tag: "📊 Steady Growth" },
-      { ticker: "DUOL", name: "Duolingo, Inc.", sector: "Technology", market_cap_b: 6.24, tranche: "Mid-Cap (Tranche 7)", score_1y: 35.0, score_2y: 78.0, rev_growth_pct: 26.5, gross_margin_pct: 72.6, op_margin_pct: 15.3, fcf_yield_pct: 5.0, share_dilution_1y: 42.1, trajectory_tag: "⚡ Volatile Breakout" }
+    let initialDataset = [
+      { ticker: "CYTK", name: "Cytokinetics, Inc.", sector: "Healthcare", market_cap_b: 10.74, current_price: 78.39, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 82.0, score_2y: 83.0, rev_growth_pct: 1125.8, gross_margin_pct: 85.2, op_margin_pct: 12.4, fcf_yield_pct: 4.8, share_dilution_1y: 95.2, trajectory_tag: "📈 Linear Climber" },
+      { ticker: "BE", name: "Bloom Energy Corp", sector: "Industrials", market_cap_b: 5.65, current_price: 15.24, tranche: "Mid-Cap (Tranche 6)", score_1y: 80.0, score_2y: 89.0, rev_growth_pct: 130.4, gross_margin_pct: 32.1, op_margin_pct: 8.5, fcf_yield_pct: 3.5, share_dilution_1y: 118.5, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "TXG", name: "10x Genomics, Inc.", sector: "Healthcare", market_cap_b: 5.49, current_price: 36.42, tranche: "Mid-Cap (Tranche 6)", score_1y: 79.0, score_2y: 82.0, rev_growth_pct: -2.6, gross_margin_pct: 65.2, op_margin_pct: 8.1, fcf_yield_pct: 4.1, share_dilution_1y: 52.4, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "HALO", name: "Halozyme Therapeutics", sector: "Healthcare", market_cap_b: 9.14, current_price: 49.52, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 78.0, score_2y: 76.0, rev_growth_pct: 42.2, gross_margin_pct: 78.4, op_margin_pct: 44.5, fcf_yield_pct: 6.8, share_dilution_1y: 124.5, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "BLDP", name: "Ballard Power Systems", sector: "Industrials", market_cap_b: 0.84, current_price: 2.34, tranche: "Small-Cap (Tranche 1)", score_1y: 77.0, score_2y: 69.0, rev_growth_pct: 26.2, gross_margin_pct: 18.5, op_margin_pct: -12.4, fcf_yield_pct: 3.2, share_dilution_1y: 298.4, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "NTRA", name: "Natera, Inc.", sector: "Healthcare", market_cap_b: 7.61, current_price: 84.12, tranche: "Upper Mid-Cap (Tranche 8)", score_1y: 75.0, score_2y: 77.0, rev_growth_pct: 38.8, gross_margin_pct: 58.2, op_margin_pct: 14.1, fcf_yield_pct: 5.2, share_dilution_1y: 110.2, trajectory_tag: "📈 Linear Climber" },
+      { ticker: "DOCN", name: "DigitalOcean Holdings", sector: "Technology", market_cap_b: 3.92, current_price: 33.15, tranche: "Small-Cap (Tranche 4)", score_1y: 73.0, score_2y: 83.0, rev_growth_pct: 22.4, gross_margin_pct: 58.5, op_margin_pct: 14.2, fcf_yield_pct: 1.1, share_dilution_1y: 88.5, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "MEDP", name: "Medpace Holdings", sector: "Healthcare", market_cap_b: 9.08, current_price: 368.10, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 69.0, score_2y: 69.0, rev_growth_pct: 26.5, gross_margin_pct: 62.4, op_margin_pct: 18.2, fcf_yield_pct: 6.1, share_dilution_1y: 31.4, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "INCY", name: "Incyte Corporation", sector: "Healthcare", market_cap_b: 8.10, current_price: 57.24, tranche: "Upper Mid-Cap (Tranche 9)", score_1y: 68.0, score_2y: 77.0, rev_growth_pct: 20.9, gross_margin_pct: 88.2, op_margin_pct: 28.4, fcf_yield_pct: 7.5, share_dilution_1y: 220.4, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "DUOL", name: "Duolingo, Inc.", sector: "Technology", market_cap_b: 6.24, current_price: 215.10, tranche: "Mid-Cap (Tranche 7)", score_1y: 35.0, score_2y: 78.0, rev_growth_pct: 26.5, gross_margin_pct: 72.6, op_margin_pct: 15.3, fcf_yield_pct: 5.0, share_dilution_1y: 42.1, trajectory_tag: "⚡ Volatile Breakout" }
     ];
 
     let currentHorizon = '1Y';
@@ -650,6 +650,42 @@
     const drawerOverlay = document.getElementById('drawer-overlay');
     const closeDrawerBtn = document.getElementById('close-drawer-btn');
 
+    // Dynamic cache loader
+    async function loadCacheData() {
+      try {
+        const res = await fetch('data/stock_screener_cache.json');
+        if (res.ok) {
+          const payload = await res.json();
+          const rawData = payload.data || payload;
+          const parsed = Object.values(rawData).map(stock => {
+            return {
+              ticker: stock.ticker,
+              name: stock.name,
+              sector: stock.sector,
+              market_cap_b: stock.market_cap_b,
+              current_price: stock.current_price || (stock.share_dilution_1y > 0 ? (stock.market_cap_b * 1000) / stock.share_dilution_1y : stock.market_cap_b * 15.0),
+              tranche: stock.tranche,
+              tranche_cat: stock.tranche_cat,
+              score_1y: stock.conviction_score_1y || stock.score_1y || 50,
+              score_2y: stock.conviction_score_2y || stock.score_2y || 50,
+              rev_growth_pct: stock.rev_growth_yoy || stock.rev_growth_pct || 0,
+              gross_margin_pct: stock.gross_margin_pct || 50,
+              op_margin_pct: stock.op_margin_pct || 10,
+              fcf_yield_pct: stock.fcf_yield_pct || 5,
+              share_dilution_1y: stock.share_dilution_1y || 100,
+              trajectory_tag: stock.trajectory_tag || "📊 Steady Growth"
+            };
+          });
+          if (parsed.length > 0) {
+            initialDataset = parsed;
+          }
+        }
+      } catch (err) {
+        console.warn("Could not load live cache, using local fallbacks:", err);
+      }
+      renderTable();
+    }
+
     function handleSort(columnKey) {
       if (sortColumn === columnKey) {
         sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
@@ -684,14 +720,11 @@
         if (type.includes("Linear")) {
           val = val * (1.0 + (rate / 400.0));
         } else if (type.includes("Breakout")) {
-          // Sigmoid breakout: accelerated growth in middle steps
           const scale = 1.0 + (rate / 100.0) * (1 / (1 + Math.exp(-(t - 2.5))));
           val = startVal * scale;
         } else if (type.includes("Oscillator")) {
-          // Sine wave oscillation around a climb trend
           val = startVal * (1.0 + (rate / 450.0) * t) + (startVal * 0.08 * Math.sin(t * 1.5));
         } else {
-          // Steady growth log climb
           val = val * (1.0 + (rate / 500.0) * Math.log1p(t));
         }
         path.push(Math.round(val * 100) / 100);
@@ -759,6 +792,22 @@
       sandboxCount.innerText = sandboxPortfolio.length;
     }
 
+    function toggleSandbox(ticker) {
+      if (sandboxPortfolio.includes(ticker)) {
+        sandboxPortfolio = sandboxPortfolio.filter(t => t !== ticker);
+      } else {
+        sandboxPortfolio.push(ticker);
+      }
+      renderTable();
+      renderSandbox();
+    }
+
+    function removeFromSandbox(ticker) {
+      sandboxPortfolio = sandboxPortfolio.filter(t => t !== ticker);
+      renderTable();
+      renderSandbox();
+    }
+
     // Tab 1: Tranche Climb Chart (Market Cap Focus)
     function renderTrancheClimbChart() {
       const ctx = document.getElementById('trancheClimbChart').getContext('2d');
@@ -813,13 +862,12 @@
       const colors = ['#38bdf8', '#10b981', '#c084fc', '#f59e0b', '#f43f5e'];
 
       const datasets = topPicks.map((stock, i) => {
-        // Base Price calculation
-        const basePrice = stock.share_dilution_1y > 0 ? (stock.market_cap_b * 1000) / stock.share_dilution_1y : stock.market_cap_b * 12.0;
+        const basePrice = stock.current_price && stock.current_price > 0 ? stock.current_price : 50.0;
         const climbRate = currentHorizon === '1Y' ? stock.score_1y : stock.score_2y;
         const priceData = generateClimbPath(basePrice, climbRate, stock.trajectory_tag);
 
         return {
-          label: `${stock.ticker} (Est. Base: $${basePrice.toFixed(2)})`,
+          label: `${stock.ticker} (Base: $${basePrice.toFixed(2)})`,
           data: priceData,
           borderColor: colors[i % colors.length],
           backgroundColor: 'transparent',
@@ -851,29 +899,14 @@
       });
     }
 
-    function toggleSandbox(ticker) {
-      if (sandboxPortfolio.includes(ticker)) {
-        sandboxPortfolio = sandboxPortfolio.filter(t => t !== ticker);
-      } else {
-        sandboxPortfolio.push(ticker);
-      }
-      renderTable();
-      renderSandbox();
-    }
-
-    function removeFromSandbox(ticker) {
-      sandboxPortfolio = sandboxPortfolio.filter(t => t !== ticker);
-      renderTable();
-      renderSandbox();
-    }
-
     function renderSandbox() {
+      sandboxCount.innerText = sandboxPortfolio.length;
+      sandboxList.innerHTML = '';
       if (sandboxPortfolio.length === 0) {
         sandboxList.innerHTML = `<p style="color: var(--text-muted); font-size: 12.5px; text-align: center; padding: 20px;">No stocks added yet. Click "+ Sandbox" on any stock in the screener!</p>`;
         return;
       }
 
-      sandboxList.innerHTML = '';
       sandboxPortfolio.forEach(ticker => {
         const stock = initialDataset.find(s => s.ticker === ticker);
         const score = stock ? (currentHorizon === '1Y' ? stock.score_1y : stock.score_2y) : 70;
@@ -1045,7 +1078,8 @@
     closeDrawerBtn.addEventListener('click', () => drawerOverlay.classList.remove('active'));
     drawerOverlay.addEventListener('click', (e) => { if (e.target === drawerOverlay) drawerOverlay.classList.remove('active'); });
 
-    renderTable();
+    // Initial Load
+    loadCacheData();
   </script>
 </body>
 </html>

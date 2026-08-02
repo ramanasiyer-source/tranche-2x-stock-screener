@@ -127,6 +127,9 @@ def fetch_stock_data(tickers):
                 
             mcap_billions = round(market_cap / 1e9, 2)
 
+            # Actual stock price
+            current_price = info.get("currentPrice", info.get("regularMarketPrice", 0.0)) or 0.0
+
             # 1. Growth & Acceleration
             rev_growth_yoy = round((info.get("revenueGrowth", 0.0) or 0.0) * 100, 2)
             rev_growth_qoq = round((info.get("quarterlyRevenueGrowth", 0.0) or rev_growth_yoy / 4.0), 2)
@@ -190,6 +193,7 @@ def fetch_stock_data(tickers):
                 "name": info.get("shortName", ticker),
                 "sector": info.get("sector", "Technology"),
                 "market_cap_b": mcap_billions,
+                "current_price": current_price,
                 "tranche": tranche_desc,
                 "tranche_cat": tranche_cat,
                 "tranche_num": tranche_bucket,
