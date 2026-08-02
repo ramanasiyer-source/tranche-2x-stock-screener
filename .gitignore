@@ -22,7 +22,8 @@ wheels/
 *.egg
 
 # Cache and generated data
-data/
+data/*
+!data/stock_screener_cache.json
 
 # Environment / IDE
 .venv
