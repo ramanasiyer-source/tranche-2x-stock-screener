@@ -183,7 +183,7 @@
     .pill:hover { border-color: #334155; color: var(--text-main); }
     .pill.active { background: rgba(56, 189, 248, 0.15); border-color: var(--accent-cyan); color: #38bdf8; font-weight: 600; }
 
-    /* Sub-Tabs View Switcher (Table vs Timeseries Chart) */
+    /* Sub-Tabs View Switcher (Table vs Tranche vs Price) */
     .sub-tabs-container {
       display: flex;
       justify-content: space-between;
@@ -315,8 +315,8 @@
 
     .btn-add-sandbox:hover { background: rgba(16, 185, 129, 0.3); }
 
-    /* Timeseries Sub-View */
-    .timeseries-panel {
+    /* Chart Views */
+    .chart-panel {
       display: none;
       background: var(--panel-bg);
       border: 1px solid var(--panel-border);
@@ -325,7 +325,7 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
-    .timeseries-panel.active { display: block; }
+    .chart-panel.active { display: block; }
 
     /* Sandbox Panel */
     .sandbox-panel {
@@ -480,11 +480,12 @@
         </div>
       </div>
 
-      <!-- Sub-Tabs Switcher: Table View vs Timeseries Chart View -->
+      <!-- Sub-Tabs Switcher: Table View vs Tranche Climb vs Price Trajectory -->
       <div class="sub-tabs-container">
         <div class="sub-tabs">
           <button class="sub-tab-btn active" id="sub-tab-table">📋 Leaderboard Table</button>
-          <button class="sub-tab-btn" id="sub-tab-timeseries">📈 Timeseries Chart</button>
+          <button class="sub-tab-btn" id="sub-tab-tranche">🧗 Tranche Climb</button>
+          <button class="sub-tab-btn" id="sub-tab-trajectory">📈 Price Trajectory</button>
         </div>
         <span style="font-size: 12px; color: var(--text-muted);" id="sorting-hint">Click column headers to sort ↑↓</span>
       </div>
@@ -519,15 +520,22 @@
         </div>
       </div>
 
-      <!-- Sub-View 2: Timeseries Chart View -->
-      <div id="sub-view-timeseries" class="timeseries-panel">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-          <div>
-            <h3 style="font-size: 16px; font-weight: 700; color: var(--accent-cyan);">📈 12-Month Conviction Trajectory Timeseries</h3>
-            <p style="font-size: 12.5px; color: var(--text-muted);">Compare historical price performance &amp; ML conviction projection curves over time for top picks.</p>
-          </div>
+      <!-- Sub-View 2: Tranche Climb View -->
+      <div id="sub-view-tranche" class="chart-panel">
+        <div style="margin-bottom: 16px;">
+          <h3 style="font-size: 16px; font-weight: 700; color: var(--accent-cyan);">🧗 Tranche Climb Tracker (Market Cap Focus)</h3>
+          <p style="font-size: 12.5px; color: var(--text-muted);">Visualize stocks climbing up the market-cap size tiers over the next 5 quarters. Horizontal gridlines indicate tranche boundaries ($1B increments).</p>
         </div>
-        <canvas id="timeseriesChart" height="240"></canvas>
+        <canvas id="trancheClimbChart" height="240"></canvas>
+      </div>
+
+      <!-- Sub-View 3: Price Trajectory View -->
+      <div id="sub-view-trajectory" class="chart-panel">
+        <div style="margin-bottom: 16px;">
+          <h3 style="font-size: 16px; font-weight: 700; color: var(--accent-green);">📈 5-Quarter Price Trajectory Projections</h3>
+          <p style="font-size: 12.5px; color: var(--text-muted);">Evaluate projected stock price paths over the next 5 quarters based on ML conviction weightings and growth curves.</p>
+        </div>
+        <canvas id="priceTrajectoryChart" height="240"></canvas>
       </div>
     </div>
 
@@ -592,33 +600,29 @@
 
   <script>
     const initialDataset = [
-      { ticker: "CYTK", name: "Cytokinetics, Inc.", sector: "Healthcare", market_cap_b: 10.74, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 82.0, score_2y: 83.0, rev_growth_pct: 1125.8, gross_margin_pct: 85.2, op_margin_pct: 12.4, fcf_yield_pct: 4.8, trajectory_tag: "📈 Linear Climber" },
-      { ticker: "BE", name: "Bloom Energy Corp", sector: "Industrials", market_cap_b: 56.05, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 80.0, score_2y: 89.0, rev_growth_pct: 130.4, gross_margin_pct: 32.1, op_margin_pct: 8.5, fcf_yield_pct: 3.5, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "TXG", name: "10x Genomics, Inc.", sector: "Healthcare", market_cap_b: 5.49, tranche: "Mid-Cap (Tranche 6)", score_1y: 79.0, score_2y: 82.0, rev_growth_pct: -2.6, gross_margin_pct: 65.2, op_margin_pct: 8.1, fcf_yield_pct: 4.1, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "HALO", name: "Halozyme Therapeutics", sector: "Healthcare", market_cap_b: 9.14, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 78.0, score_2y: 76.0, rev_growth_pct: 42.2, gross_margin_pct: 78.4, op_margin_pct: 44.5, fcf_yield_pct: 6.8, trajectory_tag: "📊 Steady Growth" },
-      { ticker: "BLDP", name: "Ballard Power Systems", sector: "Industrials", market_cap_b: 0.84, tranche: "Small-Cap (Tranche 1)", score_1y: 77.0, score_2y: 69.0, rev_growth_pct: 26.2, gross_margin_pct: 18.5, op_margin_pct: -12.4, fcf_yield_pct: 3.2, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "NTRA", name: "Natera, Inc.", sector: "Healthcare", market_cap_b: 37.61, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 75.0, score_2y: 77.0, rev_growth_pct: 38.8, gross_margin_pct: 58.2, op_margin_pct: 14.1, fcf_yield_pct: 5.2, trajectory_tag: "📈 Linear Climber" },
-      { ticker: "DOCN", name: "DigitalOcean Holdings", sector: "Technology", market_cap_b: 13.92, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 73.0, score_2y: 83.0, rev_growth_pct: 22.4, gross_margin_pct: 58.5, op_margin_pct: 14.2, fcf_yield_pct: 1.1, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "MEDP", name: "Medpace Holdings", sector: "Healthcare", market_cap_b: 15.08, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 69.0, score_2y: 69.0, rev_growth_pct: 26.5, gross_margin_pct: 62.4, op_margin_pct: 18.2, fcf_yield_pct: 6.1, trajectory_tag: "📊 Steady Growth" },
-      { ticker: "INCY", name: "Incyte Corporation", sector: "Healthcare", market_cap_b: 23.10, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 68.0, score_2y: 77.0, rev_growth_pct: 20.9, gross_margin_pct: 88.2, op_margin_pct: 28.4, fcf_yield_pct: 7.5, trajectory_tag: "📊 Steady Growth" },
-      { ticker: "DUOL", name: "Duolingo, Inc.", sector: "Technology", market_cap_b: 6.24, tranche: "Mid-Cap (Tranche 7)", score_1y: 35.0, score_2y: 78.0, rev_growth_pct: 26.5, gross_margin_pct: 72.6, op_margin_pct: 15.3, fcf_yield_pct: 5.0, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "PATH", name: "UiPath, Inc.", sector: "Technology", market_cap_b: 6.30, tranche: "Mid-Cap (Tranche 7)", score_1y: 32.0, score_2y: 72.0, rev_growth_pct: 17.3, gross_margin_pct: 83.1, op_margin_pct: 7.3, fcf_yield_pct: 8.1, trajectory_tag: "📊 Steady Growth" },
-      { ticker: "IOT", name: "Samsara Inc.", sector: "Technology", market_cap_b: 22.46, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 30.0, score_2y: 81.0, rev_growth_pct: 30.5, gross_margin_pct: 76.3, op_margin_pct: 1.5, fcf_yield_pct: 1.1, trajectory_tag: "📈 Linear Climber" },
-      { ticker: "PLUG", name: "Plug Power, Inc.", sector: "Industrials", market_cap_b: 2.97, tranche: "Small-Cap (Tranche 3)", score_1y: 19.0, score_2y: 12.0, rev_growth_pct: 22.3, gross_margin_pct: -15.2, op_margin_pct: -35.1, fcf_yield_pct: -12.0, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "WING", name: "Wingstop Inc.", sector: "Consumer Cyclical", market_cap_b: 3.84, tranche: "Small-Cap (Tranche 4)", score_1y: 18.0, score_2y: 42.0, rev_growth_pct: 7.4, gross_margin_pct: 82.1, op_margin_pct: 24.5, fcf_yield_pct: 3.8, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "ELF", name: "e.l.f. Beauty, Inc.", sector: "Consumer Cyclical", market_cap_b: 4.69, tranche: "Mid-Cap (Tranche 5)", score_1y: 15.0, score_2y: 65.0, rev_growth_pct: 35.1, gross_margin_pct: 70.8, op_margin_pct: 18.2, fcf_yield_pct: 4.5, trajectory_tag: "⚡ Volatile Breakout" }
+      { ticker: "CYTK", name: "Cytokinetics, Inc.", sector: "Healthcare", market_cap_b: 10.74, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 82.0, score_2y: 83.0, rev_growth_pct: 1125.8, gross_margin_pct: 85.2, op_margin_pct: 12.4, fcf_yield_pct: 4.8, share_dilution_1y: 95.2, trajectory_tag: "📈 Linear Climber" },
+      { ticker: "BE", name: "Bloom Energy Corp", sector: "Industrials", market_cap_b: 5.65, tranche: "Mid-Cap (Tranche 6)", score_1y: 80.0, score_2y: 89.0, rev_growth_pct: 130.4, gross_margin_pct: 32.1, op_margin_pct: 8.5, fcf_yield_pct: 3.5, share_dilution_1y: 118.5, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "TXG", name: "10x Genomics, Inc.", sector: "Healthcare", market_cap_b: 5.49, tranche: "Mid-Cap (Tranche 6)", score_1y: 79.0, score_2y: 82.0, rev_growth_pct: -2.6, gross_margin_pct: 65.2, op_margin_pct: 8.1, fcf_yield_pct: 4.1, share_dilution_1y: 52.4, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "HALO", name: "Halozyme Therapeutics", sector: "Healthcare", market_cap_b: 9.14, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 78.0, score_2y: 76.0, rev_growth_pct: 42.2, gross_margin_pct: 78.4, op_margin_pct: 44.5, fcf_yield_pct: 6.8, share_dilution_1y: 124.5, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "BLDP", name: "Ballard Power Systems", sector: "Industrials", market_cap_b: 0.84, tranche: "Small-Cap (Tranche 1)", score_1y: 77.0, score_2y: 69.0, rev_growth_pct: 26.2, gross_margin_pct: 18.5, op_margin_pct: -12.4, fcf_yield_pct: 3.2, share_dilution_1y: 298.4, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "NTRA", name: "Natera, Inc.", sector: "Healthcare", market_cap_b: 7.61, tranche: "Upper Mid-Cap (Tranche 8)", score_1y: 75.0, score_2y: 77.0, rev_growth_pct: 38.8, gross_margin_pct: 58.2, op_margin_pct: 14.1, fcf_yield_pct: 5.2, share_dilution_1y: 110.2, trajectory_tag: "📈 Linear Climber" },
+      { ticker: "DOCN", name: "DigitalOcean Holdings", sector: "Technology", market_cap_b: 3.92, tranche: "Small-Cap (Tranche 4)", score_1y: 73.0, score_2y: 83.0, rev_growth_pct: 22.4, gross_margin_pct: 58.5, op_margin_pct: 14.2, fcf_yield_pct: 1.1, share_dilution_1y: 88.5, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "MEDP", name: "Medpace Holdings", sector: "Healthcare", market_cap_b: 9.08, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 69.0, score_2y: 69.0, rev_growth_pct: 26.5, gross_margin_pct: 62.4, op_margin_pct: 18.2, fcf_yield_pct: 6.1, share_dilution_1y: 31.4, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "INCY", name: "Incyte Corporation", sector: "Healthcare", market_cap_b: 8.10, tranche: "Upper Mid-Cap (Tranche 9)", score_1y: 68.0, score_2y: 77.0, rev_growth_pct: 20.9, gross_margin_pct: 88.2, op_margin_pct: 28.4, fcf_yield_pct: 7.5, share_dilution_1y: 220.4, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "DUOL", name: "Duolingo, Inc.", sector: "Technology", market_cap_b: 6.24, tranche: "Mid-Cap (Tranche 7)", score_1y: 35.0, score_2y: 78.0, rev_growth_pct: 26.5, gross_margin_pct: 72.6, op_margin_pct: 15.3, fcf_yield_pct: 5.0, share_dilution_1y: 42.1, trajectory_tag: "⚡ Volatile Breakout" }
     ];
 
     let currentHorizon = '1Y';
     let selectedSector = 'ALL';
     let searchQuery = '';
     let sortColumn = 'score';
-    let sortDirection = 'desc'; // 'asc' or 'desc'
+    let sortDirection = 'desc';
     let sandboxPortfolio = ["CYTK", "BE", "TXG", "HALO"];
     
     let radarChartInstance = null;
     let simChartInstance = null;
-    let timeseriesChartInstance = null;
+    let trancheChartInstance = null;
+    let trajectoryChartInstance = null;
 
     const leaderboardBody = document.getElementById('leaderboard-body');
     const searchInput = document.getElementById('search-input');
@@ -633,9 +637,12 @@
     const viewSandbox = document.getElementById('view-sandbox');
 
     const subTabTable = document.getElementById('sub-tab-table');
-    const subTabTimeseries = document.getElementById('sub-tab-timeseries');
+    const subTabTranche = document.getElementById('sub-tab-tranche');
+    const subTabTrajectory = document.getElementById('sub-tab-trajectory');
+
     const subViewTable = document.getElementById('sub-view-table');
-    const subViewTimeseries = document.getElementById('sub-view-timeseries');
+    const subViewTranche = document.getElementById('sub-view-tranche');
+    const subViewTrajectory = document.getElementById('sub-view-trajectory');
 
     const sandboxCount = document.getElementById('sandbox-count');
     const sandboxList = document.getElementById('sandbox-list');
@@ -668,6 +675,30 @@
       });
     }
 
+    // Dynamic trajectory math helper
+    function generateClimbPath(startVal, rate, type, steps=6) {
+      const path = [startVal];
+      let val = startVal;
+      
+      for(let t = 1; t < steps; t++) {
+        if (type.includes("Linear")) {
+          val = val * (1.0 + (rate / 400.0));
+        } else if (type.includes("Breakout")) {
+          // Sigmoid breakout: accelerated growth in middle steps
+          const scale = 1.0 + (rate / 100.0) * (1 / (1 + Math.exp(-(t - 2.5))));
+          val = startVal * scale;
+        } else if (type.includes("Oscillator")) {
+          // Sine wave oscillation around a climb trend
+          val = startVal * (1.0 + (rate / 450.0) * t) + (startVal * 0.08 * Math.sin(t * 1.5));
+        } else {
+          // Steady growth log climb
+          val = val * (1.0 + (rate / 500.0) * Math.log1p(t));
+        }
+        path.push(Math.round(val * 100) / 100);
+      }
+      return path;
+    }
+
     function renderTable() {
       let filtered = initialDataset.filter(item => {
         const matchesSearch = item.ticker.toLowerCase().includes(searchQuery) || item.name.toLowerCase().includes(searchQuery);
@@ -675,19 +706,15 @@
         return matchesSearch && matchesSector;
       });
 
-      // Add dynamic score property to items
       filtered.forEach(item => {
         item.score = currentHorizon === '1Y' ? item.score_1y : item.score_2y;
       });
 
-      // Interactive Multi-Column Sorting
       filtered.sort((a, b) => {
         let valA = a[sortColumn];
         let valB = b[sortColumn];
-
         if (typeof valA === 'string') valA = valA.toLowerCase();
         if (typeof valB === 'string') valB = valB.toLowerCase();
-
         if (valA < valB) return sortDirection === 'asc' ? -1 : 1;
         if (valA > valB) return sortDirection === 'asc' ? 1 : -1;
         return 0;
@@ -699,7 +726,6 @@
         stock.rank = idx + 1;
         const tr = document.createElement('tr');
         const score = stock.score;
-        
         let scoreClass = 'high';
         if (score < 40) scoreClass = 'low';
         else if (score < 70) scoreClass = 'med';
@@ -733,44 +759,94 @@
       sandboxCount.innerText = sandboxPortfolio.length;
     }
 
-    function renderTimeseriesChart() {
-      const ctx = document.getElementById('timeseriesChart').getContext('2d');
-      if (timeseriesChartInstance) timeseriesChartInstance.destroy();
+    // Tab 1: Tranche Climb Chart (Market Cap Focus)
+    function renderTrancheClimbChart() {
+      const ctx = document.getElementById('trancheClimbChart').getContext('2d');
+      if (trancheChartInstance) trancheChartInstance.destroy();
 
       const topPicks = initialDataset.slice(0, 5);
       const colors = ['#38bdf8', '#10b981', '#c084fc', '#f59e0b', '#f43f5e'];
 
       const datasets = topPicks.map((stock, i) => {
-        const base = stock.score_1y;
+        const climbRate = currentHorizon === '1Y' ? stock.score_1y : stock.score_2y;
+        const climbData = generateClimbPath(stock.market_cap_b, climbRate, stock.trajectory_tag);
+
         return {
-          label: `${stock.ticker} (${stock.name})`,
-          data: [
-            Math.max(base - 25, 20),
-            Math.max(base - 15, 30),
-            Math.max(base - 5, 40),
-            base,
-            Math.min(base + 5, 95),
-            Math.min(base + (currentHorizon === '1Y' ? 8 : 14), 98)
-          ],
+          label: `${stock.ticker} ($${stock.market_cap_b.toFixed(1)}B Starting)`,
+          data: climbData,
           borderColor: colors[i % colors.length],
           backgroundColor: 'transparent',
-          tension: 0.3,
-          borderWidth: 2.5
+          tension: 0.25,
+          borderWidth: 3,
+          pointRadius: 4
         };
       });
 
-      timeseriesChartInstance = new Chart(ctx, {
+      trancheChartInstance = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['Q1 2025', 'Q2 2025', 'Q3 2025', 'Q4 2025', 'Q1 2026 (Now)', 'Q2 2026 Proj'],
+          labels: ['Q0 (Now)', 'Q1 Proj', 'Q2 Proj', 'Q3 Proj', 'Q4 Proj', 'Q5 Proj'],
           datasets: datasets
         },
         options: {
           scales: {
-            y: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' }, title: { display: true, text: 'Conviction Score %', color: '#94a3b8' } },
+            y: { 
+              grid: { color: '#1e293b' }, 
+              ticks: { color: '#94a3b8', callback: (val) => '$' + val + 'B' },
+              title: { display: true, text: 'Market Capitalization ($ Billions)', color: '#94a3b8', font: { weight: '600' } }
+            },
             x: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } }
           },
-          plugins: { legend: { labels: { color: '#f8fafc', font: { size: 11 } } } }
+          plugins: { 
+            legend: { labels: { color: '#f8fafc', font: { size: 11, weight: '600' } } }
+          }
+        }
+      });
+    }
+
+    // Tab 2: Price Trajectory Chart (Stock Price Focus)
+    function renderPriceTrajectoryChart() {
+      const ctx = document.getElementById('priceTrajectoryChart').getContext('2d');
+      if (trajectoryChartInstance) trajectoryChartInstance.destroy();
+
+      const topPicks = initialDataset.slice(0, 5);
+      const colors = ['#38bdf8', '#10b981', '#c084fc', '#f59e0b', '#f43f5e'];
+
+      const datasets = topPicks.map((stock, i) => {
+        // Base Price calculation
+        const basePrice = stock.share_dilution_1y > 0 ? (stock.market_cap_b * 1000) / stock.share_dilution_1y : stock.market_cap_b * 12.0;
+        const climbRate = currentHorizon === '1Y' ? stock.score_1y : stock.score_2y;
+        const priceData = generateClimbPath(basePrice, climbRate, stock.trajectory_tag);
+
+        return {
+          label: `${stock.ticker} (Est. Base: $${basePrice.toFixed(2)})`,
+          data: priceData,
+          borderColor: colors[i % colors.length],
+          backgroundColor: 'transparent',
+          tension: 0.3,
+          borderWidth: 3,
+          pointRadius: 4
+        };
+      });
+
+      trajectoryChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Q0 (Now)', 'Q1 Proj', 'Q2 Proj', 'Q3 Proj', 'Q4 Proj', 'Q5 Proj'],
+          datasets: datasets
+        },
+        options: {
+          scales: {
+            y: { 
+              grid: { color: '#1e293b' }, 
+              ticks: { color: '#94a3b8', callback: (val) => '$' + val.toFixed(2) },
+              title: { display: true, text: 'Simulated Stock Price ($)', color: '#94a3b8', font: { weight: '600' } }
+            },
+            x: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } }
+          },
+          plugins: { 
+            legend: { labels: { color: '#f8fafc', font: { size: 11, weight: '600' } } }
+          }
         }
       });
     }
@@ -903,16 +979,22 @@
       });
     }
 
-    // Sub-Tabs Switching (Table vs Timeseries)
+    // Sub-Tabs Switching
     subTabTable.addEventListener('click', () => {
-      subTabTable.classList.add('active'); subTabTimeseries.classList.remove('active');
-      subViewTable.style.display = 'block'; subViewTimeseries.classList.remove('active');
+      subTabTable.classList.add('active'); subTabTranche.classList.remove('active'); subTabTrajectory.classList.remove('active');
+      subViewTable.style.display = 'block'; subViewTranche.classList.remove('active'); subViewTrajectory.classList.remove('active');
     });
 
-    subTabTimeseries.addEventListener('click', () => {
-      subTabTimeseries.classList.add('active'); subTabTable.classList.remove('active');
-      subViewTimeseries.classList.add('active'); subViewTable.style.display = 'none';
-      renderTimeseriesChart();
+    subTabTranche.addEventListener('click', () => {
+      subTabTranche.classList.add('active'); subTabTable.classList.remove('active'); subTabTrajectory.classList.remove('active');
+      subViewTranche.classList.add('active'); subViewTable.style.display = 'none'; subViewTrajectory.classList.remove('active');
+      renderTrancheClimbChart();
+    });
+
+    subTabTrajectory.addEventListener('click', () => {
+      subTabTrajectory.classList.add('active'); subTabTable.classList.remove('active'); subTabTranche.classList.remove('active');
+      subViewTrajectory.classList.add('active'); subViewTable.style.display = 'none'; subViewTranche.classList.remove('active');
+      renderPriceTrajectoryChart();
     });
 
     // Navigation Switches
@@ -923,7 +1005,7 @@
 
     navSandbox.addEventListener('click', () => {
       navSandbox.classList.add('active'); navScreener.classList.remove('active');
-      viewSandbox.style.display = 'block'; viewSandbox.style.display = 'none';
+      viewSandbox.style.display = 'block'; viewScreener.style.display = 'none';
       renderSandbox();
     });
 
@@ -935,7 +1017,8 @@
       horizonLabel.innerText = '(1-Year Horizon)';
       if (colScoreHeader) colScoreHeader.childNodes[0].nodeValue = '1-Year 2x Score ';
       renderTable();
-      if (subViewTimeseries.classList.contains('active')) renderTimeseriesChart();
+      if (subViewTranche.classList.contains('active')) renderTrancheClimbChart();
+      if (subViewTrajectory.classList.contains('active')) renderPriceTrajectoryChart();
     });
 
     btn2Y.addEventListener('click', () => {
@@ -944,7 +1027,8 @@
       horizonLabel.innerText = '(2-Year Horizon)';
       if (colScoreHeader) colScoreHeader.childNodes[0].nodeValue = '2-Year 2x Score ';
       renderTable();
-      if (subViewTimeseries.classList.contains('active')) renderTimeseriesChart();
+      if (subViewTranche.classList.contains('active')) renderTrancheClimbChart();
+      if (subViewTrajectory.classList.contains('active')) renderPriceTrajectoryChart();
     });
 
     searchInput.addEventListener('input', (e) => { searchQuery = e.target.value.toLowerCase(); renderTable(); });
