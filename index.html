@@ -508,6 +508,9 @@
                 <th onclick="handleSort('name')">Company Name <span class="sort-icon" id="sort-icon-name"></span></th>
                 <th onclick="handleSort('sector')">Sector <span class="sort-icon" id="sort-icon-sector"></span></th>
                 <th onclick="handleSort('market_cap_b')">Market Cap <span class="sort-icon" id="sort-icon-market_cap_b"></span></th>
+                <th onclick="handleSort('current_price')">Price <span class="sort-icon" id="sort-icon-current_price"></span></th>
+                <th onclick="handleSort('fifty_two_week_high')">52W High <span class="sort-icon" id="sort-icon-fifty_two_week_high"></span></th>
+                <th onclick="handleSort('fifty_two_week_low')">52W Low <span class="sort-icon" id="sort-icon-fifty_two_week_low"></span></th>
                 <th onclick="handleSort('tranche')">Tranche <span class="sort-icon" id="sort-icon-tranche"></span></th>
                 <th onclick="handleSort('score')" id="col-score-header" class="sort-active">1-Year 2x Score <span class="sort-icon" id="sort-icon-score">▼</span></th>
                 <th onclick="handleSort('rev_growth_pct')">Rev Growth <span class="sort-icon" id="sort-icon-rev_growth_pct"></span></th>
@@ -600,16 +603,16 @@
 
   <script>
     let initialDataset = [
-      { ticker: "CYTK", name: "Cytokinetics, Inc.", sector: "Healthcare", market_cap_b: 10.74, current_price: 78.39, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 82.0, score_2y: 83.0, rev_growth_pct: 1125.8, gross_margin_pct: 85.2, op_margin_pct: 12.4, fcf_yield_pct: 4.8, share_dilution_1y: 95.2, trajectory_tag: "📈 Linear Climber" },
-      { ticker: "BE", name: "Bloom Energy Corp", sector: "Industrials", market_cap_b: 5.65, current_price: 15.24, tranche: "Mid-Cap (Tranche 6)", score_1y: 80.0, score_2y: 89.0, rev_growth_pct: 130.4, gross_margin_pct: 32.1, op_margin_pct: 8.5, fcf_yield_pct: 3.5, share_dilution_1y: 118.5, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "TXG", name: "10x Genomics, Inc.", sector: "Healthcare", market_cap_b: 5.49, current_price: 36.42, tranche: "Mid-Cap (Tranche 6)", score_1y: 79.0, score_2y: 82.0, rev_growth_pct: -2.6, gross_margin_pct: 65.2, op_margin_pct: 8.1, fcf_yield_pct: 4.1, share_dilution_1y: 52.4, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "HALO", name: "Halozyme Therapeutics", sector: "Healthcare", market_cap_b: 9.14, current_price: 49.52, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 78.0, score_2y: 76.0, rev_growth_pct: 42.2, gross_margin_pct: 78.4, op_margin_pct: 44.5, fcf_yield_pct: 6.8, share_dilution_1y: 124.5, trajectory_tag: "📊 Steady Growth" },
-      { ticker: "BLDP", name: "Ballard Power Systems", sector: "Industrials", market_cap_b: 0.84, current_price: 2.34, tranche: "Small-Cap (Tranche 1)", score_1y: 77.0, score_2y: 69.0, rev_growth_pct: 26.2, gross_margin_pct: 18.5, op_margin_pct: -12.4, fcf_yield_pct: 3.2, share_dilution_1y: 298.4, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "NTRA", name: "Natera, Inc.", sector: "Healthcare", market_cap_b: 7.61, current_price: 84.12, tranche: "Upper Mid-Cap (Tranche 8)", score_1y: 75.0, score_2y: 77.0, rev_growth_pct: 38.8, gross_margin_pct: 58.2, op_margin_pct: 14.1, fcf_yield_pct: 5.2, share_dilution_1y: 110.2, trajectory_tag: "📈 Linear Climber" },
-      { ticker: "DOCN", name: "DigitalOcean Holdings", sector: "Technology", market_cap_b: 3.92, current_price: 33.15, tranche: "Small-Cap (Tranche 4)", score_1y: 73.0, score_2y: 83.0, rev_growth_pct: 22.4, gross_margin_pct: 58.5, op_margin_pct: 14.2, fcf_yield_pct: 1.1, share_dilution_1y: 88.5, trajectory_tag: "⚡ Volatile Breakout" },
-      { ticker: "MEDP", name: "Medpace Holdings", sector: "Healthcare", market_cap_b: 9.08, current_price: 368.10, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 69.0, score_2y: 69.0, rev_growth_pct: 26.5, gross_margin_pct: 62.4, op_margin_pct: 18.2, fcf_yield_pct: 6.1, share_dilution_1y: 31.4, trajectory_tag: "📊 Steady Growth" },
-      { ticker: "INCY", name: "Incyte Corporation", sector: "Healthcare", market_cap_b: 8.10, current_price: 57.24, tranche: "Upper Mid-Cap (Tranche 9)", score_1y: 68.0, score_2y: 77.0, rev_growth_pct: 20.9, gross_margin_pct: 88.2, op_margin_pct: 28.4, fcf_yield_pct: 7.5, share_dilution_1y: 220.4, trajectory_tag: "📊 Steady Growth" },
-      { ticker: "DUOL", name: "Duolingo, Inc.", sector: "Technology", market_cap_b: 6.24, current_price: 215.10, tranche: "Mid-Cap (Tranche 7)", score_1y: 35.0, score_2y: 78.0, rev_growth_pct: 26.5, gross_margin_pct: 72.6, op_margin_pct: 15.3, fcf_yield_pct: 5.0, share_dilution_1y: 42.1, trajectory_tag: "⚡ Volatile Breakout" }
+      { ticker: "CYTK", name: "Cytokinetics, Inc.", sector: "Healthcare", market_cap_b: 10.74, current_price: 78.39, fifty_two_week_high: 107.80, fifty_two_week_low: 45.20, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 82.0, score_2y: 83.0, rev_growth_pct: 1125.8, gross_margin_pct: 85.2, op_margin_pct: 12.4, fcf_yield_pct: 4.8, share_dilution_1y: 95.2, trajectory_tag: "📈 Linear Climber" },
+      { ticker: "BE", name: "Bloom Energy Corp", sector: "Industrials", market_cap_b: 5.65, current_price: 15.24, fifty_two_week_high: 22.80, fifty_two_week_low: 9.40, tranche: "Mid-Cap (Tranche 6)", score_1y: 80.0, score_2y: 89.0, rev_growth_pct: 130.4, gross_margin_pct: 32.1, op_margin_pct: 8.5, fcf_yield_pct: 3.5, share_dilution_1y: 118.5, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "TXG", name: "10x Genomics, Inc.", sector: "Healthcare", market_cap_b: 5.49, current_price: 36.42, fifty_two_week_high: 58.10, fifty_two_week_low: 26.50, tranche: "Mid-Cap (Tranche 6)", score_1y: 79.0, score_2y: 82.0, rev_growth_pct: -2.6, gross_margin_pct: 65.2, op_margin_pct: 8.1, fcf_yield_pct: 4.1, share_dilution_1y: 52.4, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "HALO", name: "Halozyme Therapeutics", sector: "Healthcare", market_cap_b: 9.14, current_price: 49.52, fifty_two_week_high: 64.00, fifty_two_week_low: 34.10, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 78.0, score_2y: 76.0, rev_growth_pct: 42.2, gross_margin_pct: 78.4, op_margin_pct: 44.5, fcf_yield_pct: 6.8, share_dilution_1y: 124.5, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "BLDP", name: "Ballard Power Systems", sector: "Industrials", market_cap_b: 0.84, current_price: 2.34, fifty_two_week_high: 4.20, fifty_two_week_low: 1.80, tranche: "Small-Cap (Tranche 1)", score_1y: 77.0, score_2y: 69.0, rev_growth_pct: 26.2, gross_margin_pct: 18.5, op_margin_pct: -12.4, fcf_yield_pct: 3.2, share_dilution_1y: 298.4, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "NTRA", name: "Natera, Inc.", sector: "Healthcare", market_cap_b: 7.61, current_price: 84.12, fifty_two_week_high: 112.50, fifty_two_week_low: 52.10, tranche: "Upper Mid-Cap (Tranche 8)", score_1y: 75.0, score_2y: 77.0, rev_growth_pct: 38.8, gross_margin_pct: 58.2, op_margin_pct: 14.1, fcf_yield_pct: 5.2, share_dilution_1y: 110.2, trajectory_tag: "📈 Linear Climber" },
+      { ticker: "DOCN", name: "DigitalOcean Holdings", sector: "Technology", market_cap_b: 3.92, current_price: 33.15, fifty_two_week_high: 48.20, fifty_two_week_low: 22.10, tranche: "Small-Cap (Tranche 4)", score_1y: 73.0, score_2y: 83.0, rev_growth_pct: 22.4, gross_margin_pct: 58.5, op_margin_pct: 14.2, fcf_yield_pct: 1.1, share_dilution_1y: 88.5, trajectory_tag: "⚡ Volatile Breakout" },
+      { ticker: "MEDP", name: "Medpace Holdings", sector: "Healthcare", market_cap_b: 9.08, current_price: 368.10, fifty_two_week_high: 440.00, fifty_two_week_low: 210.00, tranche: "Upper Mid-Cap (Tranche 10)", score_1y: 69.0, score_2y: 69.0, rev_growth_pct: 26.5, gross_margin_pct: 62.4, op_margin_pct: 18.2, fcf_yield_pct: 6.1, share_dilution_1y: 31.4, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "INCY", name: "Incyte Corporation", sector: "Healthcare", market_cap_b: 8.10, current_price: 57.24, fifty_two_week_high: 78.40, fifty_two_week_low: 48.10, tranche: "Upper Mid-Cap (Tranche 9)", score_1y: 68.0, score_2y: 77.0, rev_growth_pct: 20.9, gross_margin_pct: 88.2, op_margin_pct: 28.4, fcf_yield_pct: 7.5, share_dilution_1y: 220.4, trajectory_tag: "📊 Steady Growth" },
+      { ticker: "DUOL", name: "Duolingo, Inc.", sector: "Technology", market_cap_b: 6.24, current_price: 215.10, fifty_two_week_high: 250.00, fifty_two_week_low: 110.00, tranche: "Mid-Cap (Tranche 7)", score_1y: 35.0, score_2y: 78.0, rev_growth_pct: 26.5, gross_margin_pct: 72.6, op_margin_pct: 15.3, fcf_yield_pct: 5.0, share_dilution_1y: 42.1, trajectory_tag: "⚡ Volatile Breakout" }
     ];
 
     let currentHorizon = '1Y';
@@ -664,6 +667,8 @@
               sector: stock.sector,
               market_cap_b: stock.market_cap_b,
               current_price: stock.current_price || (stock.share_dilution_1y > 0 ? (stock.market_cap_b * 1000) / stock.share_dilution_1y : stock.market_cap_b * 15.0),
+              fifty_two_week_high: stock.fifty_two_week_high || stock.current_price || 100,
+              fifty_two_week_low: stock.fifty_two_week_low || stock.current_price || 50,
               tranche: stock.tranche,
               tranche_cat: stock.tranche_cat,
               score_1y: stock.conviction_score_1y || stock.score_1y || 50,
@@ -698,7 +703,7 @@
     }
 
     function updateSortIcons() {
-      const keys = ['rank', 'ticker', 'name', 'sector', 'market_cap_b', 'tranche', 'score', 'rev_growth_pct', 'trajectory_tag'];
+      const keys = ['rank', 'ticker', 'name', 'sector', 'market_cap_b', 'current_price', 'fifty_two_week_high', 'fifty_two_week_low', 'tranche', 'score', 'rev_growth_pct', 'trajectory_tag'];
       keys.forEach(k => {
         const icon = document.getElementById(`sort-icon-${k}`);
         if (icon) {
@@ -771,6 +776,9 @@
           <td style="font-weight:600;">${stock.name}</td>
           <td><span class="sector-badge ${stock.sector === 'Healthcare' ? 'healthcare' : stock.sector === 'Technology' ? 'tech' : 'clean'}">${stock.sector}</span></td>
           <td style="font-weight:600;">$${stock.market_cap_b.toFixed(2)}B</td>
+          <td style="font-weight:600; color:var(--accent-cyan);">$${stock.current_price.toFixed(2)}</td>
+          <td style="color:#cbd5e1; font-weight:500;">$${stock.fifty_two_week_high.toFixed(2)}</td>
+          <td style="color:#cbd5e1; font-weight:500;">$${stock.fifty_two_week_low.toFixed(2)}</td>
           <td style="font-size:12px; color:#cbd5e1;">${stock.tranche}</td>
           <td>
             <div class="score-container">
@@ -893,7 +901,18 @@
             x: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } }
           },
           plugins: { 
-            legend: { labels: { color: '#f8fafc', font: { size: 11, weight: '600' } } }
+            legend: { labels: { color: '#f8fafc', font: { size: 11, weight: '600' } } },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const stockLabel = context.dataset.label.split(' ')[0];
+                  const value = context.parsed.y;
+                  const baseVal = context.dataset.data[0];
+                  const pct = (((value - baseVal) / baseVal) * 100).toFixed(1);
+                  return `${stockLabel}: $${value.toFixed(2)} (${pct >= 0 ? '+' : ''}${pct}%)`;
+                }
+              }
+            }
           }
         }
       });

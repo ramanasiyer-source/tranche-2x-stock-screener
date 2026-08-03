@@ -129,6 +129,8 @@ def fetch_stock_data(tickers):
 
             # Actual stock price
             current_price = info.get("currentPrice", info.get("regularMarketPrice", 0.0)) or 0.0
+            fifty_two_week_high = info.get("fiftyTwoWeekHigh", current_price) or current_price
+            fifty_two_week_low = info.get("fiftyTwoWeekLow", current_price) or current_price
 
             # 1. Growth & Acceleration
             rev_growth_yoy = round((info.get("revenueGrowth", 0.0) or 0.0) * 100, 2)
@@ -194,6 +196,8 @@ def fetch_stock_data(tickers):
                 "sector": info.get("sector", "Technology"),
                 "market_cap_b": mcap_billions,
                 "current_price": current_price,
+                "fifty_two_week_high": fifty_two_week_high,
+                "fifty_two_week_low": fifty_two_week_low,
                 "tranche": tranche_desc,
                 "tranche_cat": tranche_cat,
                 "tranche_num": tranche_bucket,
