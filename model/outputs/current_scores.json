@@ -1,0 +1,6842 @@
+[
+  {
+    "ticker": "GRND",
+    "name": "Grindr Inc.",
+    "sector": "Technology",
+    "market_cap_b": 3.08,
+    "current_price": 17.34,
+    "fifty_two_week_high": 18.691,
+    "fifty_two_week_low": 9.732,
+    "doubling_prob_12m": 0.539,
+    "lgbm_prob": 0.7724,
+    "xgb_prob": 0.5094,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Moderate Conviction",
+    "top_drivers": [
+      {
+        "feature": "price_to_book",
+        "shap": 2.8312
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.7579
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 1.6389
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": 1.0403
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 38.3,
+      "eps_growth_yoy": 64.5,
+      "gross_margin_pct": 74.66,
+      "op_margin_pct": 30.18,
+      "net_margin_pct": 19.853,
+      "fcf_yield_pct": 4.59,
+      "debt_to_equity": 470.77,
+      "ps_ratio": 6.476,
+      "pe_ratio": 37.696,
+      "peg_ratio": null,
+      "ev_to_ebitda": 22.711,
+      "price_to_book": 50.0,
+      "short_ratio": 4.98,
+      "share_dilution_1y": 5.27,
+      "momentum_3m": 25.83,
+      "momentum_6m": 65.3,
+      "rel_strength_6m": 56.39,
+      "drawdown_from_52w_high": -6.97,
+      "recovery_from_52w_low": 76.04,
+      "pct_vs_200dma": 32.52
+    },
+    "scored_at": "2026-08-03",
+    "rank": 1
+  },
+  {
+    "ticker": "ELF",
+    "name": "e.l.f. Beauty, Inc.",
+    "sector": "Consumer Defensive",
+    "market_cap_b": 4.88,
+    "current_price": 82.89,
+    "fifty_two_week_high": 150.99,
+    "fifty_two_week_low": 48.82,
+    "doubling_prob_12m": 0.4381,
+    "lgbm_prob": 0.51,
+    "xgb_prob": 0.5429,
+    "lr_prob": 0.1014,
+    "regime": "Unknown",
+    "conviction": "Moderate Conviction",
+    "top_drivers": [
+      {
+        "feature": "price_to_book",
+        "shap": 2.872
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 1.6732
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.4887
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 1.4154
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 35.1,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 70.72,
+      "op_margin_pct": 8.02,
+      "net_margin_pct": -0.231,
+      "fcf_yield_pct": 3.89,
+      "debt_to_equity": 0.811,
+      "ps_ratio": 18.204,
+      "pe_ratio": 188.386,
+      "peg_ratio": 1.37,
+      "ev_to_ebitda": 74.662,
+      "price_to_book": 18.619,
+      "short_ratio": 2.33,
+      "share_dilution_1y": 12.97,
+      "momentum_3m": 37.03,
+      "momentum_6m": -2.26,
+      "rel_strength_6m": -11.17,
+      "drawdown_from_52w_high": -43.49,
+      "recovery_from_52w_low": 67.22,
+      "pct_vs_200dma": 6.97
+    },
+    "scored_at": "2026-08-03",
+    "rank": 2
+  },
+  {
+    "ticker": "VKTX",
+    "name": "Viking Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 3.7,
+    "current_price": 31.74,
+    "fifty_two_week_high": 43.15,
+    "fifty_two_week_low": 22.959,
+    "doubling_prob_12m": 0.2403,
+    "lgbm_prob": 0.0003,
+    "xgb_prob": 0.4352,
+    "lr_prob": 0.5481,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.3572
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.8775
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.7881
+      },
+      {
+        "feature": "price_to_book",
+        "shap": 0.7742
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 0.0,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 0.0,
+      "op_margin_pct": 0.0,
+      "net_margin_pct": 0.0,
+      "fcf_yield_pct": -11.3,
+      "debt_to_equity": 0.01,
+      "ps_ratio": null,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": null,
+      "price_to_book": 7.329,
+      "short_ratio": 7.98,
+      "share_dilution_1y": 19.95,
+      "momentum_3m": 5.8,
+      "momentum_6m": 7.92,
+      "rel_strength_6m": -0.99,
+      "drawdown_from_52w_high": -24.66,
+      "recovery_from_52w_low": 37.46,
+      "pct_vs_200dma": -6.08
+    },
+    "scored_at": "2026-08-03",
+    "rank": 3
+  },
+  {
+    "ticker": "TARS",
+    "name": "Tarsus Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 2.58,
+    "current_price": 59.04,
+    "fifty_two_week_high": 85.25,
+    "fifty_two_week_low": 39.79,
+    "doubling_prob_12m": 0.2059,
+    "lgbm_prob": 0.0216,
+    "xgb_prob": 0.3502,
+    "lr_prob": 0.4501,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 2.1417
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -1.3786
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 1.1884
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 1.069
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 106.9,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 93.48,
+      "op_margin_pct": -9.5,
+      "net_margin_pct": -9.02,
+      "fcf_yield_pct": -1.22,
+      "debt_to_equity": 0.208,
+      "ps_ratio": 4.814,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -45.699,
+      "price_to_book": 7.279,
+      "short_ratio": 4.26,
+      "share_dilution_1y": 13.25,
+      "momentum_3m": -7.2,
+      "momentum_6m": -11.7,
+      "rel_strength_6m": -20.61,
+      "drawdown_from_52w_high": -28.45,
+      "recovery_from_52w_low": 43.48,
+      "pct_vs_200dma": -14.02
+    },
+    "scored_at": "2026-08-03",
+    "rank": 4
+  },
+  {
+    "ticker": "CLBT",
+    "name": "Cellebrite DI Ltd.",
+    "sector": "Technology",
+    "market_cap_b": 3.68,
+    "current_price": 14.75,
+    "fifty_two_week_high": 19.98,
+    "fifty_two_week_low": 11.02,
+    "doubling_prob_12m": 0.2011,
+    "lgbm_prob": 0.0077,
+    "xgb_prob": 0.369,
+    "lr_prob": 0.4325,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.2499
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 1.1557
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": 0.8663
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 0.6517
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 19.3,
+      "eps_growth_yoy": -42.9,
+      "gross_margin_pct": 83.86,
+      "op_margin_pct": 12.76,
+      "net_margin_pct": 14.476,
+      "fcf_yield_pct": 4.12,
+      "debt_to_equity": 0.045,
+      "ps_ratio": 7.411,
+      "pe_ratio": 52.679,
+      "peg_ratio": null,
+      "ev_to_ebitda": 40.582,
+      "price_to_book": 7.122,
+      "short_ratio": 3.31,
+      "share_dilution_1y": 2.81,
+      "momentum_3m": 10.49,
+      "momentum_6m": 3.29,
+      "rel_strength_6m": -5.62,
+      "drawdown_from_52w_high": -24.59,
+      "recovery_from_52w_low": 33.73,
+      "pct_vs_200dma": -3.49
+    },
+    "scored_at": "2026-08-03",
+    "rank": 5
+  },
+  {
+    "ticker": "AEHR",
+    "name": "Aehr Test Systems",
+    "sector": "Technology",
+    "market_cap_b": 2.61,
+    "current_price": 79.98,
+    "fifty_two_week_high": 126.62,
+    "fifty_two_week_low": 16.38,
+    "doubling_prob_12m": 0.1972,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0015,
+    "lr_prob": 0.9838,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": -2.7407
+      },
+      {
+        "feature": "ev_to_ebitda",
+        "shap": -1.1092
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -1.0366
+      },
+      {
+        "feature": "price_to_book",
+        "shap": 1.0258
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 33.7,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 35.3,
+      "op_margin_pct": -28.29,
+      "net_margin_pct": -14.252,
+      "fcf_yield_pct": -0.21,
+      "debt_to_equity": 0.045,
+      "ps_ratio": 52.179,
+      "pe_ratio": null,
+      "peg_ratio": 0.9,
+      "ev_to_ebitda": -50.0,
+      "price_to_book": 11.835,
+      "short_ratio": 2.0,
+      "share_dilution_1y": 14.81,
+      "momentum_3m": -14.06,
+      "momentum_6m": 194.15,
+      "rel_strength_6m": 185.24,
+      "drawdown_from_52w_high": -31.39,
+      "recovery_from_52w_low": 360.18,
+      "pct_vs_200dma": 50.65
+    },
+    "scored_at": "2026-08-03",
+    "rank": 6
+  },
+  {
+    "ticker": "ENPH",
+    "name": "Enphase Energy, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 4.95,
+    "current_price": 37.54,
+    "fifty_two_week_high": 73.74,
+    "fifty_two_week_low": 25.78,
+    "doubling_prob_12m": 0.19,
+    "lgbm_prob": 0.003,
+    "xgb_prob": 0.4773,
+    "lr_prob": 0.2267,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "share_dilution_1y",
+        "shap": 2.2906
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.2348
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 1.1043
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 1.0943
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -19.6,
+      "eps_growth_yoy": -3.5,
+      "gross_margin_pct": 46.95,
+      "op_margin_pct": 8.72,
+      "net_margin_pct": 10.088,
+      "fcf_yield_pct": 3.08,
+      "debt_to_equity": 0.492,
+      "ps_ratio": 3.724,
+      "pe_ratio": 37.168,
+      "peg_ratio": 1.08,
+      "ev_to_ebitda": 24.174,
+      "price_to_book": 4.197,
+      "short_ratio": 3.56,
+      "share_dilution_1y": 17.39,
+      "momentum_3m": 10.9,
+      "momentum_6m": 0.7,
+      "rel_strength_6m": -8.21,
+      "drawdown_from_52w_high": -48.1,
+      "recovery_from_52w_low": 43.72,
+      "pct_vs_200dma": -6.23
+    },
+    "scored_at": "2026-08-03",
+    "rank": 7
+  },
+  {
+    "ticker": "AVPT",
+    "name": "AvePoint, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.76,
+    "current_price": 13.03,
+    "fifty_two_week_high": 18.55,
+    "fifty_two_week_low": 8.835,
+    "doubling_prob_12m": 0.183,
+    "lgbm_prob": 0.0008,
+    "xgb_prob": 0.3008,
+    "lr_prob": 0.4617,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": -1.493
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.4642
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": 1.0003
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.9143
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 26.0,
+      "eps_growth_yoy": 302.8,
+      "gross_margin_pct": 73.68,
+      "op_margin_pct": 9.57,
+      "net_margin_pct": 10.505,
+      "fcf_yield_pct": 3.76,
+      "debt_to_equity": 0.03,
+      "ps_ratio": 6.227,
+      "pe_ratio": 65.15,
+      "peg_ratio": null,
+      "ev_to_ebitda": 47.449,
+      "price_to_book": 6.292,
+      "short_ratio": 4.38,
+      "share_dilution_1y": 5.87,
+      "momentum_3m": 27.62,
+      "momentum_6m": 23.16,
+      "rel_strength_6m": 14.25,
+      "drawdown_from_52w_high": -29.15,
+      "recovery_from_52w_low": 44.94,
+      "pct_vs_200dma": 10.83
+    },
+    "scored_at": "2026-08-03",
+    "rank": 8
+  },
+  {
+    "ticker": "OUST",
+    "name": "Ouster, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.62,
+    "current_price": 39.01,
+    "fifty_two_week_high": 63.79,
+    "fifty_two_week_low": 16.4,
+    "doubling_prob_12m": 0.1695,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.004,
+    "lr_prob": 0.8416,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": -2.1466
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": 1.5928
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -1.4535
+      },
+      {
+        "feature": "op_margin_pct",
+        "shap": -0.9154
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 48.9,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 48.99,
+      "op_margin_pct": -37.44,
+      "net_margin_pct": -30.122,
+      "fcf_yield_pct": -2.64,
+      "debt_to_equity": 0.063,
+      "ps_ratio": 14.165,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -34.444,
+      "price_to_book": 8.982,
+      "short_ratio": 1.12,
+      "share_dilution_1y": 9.0,
+      "momentum_3m": 47.49,
+      "momentum_6m": 92.45,
+      "rel_strength_6m": 83.54,
+      "drawdown_from_52w_high": -37.6,
+      "recovery_from_52w_low": 134.58,
+      "pct_vs_200dma": 36.28
+    },
+    "scored_at": "2026-08-03",
+    "rank": 9
+  },
+  {
+    "ticker": "ACLS",
+    "name": "Axcelis Technologies, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 4.01,
+    "current_price": 130.38,
+    "fifty_two_week_high": 193.78,
+    "fifty_two_week_low": 67.49,
+    "doubling_prob_12m": 0.1629,
+    "lgbm_prob": 0.0055,
+    "xgb_prob": 0.1699,
+    "lr_prob": 0.5457,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.8234
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.5789
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.2555
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 1.1347
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 3.3,
+      "eps_growth_yoy": -65.9,
+      "gross_margin_pct": 43.61,
+      "op_margin_pct": 11.6,
+      "net_margin_pct": 11.931,
+      "fcf_yield_pct": 2.21,
+      "debt_to_equity": 0.04,
+      "ps_ratio": 4.74,
+      "pe_ratio": 40.491,
+      "peg_ratio": 1.45,
+      "ev_to_ebitda": 34.315,
+      "price_to_book": 3.836,
+      "short_ratio": 2.67,
+      "share_dilution_1y": 5.76,
+      "momentum_3m": -6.86,
+      "momentum_6m": 54.53,
+      "rel_strength_6m": 45.62,
+      "drawdown_from_52w_high": -31.95,
+      "recovery_from_52w_low": 83.94,
+      "pct_vs_200dma": 17.44
+    },
+    "scored_at": "2026-08-03",
+    "rank": 10
+  },
+  {
+    "ticker": "ARQT",
+    "name": "Arcutis Biotherapeutics, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 3.36,
+    "current_price": 26.86,
+    "fifty_two_week_high": 31.77,
+    "fifty_two_week_low": 13.695,
+    "doubling_prob_12m": 0.161,
+    "lgbm_prob": 0.0003,
+    "xgb_prob": 0.5193,
+    "lr_prob": 0.0254,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "price_to_book",
+        "shap": 1.4905
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.9677
+      },
+      {
+        "feature": "ev_to_ebitda",
+        "shap": -0.9564
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.9314
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 60.1,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 90.94,
+      "op_margin_pct": 0.77,
+      "net_margin_pct": -0.572,
+      "fcf_yield_pct": 0.8,
+      "debt_to_equity": 0.605,
+      "ps_ratio": 8.084,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": 200.0,
+      "price_to_book": 17.706,
+      "short_ratio": 7.34,
+      "share_dilution_1y": 10.84,
+      "momentum_3m": 15.03,
+      "momentum_6m": 2.56,
+      "rel_strength_6m": -6.35,
+      "drawdown_from_52w_high": -13.91,
+      "recovery_from_52w_low": 90.23,
+      "pct_vs_200dma": 6.14
+    },
+    "scored_at": "2026-08-03",
+    "rank": 11
+  },
+  {
+    "ticker": "VERA",
+    "name": "Vera Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 2.3,
+    "current_price": 32.1,
+    "fifty_two_week_high": 56.05,
+    "fifty_two_week_low": 19.066,
+    "doubling_prob_12m": 0.1527,
+    "lgbm_prob": 0.0002,
+    "xgb_prob": 0.05,
+    "lr_prob": 0.6879,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.8806
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.3305
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 0.8622
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 0.6741
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 0.0,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 0.0,
+      "op_margin_pct": 0.0,
+      "net_margin_pct": 0.0,
+      "fcf_yield_pct": -12.75,
+      "debt_to_equity": 0.154,
+      "ps_ratio": null,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -4.66,
+      "price_to_book": 4.608,
+      "short_ratio": 5.77,
+      "share_dilution_1y": 21.01,
+      "momentum_3m": -8.81,
+      "momentum_6m": -28.14,
+      "rel_strength_6m": -37.05,
+      "drawdown_from_52w_high": -42.34,
+      "recovery_from_52w_low": 66.75,
+      "pct_vs_200dma": -17.55
+    },
+    "scored_at": "2026-08-03",
+    "rank": 12
+  },
+  {
+    "ticker": "SHLS",
+    "name": "Shoals Technologies Group, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 1.47,
+    "current_price": 8.74,
+    "fifty_two_week_high": 13.18,
+    "fifty_two_week_low": 4.43,
+    "doubling_prob_12m": 0.1479,
+    "lgbm_prob": 0.0458,
+    "xgb_prob": 0.2177,
+    "lr_prob": 0.2983,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.7062
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 1.5698
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.4362
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 1.2506
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 74.9,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 33.5,
+      "op_margin_pct": 11.16,
+      "net_margin_pct": 6.267,
+      "fcf_yield_pct": -5.28,
+      "debt_to_equity": 0.365,
+      "ps_ratio": 2.738,
+      "pe_ratio": 43.7,
+      "peg_ratio": 0.85,
+      "ev_to_ebitda": 17.926,
+      "price_to_book": 2.437,
+      "short_ratio": 2.53,
+      "share_dilution_1y": 8.65,
+      "momentum_3m": 7.11,
+      "momentum_6m": -12.69,
+      "rel_strength_6m": -21.6,
+      "drawdown_from_52w_high": -31.56,
+      "recovery_from_52w_low": 95.96,
+      "pct_vs_200dma": -1.58
+    },
+    "scored_at": "2026-08-03",
+    "rank": 13
+  },
+  {
+    "ticker": "LXRX",
+    "name": "Lexicon Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.03,
+    "current_price": 2.31,
+    "fifty_two_week_high": 2.68,
+    "fifty_two_week_low": 1.02,
+    "doubling_prob_12m": 0.1424,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0019,
+    "lr_prob": 0.7091,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.2705
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": 1.1189
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -1.0229
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.9621
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 1572.1,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 99.49,
+      "op_margin_pct": -34.79,
+      "net_margin_pct": -37.461,
+      "fcf_yield_pct": -3.78,
+      "debt_to_equity": 0.284,
+      "ps_ratio": 14.734,
+      "pe_ratio": null,
+      "peg_ratio": -10.0,
+      "ev_to_ebitda": -38.573,
+      "price_to_book": 4.823,
+      "short_ratio": 6.92,
+      "share_dilution_1y": 7.37,
+      "momentum_3m": 41.72,
+      "momentum_6m": 80.47,
+      "rel_strength_6m": 71.56,
+      "drawdown_from_52w_high": -12.5,
+      "recovery_from_52w_low": 122.12,
+      "pct_vs_200dma": 38.15
+    },
+    "scored_at": "2026-08-03",
+    "rank": 14
+  },
+  {
+    "ticker": "BHVN",
+    "name": "Biohaven Ltd.",
+    "sector": "Healthcare",
+    "market_cap_b": 2.03,
+    "current_price": 13.5,
+    "fifty_two_week_high": 18.566,
+    "fifty_two_week_low": 7.48,
+    "doubling_prob_12m": 0.1378,
+    "lgbm_prob": 0.0137,
+    "xgb_prob": 0.4365,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "price_to_book",
+        "shap": 2.497
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -1.8288
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.25
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.2054
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 0.0,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 0.0,
+      "op_margin_pct": 0.0,
+      "net_margin_pct": 0.0,
+      "fcf_yield_pct": -29.25,
+      "debt_to_equity": 2.21,
+      "ps_ratio": null,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -3.246,
+      "price_to_book": 15.698,
+      "short_ratio": 5.16,
+      "share_dilution_1y": 12.85,
+      "momentum_3m": 40.19,
+      "momentum_6m": 18.53,
+      "rel_strength_6m": 9.62,
+      "drawdown_from_52w_high": -25.46,
+      "recovery_from_52w_low": 73.3,
+      "pct_vs_200dma": 16.53
+    },
+    "scored_at": "2026-08-03",
+    "rank": 15
+  },
+  {
+    "ticker": "SPSC",
+    "name": "SPS Commerce, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.64,
+    "current_price": 73.39,
+    "fifty_two_week_high": 117.37,
+    "fifty_two_week_low": 49.04,
+    "doubling_prob_12m": 0.1377,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0571,
+    "lr_prob": 0.6027,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -2.1059
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 0.93
+      },
+      {
+        "feature": "peg_ratio",
+        "shap": -0.7176
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 0.653
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 5.6,
+      "eps_growth_yoy": -63.9,
+      "gross_margin_pct": 69.82,
+      "op_margin_pct": 15.83,
+      "net_margin_pct": 10.098,
+      "fcf_yield_pct": 7.52,
+      "debt_to_equity": 0.007,
+      "ps_ratio": 3.42,
+      "pe_ratio": 35.284,
+      "peg_ratio": 4.55,
+      "ev_to_ebitda": 13.511,
+      "price_to_book": 2.83,
+      "short_ratio": 3.67,
+      "share_dilution_1y": 8.03,
+      "momentum_3m": 24.56,
+      "momentum_6m": -10.53,
+      "rel_strength_6m": -19.44,
+      "drawdown_from_52w_high": -36.63,
+      "recovery_from_52w_low": 47.04,
+      "pct_vs_200dma": 3.47
+    },
+    "scored_at": "2026-08-03",
+    "rank": 16
+  },
+  {
+    "ticker": "AMBA",
+    "name": "Ambarella, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 3.77,
+    "current_price": 86.0,
+    "fifty_two_week_high": 96.69,
+    "fifty_two_week_low": 48.3,
+    "doubling_prob_12m": 0.1211,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0086,
+    "lr_prob": 0.5928,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "ev_to_ebitda",
+        "shap": -1.291
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 0.8881
+      },
+      {
+        "feature": "peg_ratio",
+        "shap": -0.8824
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.7308
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 16.9,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 58.82,
+      "op_margin_pct": -18.78,
+      "net_margin_pct": -17.185,
+      "fcf_yield_pct": 0.48,
+      "debt_to_equity": 0.022,
+      "ps_ratio": 9.311,
+      "pe_ratio": null,
+      "peg_ratio": 2.28,
+      "ev_to_ebitda": -50.0,
+      "price_to_book": 6.226,
+      "short_ratio": 2.22,
+      "share_dilution_1y": 8.99,
+      "momentum_3m": 20.18,
+      "momentum_6m": 42.79,
+      "rel_strength_6m": 33.88,
+      "drawdown_from_52w_high": -9.96,
+      "recovery_from_52w_low": 76.77,
+      "pct_vs_200dma": 22.03
+    },
+    "scored_at": "2026-08-03",
+    "rank": 17
+  },
+  {
+    "ticker": "FRSH",
+    "name": "Freshworks Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.87,
+    "current_price": 11.36,
+    "fifty_two_week_high": 14.06,
+    "fifty_two_week_low": 6.79,
+    "doubling_prob_12m": 0.1153,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0015,
+    "lr_prob": 0.5742,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.4343
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.9071
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.6451
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": -0.5363
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 16.5,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 84.97,
+      "op_margin_pct": 1.79,
+      "net_margin_pct": 20.687,
+      "fcf_yield_pct": 7.75,
+      "debt_to_equity": 0.038,
+      "ps_ratio": 3.603,
+      "pe_ratio": 18.615,
+      "peg_ratio": 0.61,
+      "ev_to_ebitda": 69.234,
+      "price_to_book": 3.108,
+      "short_ratio": 0.75,
+      "share_dilution_1y": 7.33,
+      "momentum_3m": 29.77,
+      "momentum_6m": 19.15,
+      "rel_strength_6m": 10.24,
+      "drawdown_from_52w_high": -18.72,
+      "recovery_from_52w_low": 65.04,
+      "pct_vs_200dma": 13.36
+    },
+    "scored_at": "2026-08-03",
+    "rank": 18
+  },
+  {
+    "ticker": "WRBY",
+    "name": "Warby Parker Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 2.86,
+    "current_price": 26.69,
+    "fifty_two_week_high": 31.0,
+    "fifty_two_week_low": 14.96,
+    "doubling_prob_12m": 0.1133,
+    "lgbm_prob": 0.0027,
+    "xgb_prob": 0.3396,
+    "lr_prob": 0.0503,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": 1.2601
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 1.0543
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.0182
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.7479
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 8.3,
+      "eps_growth_yoy": -9.6,
+      "gross_margin_pct": 53.41,
+      "op_margin_pct": -0.69,
+      "net_margin_pct": 0.151,
+      "fcf_yield_pct": 1.36,
+      "debt_to_equity": 0.632,
+      "ps_ratio": 3.678,
+      "pe_ratio": 200.0,
+      "peg_ratio": null,
+      "ev_to_ebitda": 69.942,
+      "price_to_book": 8.717,
+      "short_ratio": 4.91,
+      "share_dilution_1y": 14.56,
+      "momentum_3m": 15.64,
+      "momentum_6m": 2.18,
+      "rel_strength_6m": -6.73,
+      "drawdown_from_52w_high": -12.03,
+      "recovery_from_52w_low": 61.86,
+      "pct_vs_200dma": 11.01
+    },
+    "scored_at": "2026-08-03",
+    "rank": 19
+  },
+  {
+    "ticker": "NKTR",
+    "name": "Nektar Therapeutics",
+    "sector": "Healthcare",
+    "market_cap_b": 2.39,
+    "current_price": 70.67,
+    "fifty_two_week_high": 109.0,
+    "fifty_two_week_low": 21.6,
+    "doubling_prob_12m": 0.1124,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0017,
+    "lr_prob": 0.5596,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "net_margin_pct",
+        "shap": -2.0264
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.7422
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.5248
+      },
+      {
+        "feature": "op_margin_pct",
+        "shap": -0.8229
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 3.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 80.48,
+      "op_margin_pct": -224.08,
+      "net_margin_pct": -200.0,
+      "fcf_yield_pct": -8.54,
+      "debt_to_equity": 0.144,
+      "ps_ratio": 42.918,
+      "pe_ratio": null,
+      "peg_ratio": 0.31,
+      "ev_to_ebitda": -15.838,
+      "price_to_book": 3.615,
+      "short_ratio": 5.48,
+      "share_dilution_1y": 20.18,
+      "momentum_3m": -18.26,
+      "momentum_6m": 81.86,
+      "rel_strength_6m": 72.95,
+      "drawdown_from_52w_high": -29.58,
+      "recovery_from_52w_low": 224.92,
+      "pct_vs_200dma": 12.13
+    },
+    "scored_at": "2026-08-03",
+    "rank": 20
+  },
+  {
+    "ticker": "WING",
+    "name": "Wingstop Inc.",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 3.53,
+    "current_price": 129.49,
+    "fifty_two_week_high": 363.47,
+    "fifty_two_week_low": 116.35,
+    "doubling_prob_12m": 0.1124,
+    "lgbm_prob": 0.0467,
+    "xgb_prob": 0.0956,
+    "lr_prob": 0.3016,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "share_dilution_1y",
+        "shap": 2.8693
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.6439
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 1.4198
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 1.0827
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 6.4,
+      "eps_growth_yoy": 19.8,
+      "gross_margin_pct": 49.42,
+      "op_margin_pct": 27.87,
+      "net_margin_pct": 16.152,
+      "fcf_yield_pct": 3.64,
+      "debt_to_equity": null,
+      "ps_ratio": 4.895,
+      "pe_ratio": 30.612,
+      "peg_ratio": 1.96,
+      "ev_to_ebitda": 19.966,
+      "price_to_book": 0.0,
+      "short_ratio": 4.0,
+      "share_dilution_1y": 16.88,
+      "momentum_3m": -19.23,
+      "momentum_6m": -52.69,
+      "rel_strength_6m": -61.6,
+      "drawdown_from_52w_high": -62.64,
+      "recovery_from_52w_low": 9.13,
+      "pct_vs_200dma": -37.06
+    },
+    "scored_at": "2026-08-03",
+    "rank": 21
+  },
+  {
+    "ticker": "IOVA",
+    "name": "Iovance Biotherapeutics, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.82,
+    "current_price": 4.07,
+    "fifty_two_week_high": 5.64,
+    "fifty_two_week_low": 1.76,
+    "doubling_prob_12m": 0.1043,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0299,
+    "lr_prob": 0.4768,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.7263
+      },
+      {
+        "feature": "op_margin_pct",
+        "shap": -1.3918
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -1.2407
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.1901
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 44.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 36.71,
+      "op_margin_pct": -125.36,
+      "net_margin_pct": -123.897,
+      "fcf_yield_pct": -16.78,
+      "debt_to_equity": 0.066,
+      "ps_ratio": 6.363,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -4.824,
+      "price_to_book": 2.471,
+      "short_ratio": 6.43,
+      "share_dilution_1y": 22.37,
+      "momentum_3m": 19.71,
+      "momentum_6m": 54.17,
+      "rel_strength_6m": 45.26,
+      "drawdown_from_52w_high": -25.73,
+      "recovery_from_52w_low": 124.86,
+      "pct_vs_200dma": 23.41
+    },
+    "scored_at": "2026-08-03",
+    "rank": 22
+  },
+  {
+    "ticker": "NCNO",
+    "name": "nCino, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.02,
+    "current_price": 18.46,
+    "fifty_two_week_high": 33.92,
+    "fifty_two_week_low": 13.8,
+    "doubling_prob_12m": 0.0987,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.1116,
+    "lr_prob": 0.3261,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -2.1363
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -1.1302
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 0.8567
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.8195
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 10.6,
+      "eps_growth_yoy": 147.6,
+      "gross_margin_pct": 61.41,
+      "op_margin_pct": 4.32,
+      "net_margin_pct": 2.173,
+      "fcf_yield_pct": 5.48,
+      "debt_to_equity": 0.337,
+      "ps_ratio": 3.315,
+      "pe_ratio": 153.833,
+      "peg_ratio": null,
+      "ev_to_ebitda": 31.583,
+      "price_to_book": 2.07,
+      "short_ratio": 4.75,
+      "share_dilution_1y": 16.87,
+      "momentum_3m": 1.82,
+      "momentum_6m": -1.34,
+      "rel_strength_6m": -10.25,
+      "drawdown_from_52w_high": -43.53,
+      "recovery_from_52w_low": 31.76,
+      "pct_vs_200dma": -6.41
+    },
+    "scored_at": "2026-08-03",
+    "rank": 23
+  },
+  {
+    "ticker": "UWMC",
+    "name": "UWM Holdings Corporation",
+    "sector": "Financial Services",
+    "market_cap_b": 0.62,
+    "current_price": 1.82,
+    "fifty_two_week_high": 7.14,
+    "fifty_two_week_low": 1.715,
+    "doubling_prob_12m": 0.0955,
+    "lgbm_prob": 0.0005,
+    "xgb_prob": 0.3176,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "share_dilution_1y",
+        "shap": 2.1179
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": -1.457
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.3396
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 1.309
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 24.4,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 100.0,
+      "op_margin_pct": 40.728,
+      "net_margin_pct": 1.839,
+      "fcf_yield_pct": -898.41,
+      "debt_to_equity": 22.619,
+      "ps_ratio": 0.815,
+      "pe_ratio": 6.067,
+      "peg_ratio": null,
+      "ev_to_ebitda": 14.039,
+      "price_to_book": 2.48,
+      "short_ratio": 3.04,
+      "share_dilution_1y": 21.73,
+      "momentum_3m": -47.99,
+      "momentum_6m": -61.49,
+      "rel_strength_6m": -70.4,
+      "drawdown_from_52w_high": -70.65,
+      "recovery_from_52w_low": 4.6,
+      "pct_vs_200dma": -52.03
+    },
+    "scored_at": "2026-08-03",
+    "rank": 24
+  },
+  {
+    "ticker": "UWMC",
+    "name": "UWM Holdings Corporation",
+    "sector": "Financial Services",
+    "market_cap_b": 0.62,
+    "current_price": 1.82,
+    "fifty_two_week_high": 7.14,
+    "fifty_two_week_low": 1.715,
+    "doubling_prob_12m": 0.0955,
+    "lgbm_prob": 0.0005,
+    "xgb_prob": 0.3176,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "share_dilution_1y",
+        "shap": 2.1179
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": -1.457
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.3396
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 1.309
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 24.4,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 100.0,
+      "op_margin_pct": 40.728,
+      "net_margin_pct": 1.839,
+      "fcf_yield_pct": -898.41,
+      "debt_to_equity": 22.619,
+      "ps_ratio": 0.815,
+      "pe_ratio": 6.067,
+      "peg_ratio": null,
+      "ev_to_ebitda": 14.039,
+      "price_to_book": 2.48,
+      "short_ratio": 3.04,
+      "share_dilution_1y": 21.73,
+      "momentum_3m": -47.99,
+      "momentum_6m": -61.49,
+      "rel_strength_6m": -70.4,
+      "drawdown_from_52w_high": -70.65,
+      "recovery_from_52w_low": 4.6,
+      "pct_vs_200dma": -52.03
+    },
+    "scored_at": "2026-08-03",
+    "rank": 25
+  },
+  {
+    "ticker": "OPEN",
+    "name": "Opendoor Technologies Inc",
+    "sector": "Real Estate",
+    "market_cap_b": 3.64,
+    "current_price": 3.77,
+    "fifty_two_week_high": 10.87,
+    "fifty_two_week_low": 1.7,
+    "doubling_prob_12m": 0.0866,
+    "lgbm_prob": 0.0023,
+    "xgb_prob": 0.2827,
+    "lr_prob": 0.0029,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 2.7266
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": 2.5552
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -2.0635
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.7358
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -37.6,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 8.2,
+      "op_margin_pct": -9.73,
+      "net_margin_pct": -35.246,
+      "fcf_yield_pct": 29.42,
+      "debt_to_equity": 1.403,
+      "ps_ratio": 0.924,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -11.904,
+      "price_to_book": 3.808,
+      "short_ratio": 2.23,
+      "share_dilution_1y": 17.41,
+      "momentum_3m": -30.7,
+      "momentum_6m": -26.51,
+      "rel_strength_6m": -35.42,
+      "drawdown_from_52w_high": -64.16,
+      "recovery_from_52w_low": 103.78,
+      "pct_vs_200dma": -32.42
+    },
+    "scored_at": "2026-08-03",
+    "rank": 26
+  },
+  {
+    "ticker": "NTCT",
+    "name": "NetScout Systems, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.96,
+    "current_price": 40.67,
+    "fifty_two_week_high": 45.28,
+    "fifty_two_week_low": 20.39,
+    "doubling_prob_12m": 0.0835,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0436,
+    "lr_prob": 0.3524,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -2.8554
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.292
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": 1.1766
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.6143
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -1.0,
+      "eps_growth_yoy": -7.1,
+      "gross_margin_pct": 79.41,
+      "op_margin_pct": 12.88,
+      "net_margin_pct": 11.115,
+      "fcf_yield_pct": 9.65,
+      "debt_to_equity": 0.024,
+      "ps_ratio": 3.44,
+      "pe_ratio": 31.285,
+      "peg_ratio": 1.64,
+      "ev_to_ebitda": 13.551,
+      "price_to_book": 1.762,
+      "short_ratio": 3.92,
+      "share_dilution_1y": 3.83,
+      "momentum_3m": 19.69,
+      "momentum_6m": 43.46,
+      "rel_strength_6m": 34.55,
+      "drawdown_from_52w_high": -9.3,
+      "recovery_from_52w_low": 91.12,
+      "pct_vs_200dma": 24.93
+    },
+    "scored_at": "2026-08-03",
+    "rank": 27
+  },
+  {
+    "ticker": "PGNY",
+    "name": "Progyny, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 2.44,
+    "current_price": 31.13,
+    "fifty_two_week_high": 33.065,
+    "fifty_two_week_low": 16.1,
+    "doubling_prob_12m": 0.0805,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0067,
+    "lr_prob": 0.3926,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.5914
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.2147
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": -0.9114
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.8942
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 1.4,
+      "eps_growth_yoy": 70.6,
+      "gross_margin_pct": 24.11,
+      "op_margin_pct": 7.46,
+      "net_margin_pct": 5.235,
+      "fcf_yield_pct": 7.56,
+      "debt_to_equity": 0.053,
+      "ps_ratio": 1.886,
+      "pe_ratio": 40.429,
+      "peg_ratio": null,
+      "ev_to_ebitda": 20.461,
+      "price_to_book": 5.502,
+      "short_ratio": 3.33,
+      "share_dilution_1y": 5.91,
+      "momentum_3m": 67.37,
+      "momentum_6m": 33.95,
+      "rel_strength_6m": 25.04,
+      "drawdown_from_52w_high": -3.8,
+      "recovery_from_52w_low": 90.98,
+      "pct_vs_200dma": 33.36
+    },
+    "scored_at": "2026-08-03",
+    "rank": 28
+  },
+  {
+    "ticker": "BRZE",
+    "name": "Braze, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.81,
+    "current_price": 24.92,
+    "fifty_two_week_high": 37.327,
+    "fifty_two_week_low": 15.26,
+    "doubling_prob_12m": 0.0745,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0133,
+    "lr_prob": 0.3528,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": -1.5769
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 0.9901
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.8328
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.6669
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 30.2,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 66.46,
+      "op_margin_pct": -16.78,
+      "net_margin_pct": -15.511,
+      "fcf_yield_pct": 2.21,
+      "debt_to_equity": 0.14,
+      "ps_ratio": 3.566,
+      "pe_ratio": null,
+      "peg_ratio": 1.3,
+      "ev_to_ebitda": -23.159,
+      "price_to_book": 4.789,
+      "short_ratio": 5.19,
+      "share_dilution_1y": 11.15,
+      "momentum_3m": 5.77,
+      "momentum_6m": 31.64,
+      "rel_strength_6m": 22.73,
+      "drawdown_from_52w_high": -31.14,
+      "recovery_from_52w_low": 57.82,
+      "pct_vs_200dma": 1.94
+    },
+    "scored_at": "2026-08-03",
+    "rank": 29
+  },
+  {
+    "ticker": "HCI",
+    "name": "HCI Group, Inc.",
+    "sector": "Financial Services",
+    "market_cap_b": 2.23,
+    "current_price": 175.01,
+    "fifty_two_week_high": 210.5,
+    "fifty_two_week_low": 136.37,
+    "doubling_prob_12m": 0.0706,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0004,
+    "lr_prob": 0.3526,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.9135
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.9019
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.5506
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.5264
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 12.2,
+      "eps_growth_yoy": 1.7,
+      "gross_margin_pct": 59.559,
+      "op_margin_pct": 48.61,
+      "net_margin_pct": 32.643,
+      "fcf_yield_pct": 19.2,
+      "debt_to_equity": 0.062,
+      "ps_ratio": 2.409,
+      "pe_ratio": 7.669,
+      "peg_ratio": 0.97,
+      "ev_to_ebitda": 2.987,
+      "price_to_book": 2.073,
+      "short_ratio": 2.5,
+      "share_dilution_1y": 3.91,
+      "momentum_3m": 15.21,
+      "momentum_6m": 12.52,
+      "rel_strength_6m": 3.61,
+      "drawdown_from_52w_high": -14.57,
+      "recovery_from_52w_low": 28.21,
+      "pct_vs_200dma": 3.18
+    },
+    "scored_at": "2026-08-03",
+    "rank": 30
+  },
+  {
+    "ticker": "LCID",
+    "name": "Lucid Group, Inc.",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 2.88,
+    "current_price": 7.38,
+    "fifty_two_week_high": 25.23,
+    "fifty_two_week_low": 2.37,
+    "doubling_prob_12m": 0.0697,
+    "lgbm_prob": 0.0001,
+    "xgb_prob": 0.0808,
+    "lr_prob": 0.2269,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 2.7007
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 1.317
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.0434
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.987
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 20.2,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": -95.6,
+      "op_margin_pct": -268.44,
+      "net_margin_pct": -200.0,
+      "fcf_yield_pct": -161.42,
+      "debt_to_equity": 0.2,
+      "ps_ratio": 2.055,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -2.351,
+      "price_to_book": 0.0,
+      "short_ratio": 2.9,
+      "share_dilution_1y": 16.66,
+      "momentum_3m": 12.84,
+      "momentum_6m": -29.71,
+      "rel_strength_6m": -38.62,
+      "drawdown_from_52w_high": -70.21,
+      "recovery_from_52w_low": 59.74,
+      "pct_vs_200dma": -26.03
+    },
+    "scored_at": "2026-08-03",
+    "rank": 31
+  },
+  {
+    "ticker": "SHAK",
+    "name": "Shake Shack, Inc.",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 2.53,
+    "current_price": 62.75,
+    "fifty_two_week_high": 117.6,
+    "fifty_two_week_low": 51.6,
+    "doubling_prob_12m": 0.069,
+    "lgbm_prob": 0.0004,
+    "xgb_prob": 0.2291,
+    "lr_prob": 0.0001,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_3m",
+        "shap": 2.1996
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.0366
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.9717
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.6593
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 14.3,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 47.86,
+      "op_margin_pct": 5.55,
+      "net_margin_pct": 2.762,
+      "fcf_yield_pct": 0.63,
+      "debt_to_equity": 1.782,
+      "ps_ratio": 1.8,
+      "pe_ratio": 64.031,
+      "peg_ratio": null,
+      "ev_to_ebitda": 18.703,
+      "price_to_book": 4.814,
+      "short_ratio": 2.08,
+      "share_dilution_1y": 10.02,
+      "momentum_3m": -36.2,
+      "momentum_6m": -33.01,
+      "rel_strength_6m": -41.92,
+      "drawdown_from_52w_high": -45.66,
+      "recovery_from_52w_low": 19.89,
+      "pct_vs_200dma": -23.37
+    },
+    "scored_at": "2026-08-03",
+    "rank": 32
+  },
+  {
+    "ticker": "AUPH",
+    "name": "Aurinia Pharmaceuticals Inc",
+    "sector": "Healthcare",
+    "market_cap_b": 1.91,
+    "current_price": 14.88,
+    "fifty_two_week_high": 19.25,
+    "fifty_two_week_low": 10.34,
+    "doubling_prob_12m": 0.0684,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0035,
+    "lr_prob": 0.3369,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.652
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -1.3188
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 0.7564
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": 0.6892
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 24.4,
+      "eps_growth_yoy": 56.3,
+      "gross_margin_pct": 89.74,
+      "op_margin_pct": 41.77,
+      "net_margin_pct": 99.973,
+      "fcf_yield_pct": 8.71,
+      "debt_to_equity": 0.121,
+      "ps_ratio": 6.415,
+      "pe_ratio": 6.889,
+      "peg_ratio": null,
+      "ev_to_ebitda": 10.433,
+      "price_to_book": 3.428,
+      "short_ratio": 4.7,
+      "share_dilution_1y": 7.55,
+      "momentum_3m": -3.06,
+      "momentum_6m": -2.17,
+      "rel_strength_6m": -11.08,
+      "drawdown_from_52w_high": -20.09,
+      "recovery_from_52w_low": 34.66,
+      "pct_vs_200dma": -1.8
+    },
+    "scored_at": "2026-08-03",
+    "rank": 33
+  },
+  {
+    "ticker": "RVLV",
+    "name": "Revolve Group, Inc.",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 1.04,
+    "current_price": 25.11,
+    "fifty_two_week_high": 31.68,
+    "fifty_two_week_low": 17.35,
+    "doubling_prob_12m": 0.068,
+    "lgbm_prob": 0.0001,
+    "xgb_prob": 0.0378,
+    "lr_prob": 0.2831,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": 1.3069
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 1.1459
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.6164
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": 0.5513
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 15.6,
+      "eps_growth_yoy": 21.2,
+      "gross_margin_pct": 53.63,
+      "op_margin_pct": 5.91,
+      "net_margin_pct": 5.051,
+      "fcf_yield_pct": 4.72,
+      "debt_to_equity": 0.063,
+      "ps_ratio": 1.413,
+      "pe_ratio": 27.9,
+      "peg_ratio": 1.08,
+      "ev_to_ebitda": 17.692,
+      "price_to_book": 3.408,
+      "short_ratio": 5.76,
+      "share_dilution_1y": 6.65,
+      "momentum_3m": 0.52,
+      "momentum_6m": -6.9,
+      "rel_strength_6m": -15.81,
+      "drawdown_from_52w_high": -20.16,
+      "recovery_from_52w_low": 43.4,
+      "pct_vs_200dma": 3.21
+    },
+    "scored_at": "2026-08-03",
+    "rank": 34
+  },
+  {
+    "ticker": "QTWO",
+    "name": "Q2 Holdings, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 3.8,
+    "current_price": 60.87,
+    "fifty_two_week_high": 85.19,
+    "fifty_two_week_low": 40.79,
+    "doubling_prob_12m": 0.0664,
+    "lgbm_prob": 0.0001,
+    "xgb_prob": 0.0634,
+    "lr_prob": 0.2367,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "peg_ratio",
+        "shap": -1.1355
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.99
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": 0.7954
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 0.6876
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 12.6,
+      "eps_growth_yoy": 156.5,
+      "gross_margin_pct": 56.99,
+      "op_margin_pct": 10.44,
+      "net_margin_pct": 10.871,
+      "fcf_yield_pct": 4.98,
+      "debt_to_equity": 0.064,
+      "ps_ratio": 4.485,
+      "pe_ratio": 42.866,
+      "peg_ratio": 8.35,
+      "ev_to_ebitda": 32.625,
+      "price_to_book": 6.236,
+      "short_ratio": 5.4,
+      "share_dilution_1y": 6.83,
+      "momentum_3m": 18.82,
+      "momentum_6m": 6.7,
+      "rel_strength_6m": -2.21,
+      "drawdown_from_52w_high": -27.74,
+      "recovery_from_52w_low": 44.62,
+      "pct_vs_200dma": 6.86
+    },
+    "scored_at": "2026-08-03",
+    "rank": 35
+  },
+  {
+    "ticker": "MQ",
+    "name": "Marqeta, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 1.68,
+    "current_price": 17.36,
+    "fifty_two_week_high": 28.16,
+    "fifty_two_week_low": 14.8,
+    "doubling_prob_12m": 0.0661,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0036,
+    "lr_prob": 0.3253,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.5027
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -1.0385
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.7545
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 0.619
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 19.2,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 70.01,
+      "op_margin_pct": -3.96,
+      "net_margin_pct": 0.333,
+      "fcf_yield_pct": 6.96,
+      "debt_to_equity": 0.02,
+      "ps_ratio": 2.803,
+      "pe_ratio": 200.0,
+      "peg_ratio": 1.5,
+      "ev_to_ebitda": 200.0,
+      "price_to_book": 2.489,
+      "short_ratio": 3.47,
+      "share_dilution_1y": 4.06,
+      "momentum_3m": 0.23,
+      "momentum_6m": 8.23,
+      "rel_strength_6m": -0.68,
+      "drawdown_from_52w_high": -36.46,
+      "recovery_from_52w_low": 15.43,
+      "pct_vs_200dma": 0.41
+    },
+    "scored_at": "2026-08-03",
+    "rank": 36
+  },
+  {
+    "ticker": "SONO",
+    "name": "Sonos, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 1.73,
+    "current_price": 14.66,
+    "fifty_two_week_high": 19.82,
+    "fifty_two_week_low": 10.11,
+    "doubling_prob_12m": 0.0645,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0258,
+    "lr_prob": 0.2837,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -2.2267
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": -1.1504
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 0.7961
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": 0.656
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 8.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 46.51,
+      "op_margin_pct": 11.0,
+      "net_margin_pct": 3.818,
+      "fcf_yield_pct": 7.22,
+      "debt_to_equity": 0.141,
+      "ps_ratio": 1.164,
+      "pe_ratio": 32.578,
+      "peg_ratio": null,
+      "ev_to_ebitda": 11.368,
+      "price_to_book": 4.956,
+      "short_ratio": 4.56,
+      "share_dilution_1y": 9.34,
+      "momentum_3m": -1.21,
+      "momentum_6m": 0.21,
+      "rel_strength_6m": -8.7,
+      "drawdown_from_52w_high": -23.49,
+      "recovery_from_52w_low": 34.99,
+      "pct_vs_200dma": -5.85
+    },
+    "scored_at": "2026-08-03",
+    "rank": 37
+  },
+  {
+    "ticker": "RAMP",
+    "name": "LiveRamp Holdings, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.3,
+    "current_price": 37.87,
+    "fifty_two_week_high": 38.23,
+    "fifty_two_week_low": 21.71,
+    "doubling_prob_12m": 0.0591,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0002,
+    "lr_prob": 0.2952,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -2.332
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.1767
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": 0.669
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -0.6578
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 9.2,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 70.71,
+      "op_margin_pct": 10.88,
+      "net_margin_pct": 17.954,
+      "fcf_yield_pct": 7.28,
+      "debt_to_equity": 0.03,
+      "ps_ratio": 2.832,
+      "pe_ratio": 16.982,
+      "peg_ratio": 0.59,
+      "ev_to_ebitda": 18.833,
+      "price_to_book": 2.359,
+      "short_ratio": 3.46,
+      "share_dilution_1y": 6.98,
+      "momentum_3m": 25.36,
+      "momentum_6m": 68.54,
+      "rel_strength_6m": 59.63,
+      "drawdown_from_52w_high": -0.37,
+      "recovery_from_52w_low": 68.91,
+      "pct_vs_200dma": 24.94
+    },
+    "scored_at": "2026-08-03",
+    "rank": 38
+  },
+  {
+    "ticker": "POWI",
+    "name": "Power Integrations, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 3.38,
+    "current_price": 60.71,
+    "fifty_two_week_high": 91.18,
+    "fifty_two_week_low": 30.86,
+    "doubling_prob_12m": 0.0578,
+    "lgbm_prob": 0.0001,
+    "xgb_prob": 0.1073,
+    "lr_prob": 0.1277,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.9176
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.8648
+      },
+      {
+        "feature": "op_margin_pct",
+        "shap": 0.7023
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.6882
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 2.6,
+      "eps_growth_yoy": -60.4,
+      "gross_margin_pct": 53.86,
+      "op_margin_pct": 2.49,
+      "net_margin_pct": 3.72,
+      "fcf_yield_pct": 2.5,
+      "debt_to_equity": null,
+      "ps_ratio": 7.58,
+      "pe_ratio": 200.0,
+      "peg_ratio": 1.51,
+      "ev_to_ebitda": 62.59,
+      "price_to_book": 5.024,
+      "short_ratio": 5.63,
+      "share_dilution_1y": 9.83,
+      "momentum_3m": -16.99,
+      "momentum_6m": 35.13,
+      "rel_strength_6m": 26.22,
+      "drawdown_from_52w_high": -30.5,
+      "recovery_from_52w_low": 98.95,
+      "pct_vs_200dma": 12.26
+    },
+    "scored_at": "2026-08-03",
+    "rank": 39
+  },
+  {
+    "ticker": "LSPD",
+    "name": "Lightspeed Commerce Inc. Subord",
+    "sector": "Technology",
+    "market_cap_b": 1.31,
+    "current_price": 10.11,
+    "fifty_two_week_high": 13.715,
+    "fifty_two_week_low": 7.83,
+    "doubling_prob_12m": 0.0555,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0129,
+    "lr_prob": 0.2579,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "price_to_book",
+        "shap": -1.2606
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.1957
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.9799
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.763
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 5.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 43.09,
+      "op_margin_pct": -8.65,
+      "net_margin_pct": -7.814,
+      "fcf_yield_pct": -1.67,
+      "debt_to_equity": 0.014,
+      "ps_ratio": 1.05,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -25.969,
+      "price_to_book": 1.005,
+      "short_ratio": 4.74,
+      "share_dilution_1y": 4.0,
+      "momentum_3m": 8.48,
+      "momentum_6m": 2.64,
+      "rel_strength_6m": -6.27,
+      "drawdown_from_52w_high": -24.78,
+      "recovery_from_52w_low": 20.79,
+      "pct_vs_200dma": -2.17
+    },
+    "scored_at": "2026-08-03",
+    "rank": 40
+  },
+  {
+    "ticker": "ACVA",
+    "name": "ACV Auctions Inc.",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 1.31,
+    "current_price": 7.49,
+    "fifty_two_week_high": 14.75,
+    "fifty_two_week_low": 4.065,
+    "doubling_prob_12m": 0.0537,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0698,
+    "lr_prob": 0.1639,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.3774
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.1623
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.8663
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.6875
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 11.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 51.76,
+      "op_margin_pct": -7.42,
+      "net_margin_pct": -7.965,
+      "fcf_yield_pct": 3.22,
+      "debt_to_equity": 0.464,
+      "ps_ratio": 1.674,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -39.158,
+      "price_to_book": 3.026,
+      "short_ratio": 4.78,
+      "share_dilution_1y": 8.57,
+      "momentum_3m": 41.86,
+      "momentum_6m": 0.27,
+      "rel_strength_6m": -8.64,
+      "drawdown_from_52w_high": -47.73,
+      "recovery_from_52w_low": 80.48,
+      "pct_vs_200dma": 11.09
+    },
+    "scored_at": "2026-08-03",
+    "rank": 41
+  },
+  {
+    "ticker": "ATRC",
+    "name": "AtriCure, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.92,
+    "current_price": 37.76,
+    "fifty_two_week_high": 43.18,
+    "fifty_two_week_low": 25.36,
+    "doubling_prob_12m": 0.0455,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0314,
+    "lr_prob": 0.1802,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": 1.2625
+      },
+      {
+        "feature": "peg_ratio",
+        "shap": -0.829
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.811
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.7439
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 12.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 76.3,
+      "op_margin_pct": 2.26,
+      "net_margin_pct": 1.852,
+      "fcf_yield_pct": 2.71,
+      "debt_to_equity": 0.138,
+      "ps_ratio": 3.372,
+      "pe_ratio": 179.81,
+      "peg_ratio": 10.0,
+      "ev_to_ebitda": 54.144,
+      "price_to_book": 3.719,
+      "short_ratio": 4.62,
+      "share_dilution_1y": 9.61,
+      "momentum_3m": 30.12,
+      "momentum_6m": -0.81,
+      "rel_strength_6m": -9.72,
+      "drawdown_from_52w_high": -10.96,
+      "recovery_from_52w_low": 46.02,
+      "pct_vs_200dma": 13.95
+    },
+    "scored_at": "2026-08-03",
+    "rank": 42
+  },
+  {
+    "ticker": "LMND",
+    "name": "Lemonade, Inc.",
+    "sector": "Financial Services",
+    "market_cap_b": 3.74,
+    "current_price": 48.31,
+    "fifty_two_week_high": 99.9,
+    "fifty_two_week_low": 36.125,
+    "doubling_prob_12m": 0.042,
+    "lgbm_prob": 0.0001,
+    "xgb_prob": 0.0107,
+    "lr_prob": 0.1937,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.0164
+      },
+      {
+        "feature": "price_to_book",
+        "shap": 0.6285
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 0.5702
+      },
+      {
+        "feature": "ps_ratio",
+        "shap": 0.5228
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 79.4,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 51.651,
+      "op_margin_pct": -14.198,
+      "net_margin_pct": -14.195,
+      "fcf_yield_pct": 0.52,
+      "debt_to_equity": 0.387,
+      "ps_ratio": 3.831,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -36.251,
+      "price_to_book": 6.872,
+      "short_ratio": 6.89,
+      "share_dilution_1y": 13.21,
+      "momentum_3m": -14.74,
+      "momentum_6m": -41.58,
+      "rel_strength_6m": -50.49,
+      "drawdown_from_52w_high": -49.97,
+      "recovery_from_52w_low": 30.57,
+      "pct_vs_200dma": -26.27
+    },
+    "scored_at": "2026-08-03",
+    "rank": 43
+  },
+  {
+    "ticker": "CNXN",
+    "name": "PC Connection, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.11,
+    "current_price": 83.72,
+    "fifty_two_week_high": 88.31,
+    "fifty_two_week_low": 54.97,
+    "doubling_prob_12m": 0.0406,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0002,
+    "lr_prob": 0.2028,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -2.5752
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.7317
+      },
+      {
+        "feature": "ps_ratio",
+        "shap": -0.564
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.5091
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 12.4,
+      "eps_growth_yoy": 35.1,
+      "gross_margin_pct": 18.89,
+      "op_margin_pct": 4.33,
+      "net_margin_pct": 3.208,
+      "fcf_yield_pct": 1.61,
+      "debt_to_equity": 0.007,
+      "ps_ratio": 0.707,
+      "pe_ratio": 22.148,
+      "peg_ratio": 2.21,
+      "ev_to_ebitda": 13.231,
+      "price_to_book": 2.218,
+      "short_ratio": 2.41,
+      "share_dilution_1y": 1.7,
+      "momentum_3m": 30.59,
+      "momentum_6m": 43.28,
+      "rel_strength_6m": 34.37,
+      "drawdown_from_52w_high": 0.0,
+      "recovery_from_52w_low": 50.88,
+      "pct_vs_200dma": 31.46
+    },
+    "scored_at": "2026-08-03",
+    "rank": 44
+  },
+  {
+    "ticker": "IDYA",
+    "name": "IDEAYA Biosciences, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 3.42,
+    "current_price": 35.5,
+    "fifty_two_week_high": 40.58,
+    "fifty_two_week_low": 22.09,
+    "doubling_prob_12m": 0.039,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0006,
+    "lr_prob": 0.1944,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.0054
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.7931
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.6512
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": 0.587
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 0.0,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": -50.728,
+      "op_margin_pct": -81.44,
+      "net_margin_pct": -62.174,
+      "fcf_yield_pct": -2.57,
+      "debt_to_equity": 0.031,
+      "ps_ratio": 15.172,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -13.706,
+      "price_to_book": 3.328,
+      "short_ratio": 6.71,
+      "share_dilution_1y": 9.94,
+      "momentum_3m": 25.93,
+      "momentum_6m": 3.71,
+      "rel_strength_6m": -5.2,
+      "drawdown_from_52w_high": -12.37,
+      "recovery_from_52w_low": 58.41,
+      "pct_vs_200dma": 8.44
+    },
+    "scored_at": "2026-08-03",
+    "rank": 45
+  },
+  {
+    "ticker": "FSBC",
+    "name": "Five Star Bancorp",
+    "sector": "Financial Services",
+    "market_cap_b": 1.14,
+    "current_price": 47.19,
+    "fifty_two_week_high": 50.26,
+    "fifty_two_week_low": 28.34,
+    "doubling_prob_12m": 0.0369,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0037,
+    "lr_prob": 0.1789,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "net_margin_pct",
+        "shap": -1.2147
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -0.9814
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.7646
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": 0.4374
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 27.6,
+      "eps_growth_yoy": 33.8,
+      "gross_margin_pct": 0.0,
+      "op_margin_pct": 58.361,
+      "net_margin_pct": 42.961,
+      "fcf_yield_pct": 6.58,
+      "debt_to_equity": 0.187,
+      "ps_ratio": 6.786,
+      "pe_ratio": 18.801,
+      "peg_ratio": null,
+      "ev_to_ebitda": null,
+      "price_to_book": 2.132,
+      "short_ratio": 4.22,
+      "share_dilution_1y": 3.16,
+      "momentum_3m": 15.55,
+      "momentum_6m": 16.91,
+      "rel_strength_6m": 8.0,
+      "drawdown_from_52w_high": -5.01,
+      "recovery_from_52w_low": 64.39,
+      "pct_vs_200dma": 19.44
+    },
+    "scored_at": "2026-08-03",
+    "rank": 46
+  },
+  {
+    "ticker": "FLNC",
+    "name": "Fluence Energy, Inc.",
+    "sector": "Utilities",
+    "market_cap_b": 1.85,
+    "current_price": 13.93,
+    "fifty_two_week_high": 33.51,
+    "fifty_two_week_low": 6.602,
+    "doubling_prob_12m": 0.0325,
+    "lgbm_prob": 0.0107,
+    "xgb_prob": 0.0603,
+    "lr_prob": 0.0455,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "share_dilution_1y",
+        "shap": 2.3145
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 1.2515
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.2383
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 0.8409
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 7.7,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 11.67,
+      "op_margin_pct": -1.93,
+      "net_margin_pct": -1.617,
+      "fcf_yield_pct": -14.55,
+      "debt_to_equity": 1.064,
+      "ps_ratio": 0.993,
+      "pe_ratio": null,
+      "peg_ratio": 3.18,
+      "ev_to_ebitda": -50.0,
+      "price_to_book": 5.025,
+      "short_ratio": 2.9,
+      "share_dilution_1y": 20.08,
+      "momentum_3m": 14.27,
+      "momentum_6m": -56.78,
+      "rel_strength_6m": -65.69,
+      "drawdown_from_52w_high": -56.78,
+      "recovery_from_52w_low": 106.37,
+      "pct_vs_200dma": -26.38
+    },
+    "scored_at": "2026-08-03",
+    "rank": 47
+  },
+  {
+    "ticker": "HFWA",
+    "name": "Heritage Financial Corporation",
+    "sector": "Financial Services",
+    "market_cap_b": 1.22,
+    "current_price": 29.73,
+    "fifty_two_week_high": 31.25,
+    "fifty_two_week_low": 21.32,
+    "doubling_prob_12m": 0.0323,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0019,
+    "lr_prob": 0.1587,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.839
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -0.8232
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.6947
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.5609
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 53.1,
+      "eps_growth_yoy": 17.0,
+      "gross_margin_pct": 0.0,
+      "op_margin_pct": 28.932,
+      "net_margin_pct": 26.399,
+      "fcf_yield_pct": 6.6,
+      "debt_to_equity": 0.038,
+      "ps_ratio": 4.121,
+      "pe_ratio": 14.157,
+      "peg_ratio": 2.13,
+      "ev_to_ebitda": null,
+      "price_to_book": 1.099,
+      "short_ratio": 7.11,
+      "share_dilution_1y": 6.27,
+      "momentum_3m": 8.63,
+      "momentum_6m": 13.09,
+      "rel_strength_6m": 4.18,
+      "drawdown_from_52w_high": -4.86,
+      "recovery_from_52w_low": 40.99,
+      "pct_vs_200dma": 14.53
+    },
+    "scored_at": "2026-08-03",
+    "rank": 48
+  },
+  {
+    "ticker": "HRMY",
+    "name": "Harmony Biosciences Holdings, I",
+    "sector": "Healthcare",
+    "market_cap_b": 2.04,
+    "current_price": 35.24,
+    "fifty_two_week_high": 40.87,
+    "fifty_two_week_low": 25.52,
+    "doubling_prob_12m": 0.0317,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0018,
+    "lr_prob": 0.1558,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -2.5919
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.8561
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 0.6174
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -0.4572
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 16.6,
+      "eps_growth_yoy": -29.5,
+      "gross_margin_pct": 76.55,
+      "op_margin_pct": 21.08,
+      "net_margin_pct": 16.196,
+      "fcf_yield_pct": 16.75,
+      "debt_to_equity": 0.174,
+      "ps_ratio": 2.269,
+      "pe_ratio": 14.21,
+      "peg_ratio": null,
+      "ev_to_ebitda": 7.279,
+      "price_to_book": 2.24,
+      "short_ratio": 6.4,
+      "share_dilution_1y": 8.84,
+      "momentum_3m": 10.71,
+      "momentum_6m": -5.98,
+      "rel_strength_6m": -14.89,
+      "drawdown_from_52w_high": -13.01,
+      "recovery_from_52w_low": 36.06,
+      "pct_vs_200dma": 6.65
+    },
+    "scored_at": "2026-08-03",
+    "rank": 49
+  },
+  {
+    "ticker": "PLNT",
+    "name": "Planet Fitness, Inc.",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 4.42,
+    "current_price": 55.91,
+    "fifty_two_week_high": 114.26,
+    "fifty_two_week_low": 37.03,
+    "doubling_prob_12m": 0.0288,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0025,
+    "lr_prob": 0.1401,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.0717
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -0.6042
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": 0.5543
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -0.5033
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 19.7,
+      "eps_growth_yoy": 30.2,
+      "gross_margin_pct": 51.18,
+      "op_margin_pct": 29.91,
+      "net_margin_pct": 17.771,
+      "fcf_yield_pct": 6.04,
+      "debt_to_equity": null,
+      "ps_ratio": 3.45,
+      "pe_ratio": 20.184,
+      "peg_ratio": 0.92,
+      "ev_to_ebitda": 12.025,
+      "price_to_book": 0.0,
+      "short_ratio": 5.33,
+      "share_dilution_1y": 11.73,
+      "momentum_3m": -14.48,
+      "momentum_6m": -38.4,
+      "rel_strength_6m": -47.31,
+      "drawdown_from_52w_high": -50.07,
+      "recovery_from_52w_low": 27.04,
+      "pct_vs_200dma": -29.61
+    },
+    "scored_at": "2026-08-03",
+    "rank": 50
+  },
+  {
+    "ticker": "CRSR",
+    "name": "Corsair Gaming, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 1.13,
+    "current_price": 10.61,
+    "fifty_two_week_high": 13.1,
+    "fifty_two_week_low": 4.48,
+    "doubling_prob_12m": 0.0287,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0032,
+    "lr_prob": 0.1389,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": -2.212
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.181
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.9694
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": -0.8841
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -4.1,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 30.16,
+      "op_margin_pct": 1.24,
+      "net_margin_pct": 0.486,
+      "fcf_yield_pct": 3.98,
+      "debt_to_equity": 0.29,
+      "ps_ratio": 0.778,
+      "pe_ratio": 117.889,
+      "peg_ratio": null,
+      "ev_to_ebitda": 16.595,
+      "price_to_book": 1.751,
+      "short_ratio": 5.81,
+      "share_dilution_1y": 10.2,
+      "momentum_3m": 52.44,
+      "momentum_6m": 116.09,
+      "rel_strength_6m": 107.18,
+      "drawdown_from_52w_high": -12.6,
+      "recovery_from_52w_low": 131.66,
+      "pct_vs_200dma": 51.08
+    },
+    "scored_at": "2026-08-03",
+    "rank": 51
+  },
+  {
+    "ticker": "NBTB",
+    "name": "NBT Bancorp Inc.",
+    "sector": "Financial Services",
+    "market_cap_b": 2.74,
+    "current_price": 52.65,
+    "fifty_two_week_high": 54.5,
+    "fifty_two_week_low": 39.2,
+    "doubling_prob_12m": 0.0275,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0004,
+    "lr_prob": 0.1371,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -0.9841
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.9827
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.8066
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.6175
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 17.8,
+      "eps_growth_yoy": 131.8,
+      "gross_margin_pct": 0.0,
+      "op_margin_pct": 40.047,
+      "net_margin_pct": 29.587,
+      "fcf_yield_pct": 8.37,
+      "debt_to_equity": 0.094,
+      "ps_ratio": 3.783,
+      "pe_ratio": 12.81,
+      "peg_ratio": 2.66,
+      "ev_to_ebitda": null,
+      "price_to_book": 1.43,
+      "short_ratio": 4.48,
+      "share_dilution_1y": 3.44,
+      "momentum_3m": 20.05,
+      "momentum_6m": 18.32,
+      "rel_strength_6m": 9.41,
+      "drawdown_from_52w_high": -2.97,
+      "recovery_from_52w_low": 37.56,
+      "pct_vs_200dma": 19.58
+    },
+    "scored_at": "2026-08-03",
+    "rank": 52
+  },
+  {
+    "ticker": "CBRL",
+    "name": "Cracker Barrel Old Country Stor",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 1.26,
+    "current_price": 56.39,
+    "fifty_two_week_high": 63.61,
+    "fifty_two_week_low": 24.85,
+    "doubling_prob_12m": 0.0237,
+    "lgbm_prob": 0.0002,
+    "xgb_prob": 0.0787,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "ps_ratio",
+        "shap": -2.3755
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 2.002
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.6177
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": 1.1637
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -2.9,
+      "eps_growth_yoy": 239.3,
+      "gross_margin_pct": 31.61,
+      "op_margin_pct": -0.05,
+      "net_margin_pct": 0.786,
+      "fcf_yield_pct": 4.7,
+      "debt_to_equity": 2.352,
+      "ps_ratio": 0.378,
+      "pe_ratio": 49.035,
+      "peg_ratio": 1.56,
+      "ev_to_ebitda": 19.518,
+      "price_to_book": 2.708,
+      "short_ratio": 4.96,
+      "share_dilution_1y": 25.33,
+      "momentum_3m": 82.27,
+      "momentum_6m": 77.86,
+      "rel_strength_6m": 68.95,
+      "drawdown_from_52w_high": -7.44,
+      "recovery_from_52w_low": 129.98,
+      "pct_vs_200dma": 66.91
+    },
+    "scored_at": "2026-08-03",
+    "rank": 53
+  },
+  {
+    "ticker": "CLDX",
+    "name": "Celldex Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 2.99,
+    "current_price": 38.06,
+    "fifty_two_week_high": 40.3,
+    "fifty_two_week_low": 19.72,
+    "doubling_prob_12m": 0.0236,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0785,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "rev_growth_yoy",
+        "shap": -2.7247
+      },
+      {
+        "feature": "op_margin_pct",
+        "shap": -0.9079
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.8053
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -0.7922
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -97.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 0.0,
+      "op_margin_pct": -35688.45,
+      "net_margin_pct": 0.0,
+      "fcf_yield_pct": -7.57,
+      "debt_to_equity": 0.004,
+      "ps_ratio": 100.0,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -8.302,
+      "price_to_book": 5.554,
+      "short_ratio": 5.8,
+      "share_dilution_1y": 9.76,
+      "momentum_3m": 17.8,
+      "momentum_6m": 51.21,
+      "rel_strength_6m": 42.3,
+      "drawdown_from_52w_high": -4.68,
+      "recovery_from_52w_low": 90.2,
+      "pct_vs_200dma": 28.37
+    },
+    "scored_at": "2026-08-03",
+    "rank": 54
+  },
+  {
+    "ticker": "WINA",
+    "name": "Winmark Corporation",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 1.2,
+    "current_price": 333.5,
+    "fifty_two_week_high": 527.37,
+    "fifty_two_week_low": 325.06,
+    "doubling_prob_12m": 0.0235,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.004,
+    "lr_prob": 0.1114,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "net_margin_pct",
+        "shap": -1.0238
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 0.8055
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -0.7609
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.7262
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 7.6,
+      "eps_growth_yoy": -2.8,
+      "gross_margin_pct": 96.66,
+      "op_margin_pct": 62.33,
+      "net_margin_pct": 47.086,
+      "fcf_yield_pct": 3.42,
+      "debt_to_equity": null,
+      "ps_ratio": 13.844,
+      "pe_ratio": 30.291,
+      "peg_ratio": 1.41,
+      "ev_to_ebitda": 22.585,
+      "price_to_book": 0.0,
+      "short_ratio": 6.97,
+      "share_dilution_1y": 9.14,
+      "momentum_3m": -10.39,
+      "momentum_6m": -23.18,
+      "rel_strength_6m": -32.09,
+      "drawdown_from_52w_high": -33.6,
+      "recovery_from_52w_low": 0.65,
+      "pct_vs_200dma": -18.6
+    },
+    "scored_at": "2026-08-03",
+    "rank": 55
+  },
+  {
+    "ticker": "BOOT",
+    "name": "Boot Barn Holdings, Inc.",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 4.51,
+    "current_price": 148.99,
+    "fifty_two_week_high": 210.25,
+    "fifty_two_week_low": 133.18,
+    "doubling_prob_12m": 0.0234,
+    "lgbm_prob": 0.0002,
+    "xgb_prob": 0.0601,
+    "lr_prob": 0.0266,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -2.471
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.6067
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -1.2201
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 0.9133
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 17.7,
+      "eps_growth_yoy": 31.6,
+      "gross_margin_pct": 38.45,
+      "op_margin_pct": 13.61,
+      "net_margin_pct": 10.352,
+      "fcf_yield_pct": 2.58,
+      "debt_to_equity": 0.593,
+      "ps_ratio": 1.926,
+      "pe_ratio": 18.859,
+      "peg_ratio": null,
+      "ev_to_ebitda": 12.848,
+      "price_to_book": 3.433,
+      "short_ratio": 4.05,
+      "share_dilution_1y": 9.23,
+      "momentum_3m": -13.11,
+      "momentum_6m": -18.06,
+      "rel_strength_6m": -26.97,
+      "drawdown_from_52w_high": -28.36,
+      "recovery_from_52w_low": 10.23,
+      "pct_vs_200dma": -14.72
+    },
+    "scored_at": "2026-08-03",
+    "rank": 56
+  },
+  {
+    "ticker": "TMDX",
+    "name": "TransMedics Group, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 2.64,
+    "current_price": 76.51,
+    "fifty_two_week_high": 156.0,
+    "fifty_two_week_low": 60.105,
+    "doubling_prob_12m": 0.0231,
+    "lgbm_prob": 0.0136,
+    "xgb_prob": 0.0543,
+    "lr_prob": 0.0001,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "share_dilution_1y",
+        "shap": 2.0924
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": 1.7697
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.4918
+      },
+      {
+        "feature": "eps_growth_yoy",
+        "shap": 0.9508
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 21.2,
+      "eps_growth_yoy": -71.5,
+      "gross_margin_pct": 59.09,
+      "op_margin_pct": 14.85,
+      "net_margin_pct": 27.037,
+      "fcf_yield_pct": 5.72,
+      "debt_to_equity": 1.748,
+      "ps_ratio": 4.158,
+      "pe_ratio": 17.508,
+      "peg_ratio": null,
+      "ev_to_ebitda": 24.3,
+      "price_to_book": 5.35,
+      "short_ratio": 7.24,
+      "share_dilution_1y": 22.32,
+      "momentum_3m": -23.5,
+      "momentum_6m": -43.63,
+      "rel_strength_6m": -52.54,
+      "drawdown_from_52w_high": -49.14,
+      "recovery_from_52w_low": 23.32,
+      "pct_vs_200dma": -29.88
+    },
+    "scored_at": "2026-08-03",
+    "rank": 57
+  },
+  {
+    "ticker": "IIPR",
+    "name": "Innovative Industrial Propertie",
+    "sector": "Real Estate",
+    "market_cap_b": 1.71,
+    "current_price": 58.81,
+    "fifty_two_week_high": 65.38,
+    "fifty_two_week_low": 44.58,
+    "doubling_prob_12m": 0.0219,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0015,
+    "lr_prob": 0.1072,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.949
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.8959
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.6977
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.6587
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -3.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 88.46,
+      "op_margin_pct": 46.72,
+      "net_margin_pct": 45.58,
+      "fcf_yield_pct": 11.73,
+      "debt_to_equity": 0.193,
+      "ps_ratio": 6.478,
+      "pe_ratio": 15.003,
+      "peg_ratio": null,
+      "ev_to_ebitda": 10.349,
+      "price_to_book": 0.932,
+      "short_ratio": 10.4,
+      "share_dilution_1y": 13.42,
+      "momentum_3m": 11.27,
+      "momentum_6m": 30.09,
+      "rel_strength_6m": 21.18,
+      "drawdown_from_52w_high": -9.06,
+      "recovery_from_52w_low": 48.0,
+      "pct_vs_200dma": 15.68
+    },
+    "scored_at": "2026-08-03",
+    "rank": 58
+  },
+  {
+    "ticker": "IIPR",
+    "name": "Innovative Industrial Propertie",
+    "sector": "Real Estate",
+    "market_cap_b": 1.71,
+    "current_price": 58.81,
+    "fifty_two_week_high": 65.38,
+    "fifty_two_week_low": 44.58,
+    "doubling_prob_12m": 0.0219,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0015,
+    "lr_prob": 0.1072,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.949
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.8959
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.6977
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.6587
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -3.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 88.46,
+      "op_margin_pct": 46.72,
+      "net_margin_pct": 45.58,
+      "fcf_yield_pct": 11.73,
+      "debt_to_equity": 0.193,
+      "ps_ratio": 6.478,
+      "pe_ratio": 15.003,
+      "peg_ratio": null,
+      "ev_to_ebitda": 10.349,
+      "price_to_book": 0.932,
+      "short_ratio": 10.4,
+      "share_dilution_1y": 13.42,
+      "momentum_3m": 11.27,
+      "momentum_6m": 30.09,
+      "rel_strength_6m": 21.18,
+      "drawdown_from_52w_high": -9.06,
+      "recovery_from_52w_low": 48.0,
+      "pct_vs_200dma": 15.68
+    },
+    "scored_at": "2026-08-03",
+    "rank": 59
+  },
+  {
+    "ticker": "BUSE",
+    "name": "First Busey Corporation",
+    "sector": "Financial Services",
+    "market_cap_b": 2.61,
+    "current_price": 30.86,
+    "fifty_two_week_high": 31.43,
+    "fifty_two_week_low": 21.96,
+    "doubling_prob_12m": 0.0198,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0003,
+    "lr_prob": 0.0985,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -2.2018
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.0271
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.7156
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.5464
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 1.1,
+      "eps_growth_yoy": 32.7,
+      "gross_margin_pct": 0.0,
+      "op_margin_pct": 45.48,
+      "net_margin_pct": 29.509,
+      "fcf_yield_pct": 8.25,
+      "debt_to_equity": 0.21,
+      "ps_ratio": 3.334,
+      "pe_ratio": 12.596,
+      "peg_ratio": 1.91,
+      "ev_to_ebitda": null,
+      "price_to_book": 1.077,
+      "short_ratio": 3.93,
+      "share_dilution_1y": 4.33,
+      "momentum_3m": 17.0,
+      "momentum_6m": 22.15,
+      "rel_strength_6m": 13.24,
+      "drawdown_from_52w_high": -1.34,
+      "recovery_from_52w_low": 45.42,
+      "pct_vs_200dma": 21.55
+    },
+    "scored_at": "2026-08-03",
+    "rank": 60
+  },
+  {
+    "ticker": "MGNI",
+    "name": "Magnite, Inc.",
+    "sector": "Communication Services",
+    "market_cap_b": 2.76,
+    "current_price": 19.3,
+    "fifty_two_week_high": 26.65,
+    "fifty_two_week_low": 10.82,
+    "doubling_prob_12m": 0.0186,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0048,
+    "lr_prob": 0.0857,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.3842
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 0.9491
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.9117
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": 0.8827
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 5.5,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 63.43,
+      "op_margin_pct": 14.79,
+      "net_margin_pct": 21.958,
+      "fcf_yield_pct": 1.18,
+      "debt_to_equity": 0.468,
+      "ps_ratio": 3.825,
+      "pe_ratio": 18.381,
+      "peg_ratio": 0.09,
+      "ev_to_ebitda": 20.669,
+      "price_to_book": 3.013,
+      "short_ratio": 3.92,
+      "share_dilution_1y": 9.5,
+      "momentum_3m": 40.67,
+      "momentum_6m": 67.83,
+      "rel_strength_6m": 58.92,
+      "drawdown_from_52w_high": -27.22,
+      "recovery_from_52w_low": 72.32,
+      "pct_vs_200dma": 27.38
+    },
+    "scored_at": "2026-08-03",
+    "rank": 61
+  },
+  {
+    "ticker": "BEAM",
+    "name": "Beam Therapeutics Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 2.62,
+    "current_price": 25.52,
+    "fifty_two_week_high": 38.26,
+    "fifty_two_week_low": 15.6,
+    "doubling_prob_12m": 0.0167,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0006,
+    "lr_prob": 0.0824,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "short_ratio",
+        "shap": -1.0605
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.9178
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": -0.8842
+      },
+      {
+        "feature": "gross_margin_pct",
+        "shap": -0.8369
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 324.9,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": -100.0,
+      "op_margin_pct": -226.58,
+      "net_margin_pct": -40.229,
+      "fcf_yield_pct": -14.62,
+      "debt_to_equity": 0.215,
+      "ps_ratio": 16.008,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -4.522,
+      "price_to_book": 2.178,
+      "short_ratio": 8.56,
+      "share_dilution_1y": 22.57,
+      "momentum_3m": -16.87,
+      "momentum_6m": -8.5,
+      "rel_strength_6m": -17.41,
+      "drawdown_from_52w_high": -32.7,
+      "recovery_from_52w_low": 59.4,
+      "pct_vs_200dma": -9.19
+    },
+    "scored_at": "2026-08-03",
+    "rank": 62
+  },
+  {
+    "ticker": "NVAX",
+    "name": "Novavax, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.2,
+    "current_price": 7.32,
+    "fifty_two_week_high": 11.97,
+    "fifty_two_week_low": 6.2,
+    "doubling_prob_12m": 0.0167,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0021,
+    "lr_prob": 0.0804,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "rev_growth_yoy",
+        "shap": -2.761
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -1.1664
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 0.9482
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -0.6906
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -79.1,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 84.97,
+      "op_margin_pct": 3.3,
+      "net_margin_pct": -14.729,
+      "fcf_yield_pct": -8.11,
+      "debt_to_equity": null,
+      "ps_ratio": 2.018,
+      "pe_ratio": null,
+      "peg_ratio": 1.32,
+      "ev_to_ebitda": 11.9,
+      "price_to_book": 0.0,
+      "short_ratio": 10.0,
+      "share_dilution_1y": 26.65,
+      "momentum_3m": -8.96,
+      "momentum_6m": -12.54,
+      "rel_strength_6m": -21.45,
+      "drawdown_from_52w_high": -34.58,
+      "recovery_from_52w_low": 17.68,
+      "pct_vs_200dma": -13.59
+    },
+    "scored_at": "2026-08-03",
+    "rank": 63
+  },
+  {
+    "ticker": "SNDX",
+    "name": "Syndax Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.69,
+    "current_price": 19.05,
+    "fifty_two_week_high": 25.59,
+    "fifty_two_week_low": 9.68,
+    "doubling_prob_12m": 0.0166,
+    "lgbm_prob": 0.0005,
+    "xgb_prob": 0.0544,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "price_to_book",
+        "shap": 1.894
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -1.7466
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -1.2409
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.0848
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 223.6,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 95.99,
+      "op_margin_pct": -102.81,
+      "net_margin_pct": -112.007,
+      "fcf_yield_pct": -16.48,
+      "debt_to_equity": 8.298,
+      "ps_ratio": 7.773,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -7.473,
+      "price_to_book": 40.532,
+      "short_ratio": 8.86,
+      "share_dilution_1y": 23.49,
+      "momentum_3m": -0.31,
+      "momentum_6m": -10.35,
+      "rel_strength_6m": -19.26,
+      "drawdown_from_52w_high": -24.25,
+      "recovery_from_52w_low": 83.53,
+      "pct_vs_200dma": -6.43
+    },
+    "scored_at": "2026-08-03",
+    "rank": 64
+  },
+  {
+    "ticker": "TRUP",
+    "name": "Trupanion, Inc.",
+    "sector": "Financial Services",
+    "market_cap_b": 1.07,
+    "current_price": 24.49,
+    "fifty_two_week_high": 57.0,
+    "fifty_two_week_low": 21.16,
+    "doubling_prob_12m": 0.0165,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0002,
+    "lr_prob": 0.0823,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "ps_ratio",
+        "shap": -1.1981
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -0.9848
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -0.8883
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -0.609
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 12.3,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 16.3,
+      "op_margin_pct": 7.34,
+      "net_margin_pct": 1.741,
+      "fcf_yield_pct": 7.03,
+      "debt_to_equity": 0.277,
+      "ps_ratio": 0.721,
+      "pe_ratio": 41.508,
+      "peg_ratio": null,
+      "ev_to_ebitda": 21.478,
+      "price_to_book": 2.706,
+      "short_ratio": 9.66,
+      "share_dilution_1y": 8.5,
+      "momentum_3m": 0.66,
+      "momentum_6m": -22.43,
+      "rel_strength_6m": -31.34,
+      "drawdown_from_52w_high": -51.66,
+      "recovery_from_52w_low": 14.12,
+      "pct_vs_200dma": -18.75
+    },
+    "scored_at": "2026-08-03",
+    "rank": 65
+  },
+  {
+    "ticker": "MNKD",
+    "name": "MannKind Corporation",
+    "sector": "Healthcare",
+    "market_cap_b": 1.21,
+    "current_price": 3.91,
+    "fifty_two_week_high": 6.51,
+    "fifty_two_week_low": 2.23,
+    "doubling_prob_12m": 0.0156,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0011,
+    "lr_prob": 0.0764,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.1885
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.061
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.7247
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -0.6026
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 15.1,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 75.63,
+      "op_margin_pct": 5.2,
+      "net_margin_pct": -6.628,
+      "fcf_yield_pct": 1.09,
+      "debt_to_equity": null,
+      "ps_ratio": 3.348,
+      "pe_ratio": null,
+      "peg_ratio": 4.39,
+      "ev_to_ebitda": 42.7,
+      "price_to_book": 0.0,
+      "short_ratio": 5.19,
+      "share_dilution_1y": 9.12,
+      "momentum_3m": 37.68,
+      "momentum_6m": -37.04,
+      "rel_strength_6m": -45.95,
+      "drawdown_from_52w_high": -37.04,
+      "recovery_from_52w_low": 71.49,
+      "pct_vs_200dma": -9.76
+    },
+    "scored_at": "2026-08-03",
+    "rank": 66
+  },
+  {
+    "ticker": "SRPT",
+    "name": "Sarepta Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.57,
+    "current_price": 14.86,
+    "fifty_two_week_high": 25.32,
+    "fifty_two_week_low": 14.68,
+    "doubling_prob_12m": 0.0139,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0048,
+    "lr_prob": 0.0624,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_3m",
+        "shap": 2.1323
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.3947
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.0315
+      },
+      {
+        "feature": "ps_ratio",
+        "shap": -0.9408
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -1.9,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 62.88,
+      "op_margin_pct": 0.05,
+      "net_margin_pct": 2.979,
+      "fcf_yield_pct": 6.9,
+      "debt_to_equity": 0.689,
+      "ps_ratio": 0.718,
+      "pe_ratio": 42.457,
+      "peg_ratio": -0.09,
+      "ev_to_ebitda": 42.498,
+      "price_to_book": 1.042,
+      "short_ratio": 7.12,
+      "share_dilution_1y": 26.98,
+      "momentum_3m": -30.85,
+      "momentum_6m": -26.73,
+      "rel_strength_6m": -35.64,
+      "drawdown_from_52w_high": -39.22,
+      "recovery_from_52w_low": null,
+      "pct_vs_200dma": -23.47
+    },
+    "scored_at": "2026-08-03",
+    "rank": 67
+  },
+  {
+    "ticker": "SHOO",
+    "name": "Steven Madden, Ltd.",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 3.37,
+    "current_price": 46.08,
+    "fifty_two_week_high": 48.76,
+    "fifty_two_week_low": 23.63,
+    "doubling_prob_12m": 0.0139,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0013,
+    "lr_prob": 0.0674,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.2993
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.2585
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.0142
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": -0.6744
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 19.1,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 46.13,
+      "op_margin_pct": 7.62,
+      "net_margin_pct": 5.228,
+      "fcf_yield_pct": 6.66,
+      "debt_to_equity": 0.401,
+      "ps_ratio": 1.229,
+      "pe_ratio": 23.04,
+      "peg_ratio": 2.17,
+      "ev_to_ebitda": 13.287,
+      "price_to_book": 3.496,
+      "short_ratio": 3.23,
+      "share_dilution_1y": 5.49,
+      "momentum_3m": 23.47,
+      "momentum_6m": 10.34,
+      "rel_strength_6m": 1.43,
+      "drawdown_from_52w_high": -3.66,
+      "recovery_from_52w_low": 91.47,
+      "pct_vs_200dma": 16.52
+    },
+    "scored_at": "2026-08-03",
+    "rank": 68
+  },
+  {
+    "ticker": "APPN",
+    "name": "Appian Corporation",
+    "sector": "Technology",
+    "market_cap_b": 1.14,
+    "current_price": 26.96,
+    "fifty_two_week_high": 46.059,
+    "fifty_two_week_low": 18.63,
+    "doubling_prob_12m": 0.0133,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0092,
+    "lr_prob": 0.0526,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.2626
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.446
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -0.3922
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": -0.3651
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 21.5,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 71.8,
+      "op_margin_pct": 0.6,
+      "net_margin_pct": 0.116,
+      "fcf_yield_pct": 5.6,
+      "debt_to_equity": null,
+      "ps_ratio": 2.595,
+      "pe_ratio": 200.0,
+      "peg_ratio": null,
+      "ev_to_ebitda": 81.697,
+      "price_to_book": 0.0,
+      "short_ratio": 7.26,
+      "share_dilution_1y": 8.16,
+      "momentum_3m": 19.61,
+      "momentum_6m": 4.29,
+      "rel_strength_6m": -4.62,
+      "drawdown_from_52w_high": -40.93,
+      "recovery_from_52w_low": 44.02,
+      "pct_vs_200dma": -3.76
+    },
+    "scored_at": "2026-08-03",
+    "rank": 69
+  },
+  {
+    "ticker": "MLCO",
+    "name": "Melco Resorts & Entertainment L",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 2.23,
+    "current_price": 5.73,
+    "fifty_two_week_high": 10.15,
+    "fifty_two_week_low": 5.07,
+    "doubling_prob_12m": 0.012,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0051,
+    "lr_prob": 0.0521,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -1.536
+      },
+      {
+        "feature": "peg_ratio",
+        "shap": 0.7788
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 0.6323
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -0.6315
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 10.9,
+      "eps_growth_yoy": 150.0,
+      "gross_margin_pct": 36.81,
+      "op_margin_pct": 12.67,
+      "net_margin_pct": 4.329,
+      "fcf_yield_pct": 0.0,
+      "debt_to_equity": null,
+      "ps_ratio": 0.42,
+      "pe_ratio": 9.879,
+      "peg_ratio": 0.38,
+      "ev_to_ebitda": 6.888,
+      "price_to_book": 0.0,
+      "short_ratio": 1.38,
+      "share_dilution_1y": 1.15,
+      "momentum_3m": 4.95,
+      "momentum_6m": -5.45,
+      "rel_strength_6m": -14.36,
+      "drawdown_from_52w_high": -43.44,
+      "recovery_from_52w_low": 10.83,
+      "pct_vs_200dma": -11.67
+    },
+    "scored_at": "2026-08-03",
+    "rank": 70
+  },
+  {
+    "ticker": "OMCL",
+    "name": "Omnicell, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.61,
+    "current_price": 35.37,
+    "fifty_two_week_high": 55.0,
+    "fifty_two_week_low": 29.06,
+    "doubling_prob_12m": 0.0116,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0007,
+    "lr_prob": 0.0569,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.1546
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -0.8042
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": -0.7345
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": -0.7212
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 7.5,
+      "eps_growth_yoy": 333.3,
+      "gross_margin_pct": 43.36,
+      "op_margin_pct": 2.73,
+      "net_margin_pct": 3.135,
+      "fcf_yield_pct": 6.08,
+      "debt_to_equity": 0.161,
+      "ps_ratio": 1.29,
+      "pe_ratio": 42.107,
+      "peg_ratio": 15.4,
+      "ev_to_ebitda": 15.433,
+      "price_to_book": 1.28,
+      "short_ratio": 4.73,
+      "share_dilution_1y": 7.89,
+      "momentum_3m": -17.36,
+      "momentum_6m": -23.18,
+      "rel_strength_6m": -32.09,
+      "drawdown_from_52w_high": -31.17,
+      "recovery_from_52w_low": 20.06,
+      "pct_vs_200dma": -12.35
+    },
+    "scored_at": "2026-08-03",
+    "rank": 71
+  },
+  {
+    "ticker": "IMCR",
+    "name": "Immunocore Holdings plc",
+    "sector": "Healthcare",
+    "market_cap_b": 1.72,
+    "current_price": 33.81,
+    "fifty_two_week_high": 40.715,
+    "fifty_two_week_low": 27.555,
+    "doubling_prob_12m": 0.0115,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0379,
+    "lr_prob": 0.0004,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "ev_to_ebitda",
+        "shap": -1.0214
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -0.8628
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.6992
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.6958
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 13.6,
+      "eps_growth_yoy": 150.0,
+      "gross_margin_pct": 98.86,
+      "op_margin_pct": -8.35,
+      "net_margin_pct": -6.678,
+      "fcf_yield_pct": -1.79,
+      "debt_to_equity": 1.107,
+      "ps_ratio": 4.166,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -50.0,
+      "price_to_book": 4.365,
+      "short_ratio": 12.69,
+      "share_dilution_1y": 17.58,
+      "momentum_3m": 20.06,
+      "momentum_6m": 5.43,
+      "rel_strength_6m": -3.48,
+      "drawdown_from_52w_high": -15.93,
+      "recovery_from_52w_low": 21.66,
+      "pct_vs_200dma": 4.0
+    },
+    "scored_at": "2026-08-03",
+    "rank": 72
+  },
+  {
+    "ticker": "EXTR",
+    "name": "Extreme Networks, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 3.94,
+    "current_price": 30.14,
+    "fifty_two_week_high": 33.73,
+    "fifty_two_week_low": 13.48,
+    "doubling_prob_12m": 0.0105,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.035,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": -3.1936
+      },
+      {
+        "feature": "price_to_book",
+        "shap": 1.8189
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.1645
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.1036
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 11.4,
+      "eps_growth_yoy": 206.4,
+      "gross_margin_pct": 61.32,
+      "op_margin_pct": 3.23,
+      "net_margin_pct": 1.3,
+      "fcf_yield_pct": 2.67,
+      "debt_to_equity": 2.985,
+      "ps_ratio": 3.148,
+      "pe_ratio": 200.0,
+      "peg_ratio": 1.12,
+      "ev_to_ebitda": 42.221,
+      "price_to_book": 50.0,
+      "short_ratio": 3.17,
+      "share_dilution_1y": 5.57,
+      "momentum_3m": 35.22,
+      "momentum_6m": 102.42,
+      "rel_strength_6m": 93.51,
+      "drawdown_from_52w_high": -10.59,
+      "recovery_from_52w_low": 119.36,
+      "pct_vs_200dma": 47.97
+    },
+    "scored_at": "2026-08-03",
+    "rank": 73
+  },
+  {
+    "ticker": "ACAD",
+    "name": "ACADIA Pharmaceuticals Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 4.43,
+    "current_price": 25.87,
+    "fifty_two_week_high": 28.35,
+    "fifty_two_week_low": 19.69,
+    "doubling_prob_12m": 0.0099,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0052,
+    "lr_prob": 0.0417,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "peg_ratio",
+        "shap": -0.7664
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.6804
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.5332
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.5018
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 9.7,
+      "eps_growth_yoy": -81.8,
+      "gross_margin_pct": 91.47,
+      "op_margin_pct": 7.39,
+      "net_margin_pct": 34.298,
+      "fcf_yield_pct": 2.65,
+      "debt_to_equity": 0.041,
+      "ps_ratio": 4.045,
+      "pe_ratio": 11.706,
+      "peg_ratio": 20.0,
+      "ev_to_ebitda": 39.147,
+      "price_to_book": 3.546,
+      "short_ratio": 5.9,
+      "share_dilution_1y": 6.44,
+      "momentum_3m": 17.86,
+      "momentum_6m": 4.48,
+      "rel_strength_6m": -4.43,
+      "drawdown_from_52w_high": -7.8,
+      "recovery_from_52w_low": 28.96,
+      "pct_vs_200dma": 9.46
+    },
+    "scored_at": "2026-08-03",
+    "rank": 74
+  },
+  {
+    "ticker": "RARE",
+    "name": "Ultragenyx Pharmaceutical Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 2.45,
+    "current_price": 24.91,
+    "fifty_two_week_high": 39.89,
+    "fifty_two_week_low": 18.29,
+    "doubling_prob_12m": 0.0099,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0046,
+    "lr_prob": 0.0426,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "net_margin_pct",
+        "shap": -1.5852
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 0.8558
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 0.793
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.6417
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -2.2,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 83.52,
+      "op_margin_pct": -83.78,
+      "net_margin_pct": -90.896,
+      "fcf_yield_pct": -20.71,
+      "debt_to_equity": null,
+      "ps_ratio": 3.662,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -6.519,
+      "price_to_book": 0.0,
+      "short_ratio": 4.24,
+      "share_dilution_1y": 13.64,
+      "momentum_3m": 0.57,
+      "momentum_6m": 0.44,
+      "rel_strength_6m": -8.47,
+      "drawdown_from_52w_high": -31.83,
+      "recovery_from_52w_low": 34.65,
+      "pct_vs_200dma": -7.79
+    },
+    "scored_at": "2026-08-03",
+    "rank": 75
+  },
+  {
+    "ticker": "WOLF",
+    "name": "Wolfspeed, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 1.23,
+    "current_price": 23.62,
+    "fifty_two_week_high": 80.82,
+    "fifty_two_week_low": 8.05,
+    "doubling_prob_12m": 0.0087,
+    "lgbm_prob": 0.0001,
+    "xgb_prob": 0.0285,
+    "lr_prob": 0.0007,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 2.6998
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": 0.9977
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 0.8995
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -0.6303
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -19.0,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": -31.09,
+      "op_margin_pct": -74.9,
+      "net_margin_pct": -72.926,
+      "fcf_yield_pct": 6.251,
+      "debt_to_equity": 1.784,
+      "ps_ratio": 1.723,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -6.616,
+      "price_to_book": 1.117,
+      "short_ratio": 4.77,
+      "share_dilution_1y": 47.14,
+      "momentum_3m": -35.75,
+      "momentum_6m": 38.94,
+      "rel_strength_6m": 30.03,
+      "drawdown_from_52w_high": -67.86,
+      "recovery_from_52w_low": 59.59,
+      "pct_vs_200dma": -17.07
+    },
+    "scored_at": "2026-08-03",
+    "rank": 76
+  },
+  {
+    "ticker": "BILL",
+    "name": "BILL Holdings, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 4.5,
+    "current_price": 45.13,
+    "fifty_two_week_high": 57.21,
+    "fifty_two_week_low": 31.41,
+    "doubling_prob_12m": 0.0077,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0059,
+    "lr_prob": 0.0294,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.4429
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -1.2003
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.8475
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -0.3834
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 13.5,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 80.7,
+      "op_margin_pct": -2.94,
+      "net_margin_pct": 0.01,
+      "fcf_yield_pct": 7.27,
+      "debt_to_equity": 0.496,
+      "ps_ratio": 2.809,
+      "pe_ratio": null,
+      "peg_ratio": 0.44,
+      "ev_to_ebitda": 125.772,
+      "price_to_book": 1.182,
+      "short_ratio": 5.1,
+      "share_dilution_1y": 12.87,
+      "momentum_3m": 15.51,
+      "momentum_6m": 21.78,
+      "rel_strength_6m": 12.87,
+      "drawdown_from_52w_high": -19.85,
+      "recovery_from_52w_low": 41.21,
+      "pct_vs_200dma": 2.85
+    },
+    "scored_at": "2026-08-03",
+    "rank": 77
+  },
+  {
+    "ticker": "URGN",
+    "name": "UroGen Pharma Ltd.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.86,
+    "current_price": 38.24,
+    "fifty_two_week_high": 43.93,
+    "fifty_two_week_low": 15.86,
+    "doubling_prob_12m": 0.0077,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0003,
+    "lr_prob": 0.0382,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": -1.8611
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -1.1301
+      },
+      {
+        "feature": "op_margin_pct",
+        "shap": -0.7959
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.6901
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 151.6,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 89.85,
+      "op_margin_pct": -77.02,
+      "net_margin_pct": -94.827,
+      "fcf_yield_pct": -8.91,
+      "debt_to_equity": null,
+      "ps_ratio": 13.261,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -17.793,
+      "price_to_book": 0.0,
+      "short_ratio": 7.53,
+      "share_dilution_1y": 11.68,
+      "momentum_3m": 66.26,
+      "momentum_6m": 91.2,
+      "rel_strength_6m": 82.29,
+      "drawdown_from_52w_high": -12.65,
+      "recovery_from_52w_low": 132.89,
+      "pct_vs_200dma": 52.43
+    },
+    "scored_at": "2026-08-03",
+    "rank": 78
+  },
+  {
+    "ticker": "BLKB",
+    "name": "Blackbaud, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 1.94,
+    "current_price": 42.8,
+    "fifty_two_week_high": 70.71,
+    "fifty_two_week_low": 25.58,
+    "doubling_prob_12m": 0.0074,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0247,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -3.6393
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": -1.202
+      },
+      {
+        "feature": "price_to_book",
+        "shap": 1.1051
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 0.862
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 3.0,
+      "eps_growth_yoy": 43.6,
+      "gross_margin_pct": 59.62,
+      "op_margin_pct": 19.79,
+      "net_margin_pct": 13.124,
+      "fcf_yield_pct": 14.24,
+      "debt_to_equity": 17.157,
+      "ps_ratio": 1.692,
+      "pe_ratio": 13.375,
+      "peg_ratio": 0.48,
+      "ev_to_ebitda": 11.371,
+      "price_to_book": 28.629,
+      "short_ratio": 4.91,
+      "share_dilution_1y": 10.53,
+      "momentum_3m": 14.01,
+      "momentum_6m": -11.84,
+      "rel_strength_6m": -20.75,
+      "drawdown_from_52w_high": -39.01,
+      "recovery_from_52w_low": 61.27,
+      "pct_vs_200dma": -6.89
+    },
+    "scored_at": "2026-08-03",
+    "rank": 79
+  },
+  {
+    "ticker": "RNST",
+    "name": "Renasant Corporation",
+    "sector": "Financial Services",
+    "market_cap_b": 4.02,
+    "current_price": 43.57,
+    "fifty_two_week_high": 44.5,
+    "fifty_two_week_low": 33.04,
+    "doubling_prob_12m": 0.0074,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0002,
+    "lr_prob": 0.0367,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.8132
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.0802
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.5939
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.5878
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 45.3,
+      "eps_growth_yoy": 2000.0,
+      "gross_margin_pct": 0.0,
+      "op_margin_pct": 43.483,
+      "net_margin_pct": 29.556,
+      "fcf_yield_pct": 7.12,
+      "debt_to_equity": 0.207,
+      "ps_ratio": 3.784,
+      "pe_ratio": 12.74,
+      "peg_ratio": 1.79,
+      "ev_to_ebitda": null,
+      "price_to_book": 1.061,
+      "short_ratio": 4.97,
+      "share_dilution_1y": 4.5,
+      "momentum_3m": 10.04,
+      "momentum_6m": 14.76,
+      "rel_strength_6m": 5.85,
+      "drawdown_from_52w_high": -1.54,
+      "recovery_from_52w_low": 32.87,
+      "pct_vs_200dma": 14.37
+    },
+    "scored_at": "2026-08-03",
+    "rank": 80
+  },
+  {
+    "ticker": "STOK",
+    "name": "Stoke Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.8,
+    "current_price": 28.86,
+    "fifty_two_week_high": 40.22,
+    "fifty_two_week_low": 12.71,
+    "doubling_prob_12m": 0.0063,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0142,
+    "lr_prob": 0.0103,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "rev_growth_yoy",
+        "shap": -3.4059
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -1.2225
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.1614
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.0109
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -96.1,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 100.0,
+      "op_margin_pct": -577.46,
+      "net_margin_pct": 0.0,
+      "fcf_yield_pct": -8.22,
+      "debt_to_equity": 0.006,
+      "ps_ratio": 56.03,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -7.941,
+      "price_to_book": 4.549,
+      "short_ratio": 14.65,
+      "share_dilution_1y": 25.2,
+      "momentum_3m": -12.76,
+      "momentum_6m": -14.59,
+      "rel_strength_6m": -23.5,
+      "drawdown_from_52w_high": -24.75,
+      "recovery_from_52w_low": 122.69,
+      "pct_vs_200dma": -8.83
+    },
+    "scored_at": "2026-08-03",
+    "rank": 81
+  },
+  {
+    "ticker": "UPST",
+    "name": "Upstart Holdings, Inc.",
+    "sector": "Financial Services",
+    "market_cap_b": 2.63,
+    "current_price": 27.44,
+    "fifty_two_week_high": 85.31,
+    "fifty_two_week_low": 23.965,
+    "doubling_prob_12m": 0.006,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0198,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 2.1329
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.6066
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -1.3095
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -0.8284
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 44.6,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 82.707,
+      "op_margin_pct": 0.895,
+      "net_margin_pct": 4.209,
+      "fcf_yield_pct": -10.92,
+      "debt_to_equity": 2.645,
+      "ps_ratio": 2.238,
+      "pe_ratio": 66.927,
+      "peg_ratio": null,
+      "ev_to_ebitda": 41.753,
+      "price_to_book": 3.582,
+      "short_ratio": 6.02,
+      "share_dilution_1y": 27.35,
+      "momentum_3m": -16.19,
+      "momentum_6m": -28.88,
+      "rel_strength_6m": -37.79,
+      "drawdown_from_52w_high": -66.87,
+      "recovery_from_52w_low": 13.29,
+      "pct_vs_200dma": -23.87
+    },
+    "scored_at": "2026-08-03",
+    "rank": 82
+  },
+  {
+    "ticker": "NVST",
+    "name": "Envista Holdings Corporation",
+    "sector": "Healthcare",
+    "market_cap_b": 4.44,
+    "current_price": 27.31,
+    "fifty_two_week_high": 30.42,
+    "fifty_two_week_low": 18.77,
+    "doubling_prob_12m": 0.005,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0011,
+    "lr_prob": 0.0232,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.2993
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": -1.0254
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -1.0019
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -0.7916
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 14.4,
+      "eps_growth_yoy": 130.0,
+      "gross_margin_pct": 54.87,
+      "op_margin_pct": 9.37,
+      "net_margin_pct": 2.411,
+      "fcf_yield_pct": 4.95,
+      "debt_to_equity": 0.516,
+      "ps_ratio": 1.583,
+      "pe_ratio": 66.61,
+      "peg_ratio": null,
+      "ev_to_ebitda": 12.922,
+      "price_to_book": 1.445,
+      "short_ratio": 3.44,
+      "share_dilution_1y": 5.75,
+      "momentum_3m": 3.72,
+      "momentum_6m": 19.21,
+      "rel_strength_6m": 10.3,
+      "drawdown_from_52w_high": -9.75,
+      "recovery_from_52w_low": 44.12,
+      "pct_vs_200dma": 12.24
+    },
+    "scored_at": "2026-08-03",
+    "rank": 83
+  },
+  {
+    "ticker": "ACHR",
+    "name": "Archer Aviation Inc.",
+    "sector": "Industrials",
+    "market_cap_b": 3.54,
+    "current_price": 4.64,
+    "fifty_two_week_high": 14.62,
+    "fifty_two_week_low": 4.3,
+    "doubling_prob_12m": 0.0046,
+    "lgbm_prob": 0.0001,
+    "xgb_prob": 0.0151,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 2.3604
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -1.4215
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 1.2878
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 0.7167
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 0.0,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 15.789,
+      "op_margin_pct": -44205.26,
+      "net_margin_pct": 0.0,
+      "fcf_yield_pct": -17.37,
+      "debt_to_equity": 0.059,
+      "ps_ratio": 100.0,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -2.298,
+      "price_to_book": 1.691,
+      "short_ratio": 2.64,
+      "share_dilution_1y": 12.47,
+      "momentum_3m": -20.95,
+      "momentum_6m": -35.56,
+      "rel_strength_6m": -44.47,
+      "drawdown_from_52w_high": -65.98,
+      "recovery_from_52w_low": 4.5,
+      "pct_vs_200dma": -33.59
+    },
+    "scored_at": "2026-08-03",
+    "rank": 84
+  },
+  {
+    "ticker": "AEVA",
+    "name": "Aeva Technologies, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 1.19,
+    "current_price": 17.54,
+    "fifty_two_week_high": 31.3,
+    "fifty_two_week_low": 8.83,
+    "doubling_prob_12m": 0.0046,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0151,
+    "lr_prob": 0.0006,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": -1.188
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 0.9238
+      },
+      {
+        "feature": "op_margin_pct",
+        "shap": -0.8346
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.6213
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 85.9,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 4.63,
+      "op_margin_pct": -630.88,
+      "net_margin_pct": 0.0,
+      "fcf_yield_pct": -9.84,
+      "debt_to_equity": null,
+      "ps_ratio": 56.481,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -8.727,
+      "price_to_book": 0.0,
+      "short_ratio": 2.23,
+      "share_dilution_1y": 6.99,
+      "momentum_3m": 6.43,
+      "momentum_6m": 34.1,
+      "rel_strength_6m": 25.19,
+      "drawdown_from_52w_high": -40.12,
+      "recovery_from_52w_low": 90.86,
+      "pct_vs_200dma": 6.21
+    },
+    "scored_at": "2026-08-03",
+    "rank": 85
+  },
+  {
+    "ticker": "MARA",
+    "name": "MARA Holdings, Inc.",
+    "sector": "Financial Services",
+    "market_cap_b": 4.32,
+    "current_price": 11.32,
+    "fifty_two_week_high": 23.45,
+    "fifty_two_week_low": 6.66,
+    "doubling_prob_12m": 0.0046,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0068,
+    "lr_prob": 0.0127,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.8874
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -1.3108
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -1.3024
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 0.9581
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -18.4,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 79.22,
+      "op_margin_pct": -104.46,
+      "net_margin_pct": -200.0,
+      "fcf_yield_pct": -29.73,
+      "debt_to_equity": 1.104,
+      "ps_ratio": 4.973,
+      "pe_ratio": null,
+      "peg_ratio": 0.1,
+      "ev_to_ebitda": -8.545,
+      "price_to_book": 1.932,
+      "short_ratio": 2.44,
+      "share_dilution_1y": 28.92,
+      "momentum_3m": -1.22,
+      "momentum_6m": 25.08,
+      "rel_strength_6m": 16.17,
+      "drawdown_from_52w_high": -50.44,
+      "recovery_from_52w_low": 68.2,
+      "pct_vs_200dma": -4.09
+    },
+    "scored_at": "2026-08-03",
+    "rank": 86
+  },
+  {
+    "ticker": "TENB",
+    "name": "Tenable Holdings, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 3.6,
+    "current_price": 32.64,
+    "fifty_two_week_high": 43.67,
+    "fifty_two_week_low": 15.73,
+    "doubling_prob_12m": 0.0042,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0137,
+    "lr_prob": 0.0002,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -2.6892
+      },
+      {
+        "feature": "price_to_book",
+        "shap": 1.6883
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.1232
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": -1.0404
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 8.6,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 78.23,
+      "op_margin_pct": 3.91,
+      "net_margin_pct": 0.646,
+      "fcf_yield_pct": 7.02,
+      "debt_to_equity": 1.689,
+      "ps_ratio": 3.449,
+      "pe_ratio": 200.0,
+      "peg_ratio": 0.99,
+      "ev_to_ebitda": 61.417,
+      "price_to_book": 15.069,
+      "short_ratio": 2.95,
+      "share_dilution_1y": 9.64,
+      "momentum_3m": 53.74,
+      "momentum_6m": 62.79,
+      "rel_strength_6m": 53.88,
+      "drawdown_from_52w_high": -23.47,
+      "recovery_from_52w_low": 103.49,
+      "pct_vs_200dma": 29.72
+    },
+    "scored_at": "2026-08-03",
+    "rank": 87
+  },
+  {
+    "ticker": "ARDX",
+    "name": "Ardelyx, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.22,
+    "current_price": 4.95,
+    "fifty_two_week_high": 8.4,
+    "fifty_two_week_low": 4.24,
+    "doubling_prob_12m": 0.0041,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0135,
+    "lr_prob": 0.0004,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_3m",
+        "shap": 2.0511
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.8079
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.9791
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -0.7578
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 27.5,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 92.51,
+      "op_margin_pct": -8.75,
+      "net_margin_pct": -13.576,
+      "fcf_yield_pct": -3.07,
+      "debt_to_equity": 1.401,
+      "ps_ratio": 2.859,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -35.797,
+      "price_to_book": 8.223,
+      "short_ratio": 5.54,
+      "share_dilution_1y": 10.63,
+      "momentum_3m": -28.05,
+      "momentum_6m": -36.05,
+      "rel_strength_6m": -44.96,
+      "drawdown_from_52w_high": -38.05,
+      "recovery_from_52w_low": 12.76,
+      "pct_vs_200dma": -17.9
+    },
+    "scored_at": "2026-08-03",
+    "rank": 88
+  },
+  {
+    "ticker": "OPFI",
+    "name": "OppFi Inc.",
+    "sector": "Financial Services",
+    "market_cap_b": 0.8,
+    "current_price": 9.37,
+    "fifty_two_week_high": 12.6,
+    "fifty_two_week_low": 7.36,
+    "doubling_prob_12m": 0.0039,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.013,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -3.0336
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.7141
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 0.6628
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 0.49
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -2.2,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 83.77,
+      "op_margin_pct": 64.16,
+      "net_margin_pct": 19.439,
+      "fcf_yield_pct": 48.55,
+      "debt_to_equity": 3.902,
+      "ps_ratio": 3.969,
+      "pe_ratio": 4.616,
+      "peg_ratio": null,
+      "ev_to_ebitda": null,
+      "price_to_book": 3.274,
+      "short_ratio": 2.95,
+      "share_dilution_1y": 3.05,
+      "momentum_3m": -1.47,
+      "momentum_6m": 2.4,
+      "rel_strength_6m": -6.51,
+      "drawdown_from_52w_high": -23.45,
+      "recovery_from_52w_low": 24.6,
+      "pct_vs_200dma": 0.87
+    },
+    "scored_at": "2026-08-03",
+    "rank": 89
+  },
+  {
+    "ticker": "NTLA",
+    "name": "Intellia Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.49,
+    "current_price": 10.68,
+    "fifty_two_week_high": 28.25,
+    "fifty_two_week_low": 7.95,
+    "doubling_prob_12m": 0.0038,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0016,
+    "lr_prob": 0.0166,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.6012
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -1.1859
+      },
+      {
+        "feature": "op_margin_pct",
+        "shap": -1.1725
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 0.986
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -9.5,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 0.0,
+      "op_margin_pct": -636.56,
+      "net_margin_pct": 0.0,
+      "fcf_yield_pct": -24.37,
+      "debt_to_equity": 0.13,
+      "ps_ratio": 22.578,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -2.91,
+      "price_to_book": 2.072,
+      "short_ratio": 7.38,
+      "share_dilution_1y": 32.76,
+      "momentum_3m": -19.46,
+      "momentum_6m": -18.16,
+      "rel_strength_6m": -27.07,
+      "drawdown_from_52w_high": -61.83,
+      "recovery_from_52w_low": 32.84,
+      "pct_vs_200dma": -18.35
+    },
+    "scored_at": "2026-08-03",
+    "rank": 90
+  },
+  {
+    "ticker": "NVCR",
+    "name": "NovoCure Limited",
+    "sector": "Healthcare",
+    "market_cap_b": 1.73,
+    "current_price": 14.84,
+    "fifty_two_week_high": 21.451,
+    "fifty_two_week_low": 9.82,
+    "doubling_prob_12m": 0.0037,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0059,
+    "lr_prob": 0.0097,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": -1.1597
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 1.0949
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.8358
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.6431
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 15.6,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 76.13,
+      "op_margin_pct": -22.08,
+      "net_margin_pct": -21.248,
+      "fcf_yield_pct": -1.47,
+      "debt_to_equity": 0.69,
+      "ps_ratio": 2.472,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -11.151,
+      "price_to_book": 5.11,
+      "short_ratio": 6.36,
+      "share_dilution_1y": 9.89,
+      "momentum_3m": -10.71,
+      "momentum_6m": 25.34,
+      "rel_strength_6m": 16.43,
+      "drawdown_from_52w_high": -25.76,
+      "recovery_from_52w_low": 47.96,
+      "pct_vs_200dma": 7.63
+    },
+    "scored_at": "2026-08-03",
+    "rank": 91
+  },
+  {
+    "ticker": "VRNS",
+    "name": "Varonis Systems, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 4.59,
+    "current_price": 39.95,
+    "fifty_two_week_high": 63.9,
+    "fifty_two_week_low": 19.7,
+    "doubling_prob_12m": 0.0036,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0108,
+    "lr_prob": 0.0017,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": 1.2515
+      },
+      {
+        "feature": "peg_ratio",
+        "shap": -1.0618
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -0.9538
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.8045
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 18.3,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 77.07,
+      "op_margin_pct": -21.99,
+      "net_margin_pct": -20.547,
+      "fcf_yield_pct": 2.58,
+      "debt_to_equity": 1.161,
+      "ps_ratio": 6.669,
+      "pe_ratio": null,
+      "peg_ratio": 7.38,
+      "ev_to_ebitda": -33.808,
+      "price_to_book": 7.844,
+      "short_ratio": 3.01,
+      "share_dilution_1y": 6.94,
+      "momentum_3m": 50.75,
+      "momentum_6m": 50.58,
+      "rel_strength_6m": 41.67,
+      "drawdown_from_52w_high": -36.9,
+      "recovery_from_52w_low": 97.87,
+      "pct_vs_200dma": 21.09
+    },
+    "scored_at": "2026-08-03",
+    "rank": 92
+  },
+  {
+    "ticker": "RUN",
+    "name": "Sunrun Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.34,
+    "current_price": 9.81,
+    "fifty_two_week_high": 22.44,
+    "fifty_two_week_low": 9.01,
+    "doubling_prob_12m": 0.0028,
+    "lgbm_prob": 0.0001,
+    "xgb_prob": 0.0093,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "share_dilution_1y",
+        "shap": 2.1367
+      },
+      {
+        "feature": "momentum_3m",
+        "shap": 0.9683
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -0.6769
+      },
+      {
+        "feature": "peg_ratio",
+        "shap": -0.6664
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 43.2,
+      "eps_growth_yoy": 214.4,
+      "gross_margin_pct": 32.07,
+      "op_margin_pct": -1.72,
+      "net_margin_pct": 17.877,
+      "fcf_yield_pct": -110.11,
+      "debt_to_equity": 4.452,
+      "ps_ratio": 0.737,
+      "pe_ratio": 4.606,
+      "peg_ratio": 3.07,
+      "ev_to_ebitda": 26.284,
+      "price_to_book": 0.692,
+      "short_ratio": 5.37,
+      "share_dilution_1y": 27.63,
+      "momentum_3m": -24.89,
+      "momentum_6m": -46.89,
+      "rel_strength_6m": -55.8,
+      "drawdown_from_52w_high": -54.18,
+      "recovery_from_52w_low": 8.16,
+      "pct_vs_200dma": -37.84
+    },
+    "scored_at": "2026-08-03",
+    "rank": 93
+  },
+  {
+    "ticker": "CARG",
+    "name": "CarGurus, Inc.",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 2.75,
+    "current_price": 36.24,
+    "fifty_two_week_high": 39.42,
+    "fifty_two_week_low": 26.39,
+    "doubling_prob_12m": 0.0025,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0025,
+    "lr_prob": 0.0089,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -2.6417
+      },
+      {
+        "feature": "price_to_book",
+        "shap": 1.817
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -1.0719
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": 0.7789
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 14.8,
+      "eps_growth_yoy": -8.4,
+      "gross_margin_pct": 93.63,
+      "op_margin_pct": 27.93,
+      "net_margin_pct": 15.889,
+      "fcf_yield_pct": 9.77,
+      "debt_to_equity": 0.793,
+      "ps_ratio": 3.483,
+      "pe_ratio": 19.074,
+      "peg_ratio": 1.1,
+      "ev_to_ebitda": 12.57,
+      "price_to_book": 13.738,
+      "short_ratio": 4.96,
+      "share_dilution_1y": 8.12,
+      "momentum_3m": -2.16,
+      "momentum_6m": 22.93,
+      "rel_strength_6m": 14.02,
+      "drawdown_from_52w_high": -7.15,
+      "recovery_from_52w_low": 34.42,
+      "pct_vs_200dma": 7.2
+    },
+    "scored_at": "2026-08-03",
+    "rank": 94
+  },
+  {
+    "ticker": "XNCR",
+    "name": "Xencor, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.5,
+    "current_price": 20.21,
+    "fifty_two_week_high": 21.76,
+    "fifty_two_week_low": 6.92,
+    "doubling_prob_12m": 0.0025,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0001,
+    "lr_prob": 0.0125,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "rev_growth_yoy",
+        "shap": -1.2824
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.9889
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.5887
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.5884
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -86.2,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": -100.0,
+      "op_margin_pct": -217.93,
+      "net_margin_pct": -177.096,
+      "fcf_yield_pct": -12.6,
+      "debt_to_equity": 0.34,
+      "ps_ratio": 15.39,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -6.088,
+      "price_to_book": 2.903,
+      "short_ratio": 10.98,
+      "share_dilution_1y": 14.62,
+      "momentum_3m": 59.26,
+      "momentum_6m": 68.56,
+      "rel_strength_6m": 59.65,
+      "drawdown_from_52w_high": -5.96,
+      "recovery_from_52w_low": 188.71,
+      "pct_vs_200dma": 46.37
+    },
+    "scored_at": "2026-08-03",
+    "rank": 95
+  },
+  {
+    "ticker": "ALRM",
+    "name": "Alarm.com Holdings, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.71,
+    "current_price": 54.75,
+    "fifty_two_week_high": 59.53,
+    "fifty_two_week_low": 41.49,
+    "doubling_prob_12m": 0.0019,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0013,
+    "lr_prob": 0.0077,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.2006
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.7101
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.5969
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.5759
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 11.0,
+      "eps_growth_yoy": -10.3,
+      "gross_margin_pct": 65.83,
+      "op_margin_pct": 13.07,
+      "net_margin_pct": 12.357,
+      "fcf_yield_pct": 6.19,
+      "debt_to_equity": 0.659,
+      "ps_ratio": 2.61,
+      "pe_ratio": 22.718,
+      "peg_ratio": 1.41,
+      "ev_to_ebitda": 17.628,
+      "price_to_book": 3.145,
+      "short_ratio": 4.07,
+      "share_dilution_1y": 5.19,
+      "momentum_3m": 16.17,
+      "momentum_6m": 20.07,
+      "rel_strength_6m": 11.16,
+      "drawdown_from_52w_high": -7.45,
+      "recovery_from_52w_low": 29.95,
+      "pct_vs_200dma": 13.61
+    },
+    "scored_at": "2026-08-03",
+    "rank": 96
+  },
+  {
+    "ticker": "IRTC",
+    "name": "iRhythm Holdings, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 3.85,
+    "current_price": 117.17,
+    "fifty_two_week_high": 212.0,
+    "fifty_two_week_low": 100.846,
+    "doubling_prob_12m": 0.0017,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0058,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "price_to_book",
+        "shap": 1.1293
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.092
+      },
+      {
+        "feature": "ev_to_ebitda",
+        "shap": -0.9413
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -0.7926
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 25.7,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 71.0,
+      "op_margin_pct": -4.64,
+      "net_margin_pct": -3.527,
+      "fcf_yield_pct": 0.49,
+      "debt_to_equity": 4.524,
+      "ps_ratio": 4.887,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -50.0,
+      "price_to_book": 23.878,
+      "short_ratio": 5.39,
+      "share_dilution_1y": 10.44,
+      "momentum_3m": -3.0,
+      "momentum_6m": -27.36,
+      "rel_strength_6m": -36.27,
+      "drawdown_from_52w_high": -38.09,
+      "recovery_from_52w_low": 15.11,
+      "pct_vs_200dma": -17.3
+    },
+    "scored_at": "2026-08-03",
+    "rank": 97
+  },
+  {
+    "ticker": "CNMD",
+    "name": "CONMED Corporation",
+    "sector": "Healthcare",
+    "market_cap_b": 1.39,
+    "current_price": 46.3,
+    "fifty_two_week_high": 56.64,
+    "fifty_two_week_low": 31.44,
+    "doubling_prob_12m": 0.0016,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0011,
+    "lr_prob": 0.0065,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.8672
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.8776
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.8291
+      },
+      {
+        "feature": "short_ratio",
+        "shap": 0.5048
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 0.3,
+      "eps_growth_yoy": 11.2,
+      "gross_margin_pct": 55.79,
+      "op_margin_pct": 8.04,
+      "net_margin_pct": 4.119,
+      "fcf_yield_pct": 9.7,
+      "debt_to_equity": 0.801,
+      "ps_ratio": 1.011,
+      "pe_ratio": 25.027,
+      "peg_ratio": 1.84,
+      "ev_to_ebitda": 9.6,
+      "price_to_book": 1.333,
+      "short_ratio": 2.85,
+      "share_dilution_1y": 7.74,
+      "momentum_3m": 25.82,
+      "momentum_6m": 19.36,
+      "rel_strength_6m": 10.45,
+      "drawdown_from_52w_high": -16.73,
+      "recovery_from_52w_low": 44.19,
+      "pct_vs_200dma": 16.02
+    },
+    "scored_at": "2026-08-03",
+    "rank": 98
+  },
+  {
+    "ticker": "PLUG",
+    "name": "Plug Power, Inc.",
+    "sector": "Industrials",
+    "market_cap_b": 2.87,
+    "current_price": 2.06,
+    "fifty_two_week_high": 4.58,
+    "fifty_two_week_low": 1.4,
+    "doubling_prob_12m": 0.0016,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.005,
+    "lr_prob": 0.0007,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "net_margin_pct",
+        "shap": -1.6442
+      },
+      {
+        "feature": "op_margin_pct",
+        "shap": -0.8311
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.7496
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 0.7485
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 22.3,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": -25.66,
+      "op_margin_pct": -82.65,
+      "net_margin_pct": -200.0,
+      "fcf_yield_pct": -23.24,
+      "debt_to_equity": 1.347,
+      "ps_ratio": 3.885,
+      "pe_ratio": null,
+      "peg_ratio": 0.84,
+      "ev_to_ebitda": -5.982,
+      "price_to_book": 3.829,
+      "short_ratio": 6.34,
+      "share_dilution_1y": 23.66,
+      "momentum_3m": -33.76,
+      "momentum_6m": -3.29,
+      "rel_strength_6m": -12.2,
+      "drawdown_from_52w_high": -50.24,
+      "recovery_from_52w_low": 46.1,
+      "pct_vs_200dma": -19.44
+    },
+    "scored_at": "2026-08-03",
+    "rank": 99
+  },
+  {
+    "ticker": "PRGO",
+    "name": "Perrigo Company plc",
+    "sector": "Healthcare",
+    "market_cap_b": 1.4,
+    "current_price": 10.11,
+    "fifty_two_week_high": 27.16,
+    "fifty_two_week_low": 9.23,
+    "doubling_prob_12m": 0.0015,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0048,
+    "lr_prob": 0.0004,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": 2.9283
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": 2.1241
+      },
+      {
+        "feature": "ps_ratio",
+        "shap": -1.2978
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -0.7383
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -7.2,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 34.17,
+      "op_margin_pct": 6.39,
+      "net_margin_pct": -43.5,
+      "fcf_yield_pct": 7.7,
+      "debt_to_equity": 1.454,
+      "ps_ratio": 0.335,
+      "pe_ratio": null,
+      "peg_ratio": 1.14,
+      "ev_to_ebitda": 7.642,
+      "price_to_book": 0.559,
+      "short_ratio": 5.5,
+      "share_dilution_1y": 16.57,
+      "momentum_3m": -12.98,
+      "momentum_6m": -25.0,
+      "rel_strength_6m": -33.91,
+      "drawdown_from_52w_high": -60.18,
+      "recovery_from_52w_low": 12.14,
+      "pct_vs_200dma": -18.74
+    },
+    "scored_at": "2026-08-03",
+    "rank": 100
+  },
+  {
+    "ticker": "LCII",
+    "name": "LCI Industries",
+    "sector": "Consumer Cyclical",
+    "market_cap_b": 2.49,
+    "current_price": 102.36,
+    "fifty_two_week_high": 159.66,
+    "fifty_two_week_low": 84.33,
+    "doubling_prob_12m": 0.0015,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0008,
+    "lr_prob": 0.0062,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.3201
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.0847
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": -0.7293
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -0.6398
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 4.3,
+      "eps_growth_yoy": 30.4,
+      "gross_margin_pct": 24.05,
+      "op_margin_pct": 7.05,
+      "net_margin_pct": 4.842,
+      "fcf_yield_pct": 8.1,
+      "debt_to_equity": 0.891,
+      "ps_ratio": 0.597,
+      "pe_ratio": 12.544,
+      "peg_ratio": 1.04,
+      "ev_to_ebitda": 8.619,
+      "price_to_book": 1.792,
+      "short_ratio": 3.32,
+      "share_dilution_1y": 9.57,
+      "momentum_3m": -11.45,
+      "momentum_6m": -30.8,
+      "rel_strength_6m": -39.71,
+      "drawdown_from_52w_high": -33.57,
+      "recovery_from_52w_low": 24.38,
+      "pct_vs_200dma": -11.43
+    },
+    "scored_at": "2026-08-03",
+    "rank": 101
+  },
+  {
+    "ticker": "PFSI",
+    "name": "PennyMac Financial Services, In",
+    "sector": "Financial Services",
+    "market_cap_b": 3.92,
+    "current_price": 75.41,
+    "fifty_two_week_high": 160.36,
+    "fifty_two_week_low": 71.68,
+    "doubling_prob_12m": 0.0013,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0044,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "rev_growth_yoy",
+        "shap": -2.0797
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.6375
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.534
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": 0.5195
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -45.3,
+      "eps_growth_yoy": -83.9,
+      "gross_margin_pct": 63.73,
+      "op_margin_pct": 11.68,
+      "net_margin_pct": 13.06,
+      "fcf_yield_pct": -105.43,
+      "debt_to_equity": 5.947,
+      "ps_ratio": 1.302,
+      "pe_ratio": 8.014,
+      "peg_ratio": null,
+      "ev_to_ebitda": null,
+      "price_to_book": 0.911,
+      "short_ratio": 4.22,
+      "share_dilution_1y": 4.64,
+      "momentum_3m": -17.86,
+      "momentum_6m": -18.49,
+      "rel_strength_6m": -27.4,
+      "drawdown_from_52w_high": -52.39,
+      "recovery_from_52w_low": null,
+      "pct_vs_200dma": -27.35
+    },
+    "scored_at": "2026-08-03",
+    "rank": 102
+  },
+  {
+    "ticker": "CDRE",
+    "name": "Cadre Holdings, Inc.",
+    "sector": "Industrials",
+    "market_cap_b": 1.32,
+    "current_price": 30.83,
+    "fifty_two_week_high": 48.76,
+    "fifty_two_week_low": 25.73,
+    "doubling_prob_12m": 0.0012,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0034,
+    "lr_prob": 0.0006,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "eps_growth_yoy",
+        "shap": 1.3085
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -1.005
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.9553
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -0.8765
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 19.5,
+      "eps_growth_yoy": -79.6,
+      "gross_margin_pct": 41.48,
+      "op_margin_pct": 11.03,
+      "net_margin_pct": 5.8,
+      "fcf_yield_pct": 4.59,
+      "debt_to_equity": 1.157,
+      "ps_ratio": 2.076,
+      "pe_ratio": 36.702,
+      "peg_ratio": null,
+      "ev_to_ebitda": 17.099,
+      "price_to_book": 3.925,
+      "short_ratio": 5.78,
+      "share_dilution_1y": 6.1,
+      "momentum_3m": 3.62,
+      "momentum_6m": -26.11,
+      "rel_strength_6m": -35.02,
+      "drawdown_from_52w_high": -32.63,
+      "recovery_from_52w_low": 13.35,
+      "pct_vs_200dma": -14.77
+    },
+    "scored_at": "2026-08-03",
+    "rank": 103
+  },
+  {
+    "ticker": "VRTS",
+    "name": "Virtus Investment Partners, Inc",
+    "sector": "Financial Services",
+    "market_cap_b": 1.06,
+    "current_price": 159.35,
+    "fifty_two_week_high": 203.61,
+    "fifty_two_week_low": 121.61,
+    "doubling_prob_12m": 0.0012,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.004,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.8355
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.8063
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.7856
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.7463
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -4.4,
+      "eps_growth_yoy": 9.2,
+      "gross_margin_pct": 51.78,
+      "op_margin_pct": 17.28,
+      "net_margin_pct": 14.517,
+      "fcf_yield_pct": -3.17,
+      "debt_to_equity": 3.103,
+      "ps_ratio": 1.29,
+      "pe_ratio": 9.085,
+      "peg_ratio": 0.56,
+      "ev_to_ebitda": 7.674,
+      "price_to_book": 1.161,
+      "short_ratio": 3.12,
+      "share_dilution_1y": 6.38,
+      "momentum_3m": 18.91,
+      "momentum_6m": 8.03,
+      "rel_strength_6m": -0.88,
+      "drawdown_from_52w_high": -16.0,
+      "recovery_from_52w_low": 31.14,
+      "pct_vs_200dma": 8.37
+    },
+    "scored_at": "2026-08-03",
+    "rank": 104
+  },
+  {
+    "ticker": "ANIP",
+    "name": "ANI Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.8,
+    "current_price": 79.24,
+    "fifty_two_week_high": 99.5,
+    "fifty_two_week_low": 63.67,
+    "doubling_prob_12m": 0.0011,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0032,
+    "lr_prob": 0.0005,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -2.5672
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -0.8747
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": -0.8605
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 0.8286
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 20.5,
+      "eps_growth_yoy": 86.1,
+      "gross_margin_pct": 60.83,
+      "op_margin_pct": 11.46,
+      "net_margin_pct": 9.976,
+      "fcf_yield_pct": 10.15,
+      "debt_to_equity": 1.092,
+      "ps_ratio": 1.95,
+      "pe_ratio": 20.266,
+      "peg_ratio": null,
+      "ev_to_ebitda": 10.054,
+      "price_to_book": 3.008,
+      "short_ratio": 9.99,
+      "share_dilution_1y": 14.83,
+      "momentum_3m": -1.43,
+      "momentum_6m": -0.8,
+      "rel_strength_6m": -9.71,
+      "drawdown_from_52w_high": -19.81,
+      "recovery_from_52w_low": 21.11,
+      "pct_vs_200dma": -2.47
+    },
+    "scored_at": "2026-08-03",
+    "rank": 105
+  },
+  {
+    "ticker": "OCUL",
+    "name": "Ocular Therapeutix, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.79,
+    "current_price": 8.17,
+    "fifty_two_week_high": 16.44,
+    "fifty_two_week_low": 6.23,
+    "doubling_prob_12m": 0.001,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0014,
+    "lr_prob": 0.0029,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.2973
+      },
+      {
+        "feature": "op_margin_pct",
+        "shap": -0.867
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -0.8553
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -0.8027
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 0.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 87.24,
+      "op_margin_pct": -575.42,
+      "net_margin_pct": 0.0,
+      "fcf_yield_pct": -13.47,
+      "debt_to_equity": 0.137,
+      "ps_ratio": 34.377,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -4.076,
+      "price_to_book": 3.075,
+      "short_ratio": 8.75,
+      "share_dilution_1y": 12.34,
+      "momentum_3m": -13.36,
+      "momentum_6m": -4.0,
+      "rel_strength_6m": -12.91,
+      "drawdown_from_52w_high": -49.29,
+      "recovery_from_52w_low": 18.75,
+      "pct_vs_200dma": -19.13
+    },
+    "scored_at": "2026-08-03",
+    "rank": 106
+  },
+  {
+    "ticker": "HASI",
+    "name": "HA Sustainable Infrastructure C",
+    "sector": "Financial Services",
+    "market_cap_b": 4.84,
+    "current_price": 37.87,
+    "fifty_two_week_high": 44.13,
+    "fifty_two_week_low": 24.38,
+    "doubling_prob_12m": 0.0009,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0031,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "rev_growth_yoy",
+        "shap": -0.97
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": 0.9009
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.8365
+      },
+      {
+        "feature": "net_margin_pct",
+        "shap": -0.8016
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -28.3,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 23.56,
+      "op_margin_pct": -10.88,
+      "net_margin_pct": 63.667,
+      "fcf_yield_pct": 4.55,
+      "debt_to_equity": 2.048,
+      "ps_ratio": 55.054,
+      "pe_ratio": 94.675,
+      "peg_ratio": 1.26,
+      "ev_to_ebitda": null,
+      "price_to_book": 1.972,
+      "short_ratio": 11.03,
+      "share_dilution_1y": 8.55,
+      "momentum_3m": -9.97,
+      "momentum_6m": 9.87,
+      "rel_strength_6m": 0.96,
+      "drawdown_from_52w_high": -11.59,
+      "recovery_from_52w_low": 63.11,
+      "pct_vs_200dma": 6.78
+    },
+    "scored_at": "2026-08-03",
+    "rank": 107
+  },
+  {
+    "ticker": "AMRC",
+    "name": "Ameresco, Inc.",
+    "sector": "Industrials",
+    "market_cap_b": 0.74,
+    "current_price": 21.07,
+    "fifty_two_week_high": 44.93,
+    "fifty_two_week_low": 15.9,
+    "doubling_prob_12m": 0.0009,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0031,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_3m",
+        "shap": 2.0527
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -1.6033
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -1.0506
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.9689
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 13.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 15.58,
+      "op_margin_pct": 6.32,
+      "net_margin_pct": 1.589,
+      "fcf_yield_pct": -48.25,
+      "debt_to_equity": 1.926,
+      "ps_ratio": 0.563,
+      "pe_ratio": 36.328,
+      "peg_ratio": 1.77,
+      "ev_to_ebitda": 15.647,
+      "price_to_book": 1.048,
+      "short_ratio": 7.84,
+      "share_dilution_1y": 7.96,
+      "momentum_3m": -32.81,
+      "momentum_6m": -32.98,
+      "rel_strength_6m": -41.89,
+      "drawdown_from_52w_high": -51.26,
+      "recovery_from_52w_low": 26.17,
+      "pct_vs_200dma": -30.19
+    },
+    "scored_at": "2026-08-03",
+    "rank": 108
+  },
+  {
+    "ticker": "CRSP",
+    "name": "CRISPR Therapeutics AG",
+    "sector": "Healthcare",
+    "market_cap_b": 4.73,
+    "current_price": 47.99,
+    "fifty_two_week_high": 78.48,
+    "fifty_two_week_low": 44.12,
+    "doubling_prob_12m": 0.0008,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0028,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -1.4258
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -1.2177
+      },
+      {
+        "feature": "op_margin_pct",
+        "shap": -1.1727
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 1.0571
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 68.6,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": -20092.0,
+      "op_margin_pct": -64639.5,
+      "net_margin_pct": 0.0,
+      "fcf_yield_pct": -9.02,
+      "debt_to_equity": 0.434,
+      "ps_ratio": 100.0,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -5.601,
+      "price_to_book": 2.549,
+      "short_ratio": 11.26,
+      "share_dilution_1y": 20.11,
+      "momentum_3m": -7.05,
+      "momentum_6m": -7.71,
+      "rel_strength_6m": -16.62,
+      "drawdown_from_52w_high": -37.5,
+      "recovery_from_52w_low": 8.23,
+      "pct_vs_200dma": -11.2
+    },
+    "scored_at": "2026-08-03",
+    "rank": 109
+  },
+  {
+    "ticker": "PRGS",
+    "name": "Progress Software Corporation",
+    "sector": "Technology",
+    "market_cap_b": 1.67,
+    "current_price": 40.59,
+    "fifty_two_week_high": 47.37,
+    "fifty_two_week_low": 23.82,
+    "doubling_prob_12m": 0.0006,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0019,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -2.3886
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.0627
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": -0.7777
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.7618
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 6.8,
+      "eps_growth_yoy": 28.2,
+      "gross_margin_pct": 81.79,
+      "op_margin_pct": 18.54,
+      "net_margin_pct": 8.871,
+      "fcf_yield_pct": 18.33,
+      "debt_to_equity": 2.622,
+      "ps_ratio": 1.659,
+      "pe_ratio": 19.704,
+      "peg_ratio": 1.36,
+      "ev_to_ebitda": 8.655,
+      "price_to_book": 3.313,
+      "short_ratio": 4.11,
+      "share_dilution_1y": 10.26,
+      "momentum_3m": 40.21,
+      "momentum_6m": 1.35,
+      "rel_strength_6m": -7.56,
+      "drawdown_from_52w_high": -13.4,
+      "recovery_from_52w_low": 61.78,
+      "pct_vs_200dma": 9.7
+    },
+    "scored_at": "2026-08-03",
+    "rank": 110
+  },
+  {
+    "ticker": "OPCH",
+    "name": "Option Care Health, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 3.45,
+    "current_price": 23.03,
+    "fifty_two_week_high": 36.8,
+    "fifty_two_week_low": 18.01,
+    "doubling_prob_12m": 0.0005,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0004,
+    "lr_prob": 0.0021,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.6479
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -0.9426
+      },
+      {
+        "feature": "ps_ratio",
+        "shap": -0.5976
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -0.5767
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 1.9,
+      "eps_growth_yoy": 12.9,
+      "gross_margin_pct": 19.06,
+      "op_margin_pct": 5.86,
+      "net_margin_pct": 3.681,
+      "fcf_yield_pct": 8.81,
+      "debt_to_equity": 1.006,
+      "ps_ratio": 0.606,
+      "pe_ratio": 17.447,
+      "peg_ratio": 1.23,
+      "ev_to_ebitda": 11.16,
+      "price_to_book": 2.738,
+      "short_ratio": 5.28,
+      "share_dilution_1y": 8.58,
+      "momentum_3m": 14.98,
+      "momentum_6m": -32.38,
+      "rel_strength_6m": -41.29,
+      "drawdown_from_52w_high": -37.06,
+      "recovery_from_52w_low": 17.98,
+      "pct_vs_200dma": -16.81
+    },
+    "scored_at": "2026-08-03",
+    "rank": 111
+  },
+  {
+    "ticker": "OPCH",
+    "name": "Option Care Health, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 3.45,
+    "current_price": 23.03,
+    "fifty_two_week_high": 36.8,
+    "fifty_two_week_low": 18.01,
+    "doubling_prob_12m": 0.0005,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0004,
+    "lr_prob": 0.0021,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.6479
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -0.9426
+      },
+      {
+        "feature": "ps_ratio",
+        "shap": -0.5976
+      },
+      {
+        "feature": "pct_vs_200dma",
+        "shap": -0.5767
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 1.9,
+      "eps_growth_yoy": 12.9,
+      "gross_margin_pct": 19.06,
+      "op_margin_pct": 5.86,
+      "net_margin_pct": 3.681,
+      "fcf_yield_pct": 8.81,
+      "debt_to_equity": 1.006,
+      "ps_ratio": 0.606,
+      "pe_ratio": 17.447,
+      "peg_ratio": 1.23,
+      "ev_to_ebitda": 11.16,
+      "price_to_book": 2.738,
+      "short_ratio": 5.28,
+      "share_dilution_1y": 8.58,
+      "momentum_3m": 14.98,
+      "momentum_6m": -32.38,
+      "rel_strength_6m": -41.29,
+      "drawdown_from_52w_high": -37.06,
+      "recovery_from_52w_low": 17.98,
+      "pct_vs_200dma": -16.81
+    },
+    "scored_at": "2026-08-03",
+    "rank": 112
+  },
+  {
+    "ticker": "CUBI",
+    "name": "Customers Bancorp, Inc",
+    "sector": "Financial Services",
+    "market_cap_b": 2.66,
+    "current_price": 78.68,
+    "fifty_two_week_high": 82.56,
+    "fifty_two_week_low": 59.34,
+    "doubling_prob_12m": 0.0005,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0005,
+    "lr_prob": 0.0017,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.6419
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.0997
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.7241
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": 0.4966
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 10.1,
+      "eps_growth_yoy": 18.5,
+      "gross_margin_pct": 0.0,
+      "op_margin_pct": 46.019,
+      "net_margin_pct": 35.25,
+      "fcf_yield_pct": 10.78,
+      "debt_to_equity": 0.855,
+      "ps_ratio": 3.219,
+      "pe_ratio": 9.525,
+      "peg_ratio": 1.18,
+      "ev_to_ebitda": null,
+      "price_to_book": 1.205,
+      "short_ratio": 6.76,
+      "share_dilution_1y": 7.01,
+      "momentum_3m": 2.08,
+      "momentum_6m": 0.43,
+      "rel_strength_6m": -8.48,
+      "drawdown_from_52w_high": -3.12,
+      "recovery_from_52w_low": 30.01,
+      "pct_vs_200dma": 7.52
+    },
+    "scored_at": "2026-08-03",
+    "rank": 113
+  },
+  {
+    "ticker": "BL",
+    "name": "BlackLine, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 1.84,
+    "current_price": 31.4,
+    "fifty_two_week_high": 59.57,
+    "fifty_two_week_low": 24.7,
+    "doubling_prob_12m": 0.0004,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0013,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.3771
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -0.6931
+      },
+      {
+        "feature": "peg_ratio",
+        "shap": -0.5943
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.5551
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 9.7,
+      "eps_growth_yoy": 37.7,
+      "gross_margin_pct": 75.38,
+      "op_margin_pct": 5.47,
+      "net_margin_pct": 3.71,
+      "fcf_yield_pct": 7.49,
+      "debt_to_equity": 2.247,
+      "ps_ratio": 2.57,
+      "pe_ratio": 74.762,
+      "peg_ratio": 4.53,
+      "ev_to_ebitda": 34.108,
+      "price_to_book": 6.072,
+      "short_ratio": 5.86,
+      "share_dilution_1y": 11.33,
+      "momentum_3m": -7.4,
+      "momentum_6m": -29.33,
+      "rel_strength_6m": -38.24,
+      "drawdown_from_52w_high": -46.63,
+      "recovery_from_52w_low": 24.46,
+      "pct_vs_200dma": -23.43
+    },
+    "scored_at": "2026-08-03",
+    "rank": 114
+  },
+  {
+    "ticker": "PCRX",
+    "name": "Pacira BioSciences, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.04,
+    "current_price": 26.41,
+    "fifty_two_week_high": 27.64,
+    "fifty_two_week_low": 18.8,
+    "doubling_prob_12m": 0.0004,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0001,
+    "lr_prob": 0.0021,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.5841
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.3389
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.7563
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 0.7354
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 5.0,
+      "eps_growth_yoy": -30.0,
+      "gross_margin_pct": 79.34,
+      "op_margin_pct": 2.18,
+      "net_margin_pct": 0.699,
+      "fcf_yield_pct": 12.77,
+      "debt_to_equity": 0.629,
+      "ps_ratio": 1.414,
+      "pe_ratio": 200.0,
+      "peg_ratio": 11.21,
+      "ev_to_ebitda": 10.291,
+      "price_to_book": 1.588,
+      "short_ratio": 13.75,
+      "share_dilution_1y": 17.7,
+      "momentum_3m": 8.06,
+      "momentum_6m": 25.64,
+      "rel_strength_6m": 16.73,
+      "drawdown_from_52w_high": -2.98,
+      "recovery_from_52w_low": 37.84,
+      "pct_vs_200dma": 12.46
+    },
+    "scored_at": "2026-08-03",
+    "rank": 115
+  },
+  {
+    "ticker": "ENOV",
+    "name": "Enovis Corporation",
+    "sector": "Healthcare",
+    "market_cap_b": 1.68,
+    "current_price": 29.15,
+    "fifty_two_week_high": 34.28,
+    "fifty_two_week_low": 19.14,
+    "doubling_prob_12m": 0.0003,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0001,
+    "lr_prob": 0.0015,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -1.3312
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.9514
+      },
+      {
+        "feature": "ps_ratio_relative",
+        "shap": -0.8994
+      },
+      {
+        "feature": "ps_ratio",
+        "shap": -0.5984
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 5.4,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 60.5,
+      "op_margin_pct": 1.46,
+      "net_margin_pct": -49.915,
+      "fcf_yield_pct": 2.14,
+      "debt_to_equity": 0.955,
+      "ps_ratio": 0.736,
+      "pe_ratio": null,
+      "peg_ratio": 3.45,
+      "ev_to_ebitda": 8.215,
+      "price_to_book": 1.136,
+      "short_ratio": 6.46,
+      "share_dilution_1y": 14.49,
+      "momentum_3m": 23.41,
+      "momentum_6m": 33.78,
+      "rel_strength_6m": 24.87,
+      "drawdown_from_52w_high": -12.52,
+      "recovery_from_52w_low": 45.46,
+      "pct_vs_200dma": 14.36
+    },
+    "scored_at": "2026-08-03",
+    "rank": 116
+  },
+  {
+    "ticker": "RXRX",
+    "name": "Recursion Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "market_cap_b": 1.57,
+    "current_price": 3.0,
+    "fifty_two_week_high": 7.18,
+    "fifty_two_week_low": 2.77,
+    "doubling_prob_12m": 0.0003,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0002,
+    "lr_prob": 0.0014,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "rev_growth_yoy",
+        "shap": -1.8887
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -0.8613
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": 0.8162
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -0.7027
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": -56.1,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 6.27,
+      "op_margin_pct": -890.3,
+      "net_margin_pct": 0.0,
+      "fcf_yield_pct": -20.84,
+      "debt_to_equity": 0.071,
+      "ps_ratio": 23.977,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": -2.01,
+      "price_to_book": 1.554,
+      "short_ratio": 7.68,
+      "share_dilution_1y": 34.06,
+      "momentum_3m": -11.5,
+      "momentum_6m": -26.83,
+      "rel_strength_6m": -35.74,
+      "drawdown_from_52w_high": -55.82,
+      "recovery_from_52w_low": 5.63,
+      "pct_vs_200dma": -23.24
+    },
+    "scored_at": "2026-08-03",
+    "rank": 117
+  },
+  {
+    "ticker": "SAFE",
+    "name": "Safehold Inc. New",
+    "sector": "Real Estate",
+    "market_cap_b": 1.16,
+    "current_price": 16.18,
+    "fifty_two_week_high": 17.45,
+    "fifty_two_week_low": 12.76,
+    "doubling_prob_12m": 0.0003,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0011,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.9898
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.8174
+      },
+      {
+        "feature": "short_ratio",
+        "shap": -0.6337
+      },
+      {
+        "feature": "momentum_6m",
+        "shap": -0.6063
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 20.0,
+      "eps_growth_yoy": 7.8,
+      "gross_margin_pct": 95.71,
+      "op_margin_pct": 78.54,
+      "net_margin_pct": 26.62,
+      "fcf_yield_pct": 2.62,
+      "debt_to_equity": 1.895,
+      "ps_ratio": 2.655,
+      "pe_ratio": 10.05,
+      "peg_ratio": null,
+      "ev_to_ebitda": 17.291,
+      "price_to_book": 0.479,
+      "short_ratio": 8.92,
+      "share_dilution_1y": 4.68,
+      "momentum_3m": 10.08,
+      "momentum_6m": 17.46,
+      "rel_strength_6m": 8.55,
+      "drawdown_from_52w_high": -5.77,
+      "recovery_from_52w_low": 31.58,
+      "pct_vs_200dma": 10.93
+    },
+    "scored_at": "2026-08-03",
+    "rank": 118
+  },
+  {
+    "ticker": "BAND",
+    "name": "Bandwidth Inc.",
+    "sector": "Technology",
+    "market_cap_b": 1.18,
+    "current_price": 39.14,
+    "fifty_two_week_high": 79.08,
+    "fifty_two_week_low": 12.5,
+    "doubling_prob_12m": 0.0002,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0004,
+    "lr_prob": 0.0007,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "momentum_6m",
+        "shap": -2.3173
+      },
+      {
+        "feature": "fcf_yield_pct",
+        "shap": -1.1551
+      },
+      {
+        "feature": "drawdown_from_52w_high",
+        "shap": -0.9593
+      },
+      {
+        "feature": "share_dilution_1y",
+        "shap": -0.8517
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 22.2,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 37.23,
+      "op_margin_pct": -1.82,
+      "net_margin_pct": 0.273,
+      "fcf_yield_pct": 5.7,
+      "debt_to_equity": 1.466,
+      "ps_ratio": 1.521,
+      "pe_ratio": null,
+      "peg_ratio": null,
+      "ev_to_ebitda": 40.532,
+      "price_to_book": 3.33,
+      "short_ratio": 2.18,
+      "share_dilution_1y": 11.29,
+      "momentum_3m": -12.75,
+      "momentum_6m": 192.96,
+      "rel_strength_6m": 184.05,
+      "drawdown_from_52w_high": -50.1,
+      "recovery_from_52w_low": 205.3,
+      "pct_vs_200dma": 32.9
+    },
+    "scored_at": "2026-08-03",
+    "rank": 119
+  },
+  {
+    "ticker": "VNET",
+    "name": "VNET Group, Inc.",
+    "sector": "Technology",
+    "market_cap_b": 2.0,
+    "current_price": 7.17,
+    "fifty_two_week_high": 14.48,
+    "fifty_two_week_low": 6.17,
+    "doubling_prob_12m": 0.0001,
+    "lgbm_prob": 0.0,
+    "xgb_prob": 0.0004,
+    "lr_prob": 0.0,
+    "regime": "Unknown",
+    "conviction": "Speculative",
+    "top_drivers": [
+      {
+        "feature": "ps_ratio",
+        "shap": -1.6039
+      },
+      {
+        "feature": "rel_strength_6m",
+        "shap": -0.7372
+      },
+      {
+        "feature": "price_to_book",
+        "shap": -0.6335
+      },
+      {
+        "feature": "recovery_from_52w_low",
+        "shap": -0.621
+      }
+    ],
+    "features": {
+      "rev_growth_yoy": 19.8,
+      "eps_growth_yoy": 0.0,
+      "gross_margin_pct": 21.58,
+      "op_margin_pct": 7.49,
+      "net_margin_pct": -5.254,
+      "fcf_yield_pct": -296.3,
+      "debt_to_equity": 7.034,
+      "ps_ratio": 0.196,
+      "pe_ratio": null,
+      "peg_ratio": 0.45,
+      "ev_to_ebitda": 9.515,
+      "price_to_book": 3.145,
+      "short_ratio": 9.12,
+      "share_dilution_1y": 14.96,
+      "momentum_3m": -14.03,
+      "momentum_6m": -33.98,
+      "rel_strength_6m": -42.89,
+      "drawdown_from_52w_high": -48.9,
+      "recovery_from_52w_low": 13.99,
+      "pct_vs_200dma": -23.72
+    },
+    "scored_at": "2026-08-03",
+    "rank": 120
+  }
+]

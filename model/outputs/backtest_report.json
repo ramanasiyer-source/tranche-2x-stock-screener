@@ -1,0 +1,97 @@
+{
+  "cross_validation_folds": [
+    {
+      "fold": 1,
+      "train_dates": [
+        "2022-01-03"
+      ],
+      "val_date": "2022-07-01",
+      "n_train": 215,
+      "n_val": 217,
+      "n_pos_val": 20,
+      "auc": 0.5437,
+      "brier": 0.0854,
+      "precision_at_10": 0.3
+    },
+    {
+      "fold": 2,
+      "train_dates": [
+        "2022-01-03",
+        "2022-07-01"
+      ],
+      "val_date": "2023-01-03",
+      "n_train": 432,
+      "n_val": 216,
+      "n_pos_val": 15,
+      "auc": 0.6723,
+      "brier": 0.0658,
+      "precision_at_10": 0.3
+    },
+    {
+      "fold": 3,
+      "train_dates": [
+        "2022-01-03",
+        "2022-07-01",
+        "2023-01-03"
+      ],
+      "val_date": "2023-07-03",
+      "n_train": 648,
+      "n_val": 218,
+      "n_pos_val": 11,
+      "auc": 0.7554,
+      "brier": 0.0487,
+      "precision_at_10": 0.1
+    },
+    {
+      "fold": 4,
+      "train_dates": [
+        "2022-01-03",
+        "2022-07-01",
+        "2023-01-03",
+        "2023-07-03"
+      ],
+      "val_date": "2024-01-02",
+      "n_train": 866,
+      "n_val": 211,
+      "n_pos_val": 15,
+      "auc": 0.717,
+      "brier": 0.0738,
+      "precision_at_10": 0.3
+    }
+  ],
+  "cv_avg_auc": 0.6721,
+  "cv_avg_brier": 0.0684,
+  "cv_avg_precision_10": 0.25,
+  "test_set_date": "2024-07-01",
+  "test_auc": 0.6257,
+  "test_brier": 0.0644,
+  "test_precision_at_10": 0.0,
+  "top_features_shap": {
+    "fcf_yield_pct": 0.9233290436752227,
+    "drawdown_from_52w_high": 0.9032434868115251,
+    "price_to_book": 0.7171878707938668,
+    "share_dilution_1y": 0.6696545520188141,
+    "recovery_from_52w_low": 0.6666820531972797,
+    "momentum_6m": 0.633812109933434,
+    "momentum_3m": 0.57759401628496,
+    "ps_ratio_relative": 0.5151637926889455,
+    "rel_strength_6m": 0.5057583256775403,
+    "net_margin_pct": 0.4953608312459011
+  },
+  "top_features_lgbm": {
+    "drawdown_from_52w_high": 1808,
+    "momentum_3m": 1529,
+    "recovery_from_52w_low": 1526,
+    "rel_strength_6m": 1236,
+    "pct_vs_200dma": 1222,
+    "momentum_6m": 1151,
+    "ps_ratio_relative": 686,
+    "price_to_book": 673,
+    "fcf_yield_pct": 581,
+    "net_margin_pct": 527
+  },
+  "training_obs": 1077,
+  "test_obs": 216,
+  "positive_rate_train": 5.94,
+  "positive_rate_test": 5.09
+}

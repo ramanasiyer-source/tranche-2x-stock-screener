@@ -5,7 +5,6 @@ __pycache__/
 data/
 cache/
 
-# Model outputs (keep only some json or none)
-outputs/*.pkl
+# Model outputs (ignore large CSVs, allow trained models)
 outputs/*.csv
-outputs/*.json
+# We want to track outputs/current_scores.json and outputs/model_*.pkl for inference

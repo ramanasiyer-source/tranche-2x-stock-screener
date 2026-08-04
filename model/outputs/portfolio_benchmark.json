@@ -1,0 +1,686 @@
+{
+  "2022": {
+    "snapshot_date": "2022-01-03",
+    "end_date": "2023-01-03",
+    "n_universe": 215,
+    "n_doublers": 3,
+    "doubler_rate_pct": 1.4,
+    "top_picks": [
+      {
+        "ticker": "TMDX",
+        "name": "TransMedics Group, Inc.",
+        "sector": "Healthcare",
+        "model_score": 0.872,
+        "actual_return": 203.29,
+        "doubled": true,
+        "return_12m_label": 180.64
+      },
+      {
+        "ticker": "MDGL",
+        "name": "Madrigal Pharmaceuticals, Inc.",
+        "sector": "Healthcare",
+        "model_score": 0.818,
+        "actual_return": 222.07,
+        "doubled": true,
+        "return_12m_label": 216.71
+      },
+      {
+        "ticker": "IMVT",
+        "name": "Immunovant, Inc.",
+        "sector": "Healthcare",
+        "model_score": 0.796,
+        "actual_return": 102.39,
+        "doubled": true,
+        "return_12m_label": 113.8
+      },
+      {
+        "ticker": "SG",
+        "name": "Sweetgreen, Inc.",
+        "sector": "Consumer Cyclical",
+        "model_score": 0.301,
+        "actual_return": -72.78,
+        "doubled": false,
+        "return_12m_label": -72.52
+      },
+      {
+        "ticker": "CELH",
+        "name": "Celsius Holdings, Inc.",
+        "sector": "Consumer Defensive",
+        "model_score": 0.266,
+        "actual_return": 38.55,
+        "doubled": false,
+        "return_12m_label": 33.8
+      },
+      {
+        "ticker": "AEHR",
+        "name": "Aehr Test Systems",
+        "sector": "Technology",
+        "model_score": 0.202,
+        "actual_return": -14.07,
+        "doubled": false,
+        "return_12m_label": -21.38
+      },
+      {
+        "ticker": "EXTR",
+        "name": "Extreme Networks, Inc.",
+        "sector": "Technology",
+        "model_score": 0.193,
+        "actual_return": 16.18,
+        "doubled": false,
+        "return_12m_label": 16.94
+      },
+      {
+        "ticker": "DKNG",
+        "name": "DraftKings Inc.",
+        "sector": "Consumer Cyclical",
+        "model_score": 0.19,
+        "actual_return": -58.98,
+        "doubled": false,
+        "return_12m_label": -60.21
+      },
+      {
+        "ticker": "LSCC",
+        "name": "Lattice Semiconductor Corporati",
+        "sector": "Technology",
+        "model_score": 0.187,
+        "actual_return": -17.4,
+        "doubled": false,
+        "return_12m_label": -18.38
+      },
+      {
+        "ticker": "DUOL",
+        "name": "Duolingo, Inc.",
+        "sector": "Technology",
+        "model_score": 0.187,
+        "actual_return": -32.3,
+        "doubled": false,
+        "return_12m_label": -32.49
+      }
+    ],
+    "portfolio_return_pct": 38.7,
+    "iwm_return_pct": -21.5,
+    "spy_return_pct": -18.65,
+    "alpha_vs_iwm_pct": 60.2,
+    "actual_winners": [
+      {
+        "ticker": "MDGL",
+        "name": "Madrigal Pharmaceuticals, Inc.",
+        "return_12m": 216.71,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "TMDX",
+        "name": "TransMedics Group, Inc.",
+        "return_12m": 180.64,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "IMVT",
+        "name": "Immunovant, Inc.",
+        "return_12m": 113.8,
+        "path_quality": "Turbulent Doubler"
+      }
+    ]
+  },
+  "2023": {
+    "snapshot_date": "2023-01-03",
+    "end_date": "2024-01-02",
+    "n_universe": 216,
+    "n_doublers": 15,
+    "doubler_rate_pct": 6.9,
+    "top_picks": [
+      {
+        "ticker": "ELF",
+        "name": "e.l.f. Beauty, Inc.",
+        "sector": "Consumer Defensive",
+        "model_score": 0.968,
+        "actual_return": 160.82,
+        "doubled": true,
+        "return_12m_label": 138.81
+      },
+      {
+        "ticker": "VKTX",
+        "name": "Viking Therapeutics, Inc.",
+        "sector": "Healthcare",
+        "model_score": 0.967,
+        "actual_return": 118.43,
+        "doubled": true,
+        "return_12m_label": 104.23
+      },
+      {
+        "ticker": "UPST",
+        "name": "Upstart Holdings, Inc.",
+        "sector": "Financial Services",
+        "model_score": 0.966,
+        "actual_return": 216.99,
+        "doubled": true,
+        "return_12m_label": 170.05
+      },
+      {
+        "ticker": "PTGX",
+        "name": "Protagonist Therapeutics, Inc.",
+        "sector": "Healthcare",
+        "model_score": 0.963,
+        "actual_return": 112.71,
+        "doubled": true,
+        "return_12m_label": 109.18
+      },
+      {
+        "ticker": "OPEN",
+        "name": "Opendoor Technologies Inc",
+        "sector": "Real Estate",
+        "model_score": 0.949,
+        "actual_return": 307.27,
+        "doubled": true,
+        "return_12m_label": 266.36
+      },
+      {
+        "ticker": "UWMC",
+        "name": "UWM Holdings Corporation",
+        "sector": "Financial Services",
+        "model_score": 0.938,
+        "actual_return": 125.96,
+        "doubled": true,
+        "return_12m_label": 110.16
+      },
+      {
+        "ticker": "UWMC",
+        "name": "UWM Holdings Corporation",
+        "sector": "Financial Services",
+        "model_score": 0.938,
+        "actual_return": 125.96,
+        "doubled": true,
+        "return_12m_label": 110.16
+      },
+      {
+        "ticker": "DKNG",
+        "name": "DraftKings Inc.",
+        "sector": "Consumer Cyclical",
+        "model_score": 0.932,
+        "actual_return": 219.0,
+        "doubled": true,
+        "return_12m_label": 191.49
+      },
+      {
+        "ticker": "IMVT",
+        "name": "Immunovant, Inc.",
+        "sector": "Healthcare",
+        "model_score": 0.929,
+        "actual_return": 124.69,
+        "doubled": true,
+        "return_12m_label": 106.77
+      },
+      {
+        "ticker": "MARA",
+        "name": "MARA Holdings, Inc.",
+        "sector": "Financial Services",
+        "model_score": 0.925,
+        "actual_return": 590.88,
+        "doubled": true,
+        "return_12m_label": 589.41
+      }
+    ],
+    "portfolio_return_pct": 210.27,
+    "iwm_return_pct": 17.47,
+    "spy_return_pct": 26.71,
+    "alpha_vs_iwm_pct": 192.8,
+    "actual_winners": [
+      {
+        "ticker": "MARA",
+        "name": "MARA Holdings, Inc.",
+        "return_12m": 589.41,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "OPEN",
+        "name": "Opendoor Technologies Inc",
+        "return_12m": 266.36,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "BHVN",
+        "name": "Biohaven Ltd.",
+        "return_12m": 197.7,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "DKNG",
+        "name": "DraftKings Inc.",
+        "return_12m": 191.49,
+        "path_quality": "Clean Doubler"
+      },
+      {
+        "ticker": "DUOL",
+        "name": "Duolingo, Inc.",
+        "return_12m": 190.79,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "ACHR",
+        "name": "Archer Aviation Inc.",
+        "return_12m": 189.64,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "UPST",
+        "name": "Upstart Holdings, Inc.",
+        "return_12m": 170.05,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "ELF",
+        "name": "e.l.f. Beauty, Inc.",
+        "return_12m": 138.81,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "ARDX",
+        "name": "Ardelyx, Inc.",
+        "return_12m": 129.48,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "ESTC",
+        "name": "Elastic N.V.",
+        "return_12m": 110.63,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "UWMC",
+        "name": "UWM Holdings Corporation",
+        "return_12m": 110.16,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "UWMC",
+        "name": "UWM Holdings Corporation",
+        "return_12m": 110.16,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "PTGX",
+        "name": "Protagonist Therapeutics, Inc.",
+        "return_12m": 109.18,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "IMVT",
+        "name": "Immunovant, Inc.",
+        "return_12m": 106.77,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "VKTX",
+        "name": "Viking Therapeutics, Inc.",
+        "return_12m": 104.23,
+        "path_quality": "Turbulent Doubler"
+      }
+    ]
+  },
+  "2024": {
+    "snapshot_date": "2024-01-02",
+    "end_date": "2025-01-02",
+    "n_universe": 211,
+    "n_doublers": 15,
+    "doubler_rate_pct": 7.1,
+    "top_picks": [
+      {
+        "ticker": "PRAX",
+        "name": "Praxis Precision Medicines, Inc",
+        "sector": "Healthcare",
+        "model_score": 0.953,
+        "actual_return": 268.23,
+        "doubled": true,
+        "return_12m_label": 280.48
+      },
+      {
+        "ticker": "VERA",
+        "name": "Vera Therapeutics, Inc.",
+        "sector": "Healthcare",
+        "model_score": 0.949,
+        "actual_return": 170.92,
+        "doubled": true,
+        "return_12m_label": 170.34
+      },
+      {
+        "ticker": "HIMS",
+        "name": "Hims & Hers Health, Inc.",
+        "sector": "Healthcare",
+        "model_score": 0.93,
+        "actual_return": 150.83,
+        "doubled": true,
+        "return_12m_label": 161.41
+      },
+      {
+        "ticker": "GRND",
+        "name": "Grindr Inc.",
+        "sector": "Technology",
+        "model_score": 0.926,
+        "actual_return": 108.41,
+        "doubled": true,
+        "return_12m_label": 109.7
+      },
+      {
+        "ticker": "TOST",
+        "name": "Toast, Inc.",
+        "sector": "Technology",
+        "model_score": 0.916,
+        "actual_return": 101.83,
+        "doubled": true,
+        "return_12m_label": 101.44
+      },
+      {
+        "ticker": "CAVA",
+        "name": "CAVA Group, Inc.",
+        "sector": "Consumer Cyclical",
+        "model_score": 0.894,
+        "actual_return": 176.0,
+        "doubled": true,
+        "return_12m_label": 181.82
+      },
+      {
+        "ticker": "SG",
+        "name": "Sweetgreen, Inc.",
+        "sector": "Consumer Cyclical",
+        "model_score": 0.89,
+        "actual_return": 189.61,
+        "doubled": true,
+        "return_12m_label": 189.88
+      },
+      {
+        "ticker": "TARS",
+        "name": "Tarsus Pharmaceuticals, Inc.",
+        "sector": "Healthcare",
+        "model_score": 0.881,
+        "actual_return": 174.65,
+        "doubled": true,
+        "return_12m_label": 173.56
+      },
+      {
+        "ticker": "CLBT",
+        "name": "Cellebrite DI Ltd.",
+        "sector": "Technology",
+        "model_score": 0.874,
+        "actual_return": 161.33,
+        "doubled": true,
+        "return_12m_label": 156.94
+      },
+      {
+        "ticker": "AVPT",
+        "name": "AvePoint, Inc.",
+        "sector": "Technology",
+        "model_score": 0.872,
+        "actual_return": 108.99,
+        "doubled": true,
+        "return_12m_label": 110.38
+      }
+    ],
+    "portfolio_return_pct": 161.08,
+    "iwm_return_pct": 12.05,
+    "spy_return_pct": 25.59,
+    "alpha_vs_iwm_pct": 149.03,
+    "actual_winners": [
+      {
+        "ticker": "PRAX",
+        "name": "Praxis Precision Medicines, Inc",
+        "return_12m": 280.48,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "SG",
+        "name": "Sweetgreen, Inc.",
+        "return_12m": 189.88,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "CAVA",
+        "name": "CAVA Group, Inc.",
+        "return_12m": 181.82,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "TARS",
+        "name": "Tarsus Pharmaceuticals, Inc.",
+        "return_12m": 173.56,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "VERA",
+        "name": "Vera Therapeutics, Inc.",
+        "return_12m": 170.34,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "HIMS",
+        "name": "Hims & Hers Health, Inc.",
+        "return_12m": 161.41,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "CLBT",
+        "name": "Cellebrite DI Ltd.",
+        "return_12m": 156.94,
+        "path_quality": "Clean Doubler"
+      },
+      {
+        "ticker": "QTWO",
+        "name": "Q2 Holdings, Inc.",
+        "return_12m": 135.54,
+        "path_quality": "Clean Doubler"
+      },
+      {
+        "ticker": "ZETA",
+        "name": "Zeta Global Holdings Corp.",
+        "return_12m": 123.1,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "LMND",
+        "name": "Lemonade, Inc.",
+        "return_12m": 113.56,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "AVPT",
+        "name": "AvePoint, Inc.",
+        "return_12m": 110.38,
+        "path_quality": "Clean Doubler"
+      },
+      {
+        "ticker": "GRND",
+        "name": "Grindr Inc.",
+        "return_12m": 109.7,
+        "path_quality": "Clean Doubler"
+      },
+      {
+        "ticker": "CORT",
+        "name": "Corcept Therapeutics Incorporat",
+        "return_12m": 106.83,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "BOOT",
+        "name": "Boot Barn Holdings, Inc.",
+        "return_12m": 102.57,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "TOST",
+        "name": "Toast, Inc.",
+        "return_12m": 101.44,
+        "path_quality": "Volatile Doubler"
+      }
+    ]
+  },
+  "2025": {
+    "snapshot_date": "2024-07-01",
+    "end_date": "2025-07-01",
+    "n_universe": 216,
+    "n_doublers": 11,
+    "doubler_rate_pct": 5.1,
+    "top_picks": [
+      {
+        "ticker": "QTWO",
+        "name": "Q2 Holdings, Inc.",
+        "sector": "Technology",
+        "model_score": 0.789,
+        "actual_return": 55.49,
+        "doubled": false,
+        "return_12m_label": 53.76
+      },
+      {
+        "ticker": "GRND",
+        "name": "Grindr Inc.",
+        "sector": "Technology",
+        "model_score": 0.77,
+        "actual_return": 91.4,
+        "doubled": false,
+        "return_12m_label": 84.23
+      },
+      {
+        "ticker": "VKTX",
+        "name": "Viking Therapeutics, Inc.",
+        "sector": "Healthcare",
+        "model_score": 0.618,
+        "actual_return": -52.1,
+        "doubled": false,
+        "return_12m_label": -51.79
+      },
+      {
+        "ticker": "BHVN",
+        "name": "Biohaven Ltd.",
+        "sector": "Healthcare",
+        "model_score": 0.572,
+        "actual_return": -60.04,
+        "doubled": false,
+        "return_12m_label": -60.46
+      },
+      {
+        "ticker": "TARS",
+        "name": "Tarsus Pharmaceuticals, Inc.",
+        "sector": "Healthcare",
+        "model_score": 0.518,
+        "actual_return": 43.45,
+        "doubled": false,
+        "return_12m_label": 41.61
+      },
+      {
+        "ticker": "ARRY",
+        "name": "Array Technologies, Inc.",
+        "sector": "Technology",
+        "model_score": 0.515,
+        "actual_return": -38.35,
+        "doubled": false,
+        "return_12m_label": -30.62
+      },
+      {
+        "ticker": "ARRY",
+        "name": "Array Technologies, Inc.",
+        "sector": "Technology",
+        "model_score": 0.515,
+        "actual_return": -38.35,
+        "doubled": false,
+        "return_12m_label": -30.62
+      },
+      {
+        "ticker": "LSCC",
+        "name": "Lattice Semiconductor Corporati",
+        "sector": "Technology",
+        "model_score": 0.469,
+        "actual_return": -15.11,
+        "doubled": false,
+        "return_12m_label": -13.12
+      },
+      {
+        "ticker": "ELF",
+        "name": "e.l.f. Beauty, Inc.",
+        "sector": "Consumer Defensive",
+        "model_score": 0.436,
+        "actual_return": -39.05,
+        "doubled": false,
+        "return_12m_label": -37.96
+      },
+      {
+        "ticker": "CLBT",
+        "name": "Cellebrite DI Ltd.",
+        "sector": "Technology",
+        "model_score": 0.431,
+        "actual_return": 31.8,
+        "doubled": false,
+        "return_12m_label": 30.23
+      }
+    ],
+    "portfolio_return_pct": -2.09,
+    "iwm_return_pct": 8.48,
+    "spy_return_pct": 14.71,
+    "alpha_vs_iwm_pct": -10.57,
+    "actual_winners": [
+      {
+        "ticker": "VNET",
+        "name": "VNET Group, Inc.",
+        "return_12m": 220.87,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "UPST",
+        "name": "Upstart Holdings, Inc.",
+        "return_12m": 197.55,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "ACHR",
+        "name": "Archer Aviation Inc.",
+        "return_12m": 188.89,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "LMND",
+        "name": "Lemonade, Inc.",
+        "return_12m": 165.25,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "XPEV",
+        "name": "XPeng Inc.",
+        "return_12m": 136.84,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "OUST",
+        "name": "Ouster, Inc.",
+        "return_12m": 124.25,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "HIMS",
+        "name": "Hims & Hers Health, Inc.",
+        "return_12m": 123.9,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "KTOS",
+        "name": "Kratos Defense & Security Solut",
+        "return_12m": 118.19,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "CORT",
+        "name": "Corcept Therapeutics Incorporat",
+        "return_12m": 112.15,
+        "path_quality": "Turbulent Doubler"
+      },
+      {
+        "ticker": "DUOL",
+        "name": "Duolingo, Inc.",
+        "return_12m": 106.45,
+        "path_quality": "Volatile Doubler"
+      },
+      {
+        "ticker": "JOBY",
+        "name": "Joby Aviation, Inc.",
+        "return_12m": 101.44,
+        "path_quality": "Turbulent Doubler"
+      }
+    ]
+  }
+}

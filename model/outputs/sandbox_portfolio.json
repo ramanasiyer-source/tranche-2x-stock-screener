@@ -1,0 +1,11 @@
+{
+  "positions": [
+    {
+      "ticker": "GRND",
+      "buy_date": "2026-01-01",
+      "buy_price": 13.54,
+      "quantity": 100,
+      "current_price": 17.34
+    }
+  ]
+}
