@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+
+# Data and caches
+data/
+cache/
+
+# Model outputs (keep only some json or none)
+outputs/*.pkl
+outputs/*.csv
+outputs/*.json
