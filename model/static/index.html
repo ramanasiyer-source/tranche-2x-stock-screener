@@ -16,7 +16,11 @@
                 <h2>Tranche 2x</h2>
             </div>
             <ul class="nav-links">
-                <li class="active" data-view="leaderboard">
+                <li class="active" data-view="home">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Home
+                </li>
+                <li data-view="leaderboard">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                     Leaderboard
                 </li>
@@ -24,13 +28,62 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5H5a2 2 0 0 1 0-4h14v4"></path></svg>
                     Sandbox
                 </li>
+                <li data-view="about">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    About
+                </li>
             </ul>
         </nav>
 
         <!-- Main Content Area -->
         <main class="main-content">
+            <!-- View: Home -->
+            <section id="home-view" class="view active">
+                <div class="hero-section glass-panel">
+                    <h1>Welcome to Tranche 2x</h1>
+                    <p class="hero-subtitle">An AI-driven quantitative research project screening small and mid-cap equities.</p>
+                    
+                    <div class="disclaimer-alert">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        <div>
+                            <strong>Disclaimer</strong>
+                            <p>This is by no means investment advice. This is strictly an academic and research project, and all data/predictions should be used solely as reference. Do not trade real money based on this dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- View: About -->
+            <section id="about-view" class="view">
+                <header class="view-header">
+                    <div class="header-titles">
+                        <h1>About Tranche 2x</h1>
+                        <p class="subtitle">The research, the author, and the machine learning model behind the predictions.</p>
+                    </div>
+                </header>
+
+                <div class="about-grid">
+                    <div class="about-card glass-panel">
+                        <h3>What is this site about?</h3>
+                        <p>Tranche 2x is an experimental platform designed to identify mispricings in the small to mid-cap equity markets. Our goal is to surface companies exhibiting historical patterns associated with significant capital appreciation over a 12-month horizon.</p>
+                    </div>
+
+                    <div class="about-card glass-panel">
+                        <h3>About the Author</h3>
+                        <p>Built by a Quantitative Researcher exploring the intersection of modern machine learning and classical fundamental analysis. This project serves as a proving ground for robust feature engineering and predictive modeling in noisy financial environments.</p>
+                    </div>
+
+                    <div class="about-card glass-panel">
+                        <h3>About the Model</h3>
+                        <p>The core engine is a sophisticated machine learning pipeline combining gradient boosted decision trees (LightGBM and XGBoost) in a soft-voting ensemble.</p>
+                        <p>The model processes over <strong>20 distinct features</strong> for every stock in the universe. This includes complex valuation multiples, relative price momentum indicators, macroeconomic sensitivity, and sector-relative normalization parameters.</p>
+                        <p>Rather than a black box, the model utilizes <strong>SHAP (SHapley Additive exPlanations)</strong> to calculate exactly which fundamental or technical factors contributed to a stock's overall propensity score, bringing complete transparency to the predictions.</p>
+                    </div>
+                </div>
+            </section>
+
             <!-- View: Leaderboard -->
-            <section id="leaderboard-view" class="view active">
+            <section id="leaderboard-view" class="view">
                 <header class="view-header">
                     <div class="header-titles">
                         <h1>Top Doublers</h1>

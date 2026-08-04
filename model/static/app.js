@@ -223,6 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
+        const pwd = prompt("Enter Admin Password to update sandbox:");
+        if (pwd === null) return; // User cancelled
+
         const position = {
             ticker: document.getElementById('sandbox-ticker').value,
             buy_date: dateInput.value,
@@ -232,17 +235,26 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            await fetch('/api/sandbox/add', {
+            const res = await fetch('/api/sandbox/add', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'X-Admin-Password': pwd
+                },
                 body: JSON.stringify(position)
             });
+            
+            if (!res.ok) {
+                const data = await res.json();
+                throw new Error(data.detail || 'Failed to add to sandbox');
+            }
+            
             modal.classList.add('hidden');
             
-            // Switch to sandbox view to see it
-            navLinks[1].click();
+            // Switch to sandbox view to see it (index 2 because Home is 0, Leaderboard is 1, Sandbox is 2)
+            navLinks[2].click();
         } catch (err) {
-            alert('Failed to add to sandbox: ' + err.message);
+            alert('Error: ' + err.message);
         }
     });
 

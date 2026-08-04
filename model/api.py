@@ -5,7 +5,7 @@ import logging
 from typing import List, Dict, Any, Optional
 from datetime import datetime, timedelta
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Header
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 
@@ -164,7 +164,10 @@ def get_sandbox():
 
 
 @app.post("/api/sandbox/add")
-def add_to_sandbox(position: dict):
+def add_to_sandbox(position: dict, x_admin_password: str = Header(None)):
+    if x_admin_password != "admin123":
+        raise HTTPException(status_code=401, detail="Unauthorized: Invalid admin password.")
+        
     # Expected: {"ticker": "XYZ", "quantity": 100, "buy_date": "YYYY-MM-DD", "buy_price": 50.0}
     sandbox = get_sandbox()
     
